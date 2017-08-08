@@ -1,0 +1,62 @@
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\Антикафе 2.0.exe.config
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\Антикафе 2.0.exe
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\Антикафе 2.0.pdb
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\Disk.SDK.Provider.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.csprojResolveAssemblyReference.cache
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.csproj.ResolveComReference.cache
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.anti.resources
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.BCO.resources
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.Info.Clean.clean.resources
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.guestOut.resources
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.newGuest.resources
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.smenaEnd.resources
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.Start.resources
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.Properties.Resources.resources
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.tax.resources
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.csproj.GenerateResource.Cache
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе 2.0.exe
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе 2.0.pdb
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\Disk.SDK.dll
+C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Debug\Disk.SDK.pdb
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\Anticafe 2.0.exe.config
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\Anticafe 2.0.exe
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\Anticafe 2.0.pdb
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.csproj.ResolveComReference.cache
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.anti.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.Info.Clean.clean.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.guestOut.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.newGuest.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.smenaEnd.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.Start.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.Properties.Resources.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе_2._0.tax.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.csproj.GenerateResource.Cache
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.exe
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.pdb
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.csprojResolveAssemblyReference.cache
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\Anticafe 2.0.exe.manifest
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\Anticafe 2.0.application
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.exe.manifest
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.application
