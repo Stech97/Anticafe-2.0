@@ -42,3 +42,6 @@ C:\Users\Max\Desktop\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\
 C:\Users\Max\Desktop\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.exe
 C:\Users\Max\Desktop\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.pdb
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.OutInfo.resources
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe.config
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.exe
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.pdb

@@ -151,10 +151,10 @@
     <Compile Include="Info\DelRow.Designer.cs">
       <DependentUpon>DelRow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Info\OutInfo.cs">
+    <Compile Include="CloseProject\OutInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Info\OutInfo.Designer.cs">
+    <Compile Include="CloseProject\OutInfo.Designer.cs">
       <DependentUpon>OutInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Service References\Program.cs" />
@@ -186,7 +186,7 @@
     <EmbeddedResource Include="Info\DelRow.resx">
       <DependentUpon>DelRow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Info\OutInfo.resx">
+    <EmbeddedResource Include="CloseProject\OutInfo.resx">
       <DependentUpon>OutInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
