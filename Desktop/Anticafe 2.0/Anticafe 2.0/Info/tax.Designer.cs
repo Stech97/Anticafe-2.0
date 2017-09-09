@@ -1,4 +1,4 @@
-﻿namespace Антикафе_2._0
+﻿namespace Anticafe_2._0
 {
     partial class tax
     {

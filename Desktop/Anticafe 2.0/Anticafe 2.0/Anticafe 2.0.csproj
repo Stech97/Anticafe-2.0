@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -39,12 +39,13 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
     <Prefer32Bit>true</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>
     </DocumentationFile>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -57,9 +58,7 @@
     <Prefer32Bit>false</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-  <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationIcon>Service References\_jpg.ico</ApplicationIcon>
   </PropertyGroup>
@@ -73,7 +72,17 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Disk.SDK">
@@ -82,37 +91,34 @@
     <Reference Include="Disk.SDK.Provider">
       <HintPath>..\..\..\..\..\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK.Provider (.NET 4.0)\bin\Debug\Disk.SDK.Provider.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Net" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\Admin.cs" />
+    <Compile Include="Administrator\Admin.Func.cs" />
+    <Compile Include="Billing\Billing.cs" />
+    <Compile Include="Billing\Billing.Func.cs" />
     <Compile Include="CommonInfo\anti.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CommonInfo\anti.Designer.cs">
       <DependentUpon>anti.cs</DependentUpon>
     </Compile>
-    <Compile Include="Info\Clean\clean.cs">
+    <Compile Include="Event\Event.cs" />
+    <Compile Include="Event\Events.Func.cs" />
+    <Compile Include="Info\clean.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Info\Clean\clean.Designer.cs">
+    <Compile Include="Info\clean.Designer.cs">
       <DependentUpon>clean.cs</DependentUpon>
     </Compile>
     <Compile Include="Guest\guestOut.cs">
@@ -139,49 +145,18 @@
     <Compile Include="CommonInfo\startWindow.Designer.cs">
       <DependentUpon>startWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Info\Clean\Fri.cs">
+    <Compile Include="Info\DelRow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Info\Clean\Fri.Designer.cs">
-      <DependentUpon>Fri.cs</DependentUpon>
+    <Compile Include="Info\DelRow.Designer.cs">
+      <DependentUpon>DelRow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Info\Clean\Mon.cs">
+    <Compile Include="Info\OutInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Info\Clean\Mon.Designer.cs">
-      <DependentUpon>Mon.cs</DependentUpon>
+    <Compile Include="Info\OutInfo.Designer.cs">
+      <DependentUpon>OutInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Info\Clean\Sat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Info\Clean\Sat.Designer.cs">
-      <DependentUpon>Sat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Info\Clean\Sun.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Info\Clean\Sun.Designer.cs">
-      <DependentUpon>Sun.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Info\Clean\The.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Info\Clean\The.Designer.cs">
-      <DependentUpon>The.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Info\Clean\Thu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Info\Clean\Thu.Designer.cs">
-      <DependentUpon>Thu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Info\Clean\Wen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Info\Clean\Wen.Designer.cs">
-      <DependentUpon>Wen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\function.cs" />
     <Compile Include="Service References\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Info\tax.cs">
@@ -193,7 +168,7 @@
     <EmbeddedResource Include="CommonInfo\anti.resx">
       <DependentUpon>anti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Info\Clean\clean.resx">
+    <EmbeddedResource Include="Info\clean.resx">
       <DependentUpon>clean.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guest\guestOut.resx">
@@ -208,6 +183,12 @@
     <EmbeddedResource Include="CommonInfo\startWindow.resx">
       <DependentUpon>startWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Info\DelRow.resx">
+      <DependentUpon>DelRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info\OutInfo.resx">
+      <DependentUpon>OutInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -221,7 +202,6 @@
     <EmbeddedResource Include="Info\tax.resx">
       <DependentUpon>tax.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
     <None Include="Service References\app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -234,37 +214,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Info\Clean++.xml" />
     <Content Include="ReadMe.txt" />
     <Content Include="Service References\_jpg.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>8</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>9</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

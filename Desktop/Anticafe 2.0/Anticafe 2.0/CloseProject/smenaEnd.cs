@@ -1,48 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
-
-namespace Антикафе_2._0
+namespace Anticafe_2._0
 {
     public partial class smenaEnd : Form
     {      
         public smenaEnd()
-        {
+        { 
             InitializeComponent();
         }
 
         private void smenaEnd_Load(object sender, EventArgs e)
         {
-            ND.Text = Convert.ToString(function.StartOfDay);
+            ND.Text = Admin.admin[0].SumLogIn.ToString();
+            SumPrazdnik.Text = "0";
             Rashod.Text = "0";
-            //подсчёт денег за смену
-            for (int i = 0; i <function.DGV.RowCount; i++)
-                function.SumOnSmena += Convert.ToDouble(function.DGV[6, i].Value);
-            Z.Text = Convert.ToString(function.SumOnSmena);
-            int itog = function.StartOfDay + Convert.ToInt32(function.SumOnSmena) - function.rashod;
-            Itog.Text = Convert.ToString(itog);
+
+            Z.Text = Admin.admin[0].CalcTotalSum().ToString();
+
+            Itog.Text = Admin.admin[0].CalcItog().ToString();
         }
 
         private void Rashod_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(Rashod.Text, "[0-9]"))
-                function.rashod = Convert.ToInt32(Rashod.Text);
-            int itog = function.StartOfDay +  Convert.ToInt32(function.SumOnSmena) - function.rashod;
-            Itog.Text = Convert.ToString(itog);
+           if (Regex.IsMatch(Rashod.Text, "[0-9]"))
+                Admin.admin[0].Rashod = Convert.ToInt32(Rashod.Text);
+
+            Itog.Text = Admin.admin[0].CalcItog().ToString();
+        }
+
+        private void SumPrazdnik_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(SumPrazdnik.Text, "[0-9]"))
+                Admin.admin[0].SumInPrazdnik = Convert.ToInt32(SumPrazdnik.Text);
+
+            Itog.Text = Admin.admin[0].CalcItog().ToString();
         }
 
         private void EndSmena_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.Close();
+            OutInfo form = new OutInfo();
+            form.ShowDialog();
             Application.Exit();
         }
+
+
     }
 }

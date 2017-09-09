@@ -1,63 +1,44 @@
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.csproj.ResolveComReference.cache
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\Disk.SDK.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\Disk.SDK.Provider.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\System.Windows.Interactivity.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\Disk.SDK.pdb
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\System.Windows.Interactivity.xml
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\de\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\en\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\es\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\fr\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\it\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\ja\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\ko\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\zh-Hans\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\zh-Hant\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.anti.resources
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.BCO.resources
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.Info.Clean.clean.resources
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.guestOut.resources
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.newGuest.resources
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.smenaEnd.resources
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.Start.resources
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.Properties.Resources.resources
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.tax.resources
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.csproj.GenerateResource.Cache
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe.config
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.exe
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.pdb
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.pdb
-C:\Users\Max\Documents\Visual Studio 2012\Projects\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.csprojResolveAssemblyReference.cache
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.anti.resources
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.Info.Clean.clean.resources
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.guestOut.resources
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.newGuest.resources
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.smenaEnd.resources
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.Start.resources
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.Properties.Resources.resources
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.tax.resources
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.csproj.GenerateResource.Cache
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.application
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.exe
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.pdb
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe.config
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe.manifest
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.application
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe
+C:\Users\Max\Desktop\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.pdb
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe.config
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.csproj.ResolveComReference.cache
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.exe
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.pdb
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe.manifest
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.application
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.pdb
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Disk.SDK.pdb
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\System.Windows.Interactivity.xml
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\de\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\en\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\es\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\fr\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\it\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\ja\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\ko\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\zh-Hans\System.Windows.Interactivity.resources.dll
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.csprojResolveAssemblyReference.cache
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.anti.resources
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.Info.Clean.clean.resources
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.guestOut.resources
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.newGuest.resources
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.smenaEnd.resources
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.Start.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.anti.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.guestOut.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.newGuest.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.smenaEnd.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.Start.resources
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.Properties.Resources.resources
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе_2._0.tax.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.tax.resources
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.csproj.GenerateResource.Cache
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe.manifest
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.application
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\System.Windows.Interactivity.dll
-C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.exe.manifest
 C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.application
+C:\Users\Max\Documents\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe.config
+C:\Users\Max\Documents\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.exe
+C:\Users\Max\Documents\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.pdb
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.clean.resources
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.DelRow.resources
+C:\Users\Max\Desktop\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Anticafe 2.0.exe.config
+C:\Users\Max\Desktop\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.exe
+C:\Users\Max\Desktop\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.pdb
+C:\Users\Max\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.OutInfo.resources

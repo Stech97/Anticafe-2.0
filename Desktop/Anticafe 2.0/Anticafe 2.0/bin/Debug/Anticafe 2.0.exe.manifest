@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Anticafe 2.0.exe" version="2.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Anticafe 2.0.exe" version="2.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="Service References\_jpg.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Anticafe 2.0" version="2.1.0.2" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Anticafe 2.0" version="2.0.3.5" language="neutral" processorArchitecture="msil" />
     <commandLine file="Anticafe 2.0.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Anticafe 2.0.exe" size="1204736">
-      <assemblyIdentity name="Anticafe 2.0" version="2.1.0.2" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Anticafe 2.0.exe" size="1197056">
+      <assemblyIdentity name="Anticafe 2.0" version="2.0.3.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/N3OuqUs1jchiVzT9VIF6lUMkhk=</dsig:DigestValue>
+        <dsig:DigestValue>MwJ8nTauRdesbcs/R3CbyD5Ij9E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -198,22 +198,22 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Anticafe 2.0.exe.config" size="144">
+  <file name="Anticafe 2.0.exe.config" size="157">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>cpzNzlRjZspwKGLNlX6RAlU3880=</dsig:DigestValue>
+      <dsig:DigestValue>v8o7bVhwhyKdU5406a9NkVrVW3g=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ReadMe.txt" size="1242">
+  <file name="ReadMe.txt" size="1552">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>SE8CT7VpLAmHFWKHcV3DHNOFtdM=</dsig:DigestValue>
+      <dsig:DigestValue>c8JjQnlEvuTC7NHHFP5zjzZ+3O8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Service References\_jpg.ico" size="127038">

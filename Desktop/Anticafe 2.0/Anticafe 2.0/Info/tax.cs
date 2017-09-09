@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Антикафе_2._0
+namespace Anticafe_2._0
 {
     public partial class tax : Form
     {

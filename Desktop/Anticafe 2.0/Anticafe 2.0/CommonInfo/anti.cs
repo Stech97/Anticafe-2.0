@@ -1,43 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.IO;
-using System.Windows.Controls;
 //using Disk.SDK;
 //using Disk.SDK.Provider;
 //using Disk.SDK.Utils;
 
 
-
-namespace Антикафе_2._0
+namespace Anticafe_2._0
 {
     public partial class anti : Form
     {
         //private Disk.SDK.DiskSdkClient Disk;
         //private Disk.SDK.DiskItemInfo DiskInfo;
         //internal System.Windows.Controls.WebBrowser browser;
-        private bool EndSmena;
 
+        private bool EndSmena;
+        
         public anti()
         {
             InitializeComponent();
         }
 
         private void anti_Load(object sender, EventArgs e)
-        {            
+        {
             TimeOnForm.Tick += new EventHandler(TimeOnForm_Tick);
             TimeOnForm.Enabled = true;
             TimeOnForm.Start();
 
-            WhoWork.Text = function.WhoOnSmena;
+            WhoWork.Text = Admin.admin[0].NameAdmin;
 
             GuestOut.Enabled = false;
-            CHE.Enabled = false;
         }
 
         private void TimeOnForm_Tick(object sender, EventArgs e)
@@ -54,29 +45,69 @@ namespace Антикафе_2._0
         private void NewGuest_Click(object sender, EventArgs e)
         {
             newGuest form = new newGuest();
-            function.DGV = Table;
             form.ShowDialog();
-            if (function.VisitorInValue > function.VisitorOutValue)
+
+            if (Billing.CheckIn)
+            {
+                Table.Rows.Add();
+
+                Table.Rows[Billing.LogInValue].Cells[0].Value = Billing.bill[Billing.LogInValue].Name;
+
+                Table.Rows[Billing.LogInValue].Cells[1].Value = Billing.bill[Billing.LogInValue].Tax;
+
+                Table.Rows[Billing.LogInValue].Cells[2].Value = Billing.bill[Billing.LogInValue].Flayer;
+
+                Table.Rows[Billing.LogInValue].Cells[3].Value =
+                    Billing.bill[Billing.LogInValue].LogIn.ToShortTimeString();
+
+                Billing.LogInValue++;
+            }
+
+            if (Billing.LogInValue > Billing.LogOutValue)
             {
                 GuestOut.Enabled = true;
                 SmenaEnd.Enabled = false;
             }
-            Table = function.DGV;
+            else
+            {
+                GuestOut.Enabled = false;
+                SmenaEnd.Enabled = true;
+            }
+
         }
 
         private void GuestOut_Click(object sender, EventArgs e)
-        {       
+        {
+            Billing.IdRow = Table.CurrentRow.Index;
+
             guestOut form = new guestOut();
-            function.DGV = Table;
             form.ShowDialog();
-            if (function.VisitorInValue == function.VisitorOutValue)
-                SmenaEnd.Enabled = true;
-            Table = function.DGV;
+
+            if (Billing.bill[Billing.IdRow].CheckOut)
+            {
+                Billing.LogOutValue++;
+
+                Table.Rows[Billing.IdRow].Cells[4].Value =
+                    Billing.bill[Billing.IdRow].LogOut.ToShortTimeString();
+
+                Table.Rows[Billing.IdRow].Cells[5].Value =
+                    Billing.bill[Billing.IdRow].TotalTime;
+
+                Table.Rows[Billing.IdRow].Cells[6].Value =
+                    Billing.bill[Billing.IdRow].Money;
+
+                Table.Rows[Billing.IdRow].ReadOnly = true;
+
+                Table.Rows[Billing.IdRow].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+            }
+
+                if (Billing.LogInValue == Billing.LogOutValue)
+                    SmenaEnd.Enabled = true;
+            
         }
 
         private void SmenaEnd_Click(object sender, EventArgs e)
         {
-            function.DGV = Table;
             smenaEnd form = new smenaEnd();
             EndSmena = true;
             form.ShowDialog();
@@ -84,20 +115,19 @@ namespace Антикафе_2._0
 
         private void CHE_Click(object sender, EventArgs e)
         {
-            Антикафе_2._0.Info.Clean.clean form = new Антикафе_2._0.Info.Clean.clean();
+            clean form = new clean();
             form.ShowDialog();
         }
 
         private void anti_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //string nav = "https://oauth.yandex.ru/authorize?response_type=token&client_id=c86cc54948f8474e9a74a909d16838d7";
-            /*browser = new System.Windows.Controls.WebBrowser();
+            /*string nav = "https://oauth.yandex.ru/authorize?response_type=token&client_id=c86cc54948f8474e9a74a909d16838d7";
+            browser = new System.Windows.Controls.WebBrowser();
             Disk.AuthorizeAsync(new WebBrowserWrapper(browser), "c86cc54948f8474e9a74a909d16838d7", "https://oauth.yandex.ru/verification_code", this.CompleteCallback);
             Disk = new Disk.SDK.DiskSdkClient();
             DiskInfo = new Disk.SDK.DiskItemInfo();
             Disk.MakeDirectoryAsync("Сметки\\" + Year + " год\\" + Month);*/
-           function.DGV = Table;
-           function.SaveInExcel();
+            Admin.admin[0].SaveInExcel();
         }
 
         private void trey_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -122,15 +152,26 @@ namespace Антикафе_2._0
                 Application.Exit();
             }
         }
+
+        private void Table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Billing.IdRow = Table.CurrentRow.Index;
+
+            DelRow form = new DelRow();
+            form.ShowDialog();
+
+            if (Billing.Del)
+                Table.Rows.RemoveAt(Billing.IdRow);
+        }
         
         /*private void CompleteCallback(object sender, GenericSdkEventArgs<string> e)
-        {
-            if (this.AuthCompleted != null)
-                this.AuthCompleted(this, new GenericSdkEventArgs<string>(e.Result));
-            this.Close();
-        }
-        //Api яндекс Диска. Я не знаю как это работает, но это нужно(строка выше и ниже)
-        //public event EventHandler<GenericSdkEventArgs<string>> AuthCompleted;*/
+{
+   if (this.AuthCompleted != null)
+       this.AuthCompleted(this, new GenericSdkEventArgs<string>(e.Result));
+   this.Close();
+}
+//Api яндекс Диска. Я не знаю как это работает, но это нужно(строка выше и ниже)
+//public event EventHandler<GenericSdkEventArgs<string>> AuthCompleted;*/
 
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Антикафе_2._0
+﻿namespace Anticafe_2._0
 {
     partial class Start
     {
@@ -21,14 +21,14 @@
             this.work = new System.Windows.Forms.Button();
             this.ND = new System.Windows.Forms.TextBox();
             this.Smena = new System.Windows.Forms.TextBox();
-            this.MerFal = new System.Windows.Forms.RadioButton();
-            this.MerTru = new System.Windows.Forms.RadioButton();
             this.MerStartLabel = new System.Windows.Forms.Label();
             this.HourMerStart = new System.Windows.Forms.ComboBox();
             this.MinMerStart = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LTimeStart = new System.Windows.Forms.Label();
             this.TimeStart = new System.Windows.Forms.TextBox();
+            this.Mer = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NDLabel
@@ -56,10 +56,10 @@
             // work
             // 
             this.work.Font = new System.Drawing.Font("Times New Roman", 27.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.work.Location = new System.Drawing.Point(110, 565);
+            this.work.Location = new System.Drawing.Point(110, 495);
             this.work.Margin = new System.Windows.Forms.Padding(4);
             this.work.Name = "work";
-            this.work.Size = new System.Drawing.Size(401, 80);
+            this.work.Size = new System.Drawing.Size(401, 85);
             this.work.TabIndex = 5;
             this.work.Text = "Начать смену!";
             this.work.UseVisualStyleBackColor = true;
@@ -85,40 +85,11 @@
             this.Smena.TabIndex = 6;
             this.Smena.TextChanged += new System.EventHandler(this.smena_TextChanged);
             // 
-            // MerFal
-            // 
-            this.MerFal.AutoSize = true;
-            this.MerFal.Font = new System.Drawing.Font("Times New Roman", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.MerFal.Location = new System.Drawing.Point(30, 239);
-            this.MerFal.Margin = new System.Windows.Forms.Padding(4);
-            this.MerFal.Name = "MerFal";
-            this.MerFal.Size = new System.Drawing.Size(450, 56);
-            this.MerFal.TabIndex = 7;
-            this.MerFal.TabStop = true;
-            this.MerFal.Text = "Нет мероприятия ";
-            this.MerFal.UseVisualStyleBackColor = true;
-            this.MerFal.CheckedChanged += new System.EventHandler(this.MerFal_CheckedChanged);
-            // 
-            // MerTru
-            // 
-            this.MerTru.AutoSize = true;
-            this.MerTru.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.MerTru.Font = new System.Drawing.Font("Times New Roman", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.MerTru.Location = new System.Drawing.Point(30, 312);
-            this.MerTru.Margin = new System.Windows.Forms.Padding(4);
-            this.MerTru.Name = "MerTru";
-            this.MerTru.Size = new System.Drawing.Size(454, 57);
-            this.MerTru.TabIndex = 8;
-            this.MerTru.TabStop = true;
-            this.MerTru.Text = "Есть мероприятие";
-            this.MerTru.UseVisualStyleBackColor = true;
-            this.MerTru.CheckedChanged += new System.EventHandler(this.MerTru_CheckedChanged);
-            // 
             // MerStartLabel
             // 
             this.MerStartLabel.AutoSize = true;
             this.MerStartLabel.Font = new System.Drawing.Font("Times New Roman", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.MerStartLabel.Location = new System.Drawing.Point(30, 386);
+            this.MerStartLabel.Location = new System.Drawing.Point(30, 316);
             this.MerStartLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MerStartLabel.Name = "MerStartLabel";
             this.MerStartLabel.Size = new System.Drawing.Size(571, 52);
@@ -135,7 +106,7 @@
             "18",
             "19",
             "20"});
-            this.HourMerStart.Location = new System.Drawing.Point(110, 460);
+            this.HourMerStart.Location = new System.Drawing.Point(110, 390);
             this.HourMerStart.Margin = new System.Windows.Forms.Padding(4);
             this.HourMerStart.Name = "HourMerStart";
             this.HourMerStart.Size = new System.Drawing.Size(172, 60);
@@ -151,7 +122,7 @@
             "15",
             "30",
             "45"});
-            this.MinMerStart.Location = new System.Drawing.Point(339, 460);
+            this.MinMerStart.Location = new System.Drawing.Point(339, 390);
             this.MinMerStart.Margin = new System.Windows.Forms.Padding(4);
             this.MinMerStart.Name = "MinMerStart";
             this.MinMerStart.Size = new System.Drawing.Size(172, 60);
@@ -162,7 +133,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Location = new System.Drawing.Point(290, 460);
+            this.label1.Location = new System.Drawing.Point(290, 390);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 52);
@@ -190,20 +161,45 @@
             this.TimeStart.Size = new System.Drawing.Size(140, 61);
             this.TimeStart.TabIndex = 14;
             // 
+            // Mer
+            // 
+            this.Mer.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Mer.FormattingEnabled = true;
+            this.Mer.Items.AddRange(new object[] {
+            "Есть",
+            "Нет"});
+            this.Mer.Location = new System.Drawing.Point(380, 245);
+            this.Mer.Margin = new System.Windows.Forms.Padding(4);
+            this.Mer.Name = "Mer";
+            this.Mer.Size = new System.Drawing.Size(278, 60);
+            this.Mer.TabIndex = 15;
+            this.Mer.SelectedIndexChanged += new System.EventHandler(this.Mer_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.Location = new System.Drawing.Point(27, 235);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(333, 52);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Мероприятие:";
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(678, 699);
+            this.ClientSize = new System.Drawing.Size(678, 599);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Mer);
             this.Controls.Add(this.TimeStart);
             this.Controls.Add(this.LTimeStart);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MinMerStart);
             this.Controls.Add(this.HourMerStart);
             this.Controls.Add(this.MerStartLabel);
-            this.Controls.Add(this.MerTru);
-            this.Controls.Add(this.MerFal);
             this.Controls.Add(this.Smena);
             this.Controls.Add(this.ND);
             this.Controls.Add(this.work);
@@ -227,14 +223,14 @@
         private System.Windows.Forms.Button work;
         private System.Windows.Forms.TextBox ND;
         private System.Windows.Forms.TextBox Smena;
-        private System.Windows.Forms.RadioButton MerFal;
-        private System.Windows.Forms.RadioButton MerTru;
         private System.Windows.Forms.Label MerStartLabel;
         private System.Windows.Forms.ComboBox HourMerStart;
         private System.Windows.Forms.ComboBox MinMerStart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LTimeStart;
         private System.Windows.Forms.TextBox TimeStart;
+        private System.Windows.Forms.ComboBox Mer;
+        private System.Windows.Forms.Label label2;
     }
 }
 

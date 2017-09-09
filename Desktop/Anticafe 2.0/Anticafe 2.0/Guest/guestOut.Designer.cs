@@ -1,4 +1,4 @@
-﻿namespace Антикафе_2._0
+﻿namespace Anticafe_2._0
 {
     partial class guestOut
     {
@@ -56,7 +56,7 @@
             this.flayer.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.flayer.Location = new System.Drawing.Point(25, 205);
             this.flayer.Name = "flayer";
-            this.flayer.Size = new System.Drawing.Size(163, 40);
+            this.flayer.Size = new System.Drawing.Size(204, 50);
             this.flayer.TabIndex = 43;
             this.flayer.Text = "Флаер     ";
             this.flayer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,7 +70,7 @@
             this.Sum.ForeColor = System.Drawing.Color.Red;
             this.Sum.Location = new System.Drawing.Point(150, 250);
             this.Sum.Name = "Sum";
-            this.Sum.Size = new System.Drawing.Size(0, 36);
+            this.Sum.Size = new System.Drawing.Size(0, 46);
             this.Sum.TabIndex = 40;
             // 
             // TimeOutput
@@ -79,7 +79,7 @@
             this.TimeOutput.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TimeOutput.Location = new System.Drawing.Point(230, 160);
             this.TimeOutput.Name = "TimeOutput";
-            this.TimeOutput.Size = new System.Drawing.Size(0, 36);
+            this.TimeOutput.Size = new System.Drawing.Size(0, 46);
             this.TimeOutput.TabIndex = 39;
             // 
             // TimeInput
@@ -88,7 +88,7 @@
             this.TimeInput.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TimeInput.Location = new System.Drawing.Point(265, 115);
             this.TimeInput.Name = "TimeInput";
-            this.TimeInput.Size = new System.Drawing.Size(0, 36);
+            this.TimeInput.Size = new System.Drawing.Size(0, 46);
             this.TimeInput.TabIndex = 38;
             // 
             // tax
@@ -101,7 +101,7 @@
             "Детский"});
             this.tax.Location = new System.Drawing.Point(150, 60);
             this.tax.Name = "tax";
-            this.tax.Size = new System.Drawing.Size(221, 44);
+            this.tax.Size = new System.Drawing.Size(221, 54);
             this.tax.TabIndex = 34;
             this.tax.SelectedIndexChanged += new System.EventHandler(this.tax_SelectedIndexChanged);
             // 
@@ -109,9 +109,9 @@
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.name.Location = new System.Drawing.Point(115, 15);
+            this.name.Location = new System.Drawing.Point(114, 14);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(0, 36);
+            this.name.Size = new System.Drawing.Size(0, 46);
             this.name.TabIndex = 32;
             // 
             // Ltax
@@ -120,7 +120,7 @@
             this.Ltax.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Ltax.Location = new System.Drawing.Point(25, 60);
             this.Ltax.Name = "Ltax";
-            this.Ltax.Size = new System.Drawing.Size(118, 36);
+            this.Ltax.Size = new System.Drawing.Size(147, 46);
             this.Ltax.TabIndex = 31;
             this.Ltax.Text = "Тариф:";
             // 
@@ -128,9 +128,9 @@
             // 
             this.LName.AutoSize = true;
             this.LName.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LName.Location = new System.Drawing.Point(25, 15);
+            this.LName.Location = new System.Drawing.Point(24, 14);
             this.LName.Name = "LName";
-            this.LName.Size = new System.Drawing.Size(89, 36);
+            this.LName.Size = new System.Drawing.Size(112, 46);
             this.LName.TabIndex = 29;
             this.LName.Text = "Имя:";
             // 
@@ -151,7 +151,7 @@
             this.Calc.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Calc.Location = new System.Drawing.Point(25, 295);
             this.Calc.Name = "Calc";
-            this.Calc.Size = new System.Drawing.Size(311, 36);
+            this.Calc.Size = new System.Drawing.Size(394, 46);
             this.Calc.TabIndex = 48;
             this.Calc.Text = "Мини -  калькулятор";
             // 
@@ -161,9 +161,9 @@
             this.GuestIn.Location = new System.Drawing.Point(25, 350);
             this.GuestIn.MaxLength = 4;
             this.GuestIn.Name = "GuestIn";
-            this.GuestIn.Size = new System.Drawing.Size(100, 44);
+            this.GuestIn.Size = new System.Drawing.Size(100, 53);
             this.GuestIn.TabIndex = 2;
-            this.GuestIn.TextChanged += new System.EventHandler(this.GuestIn_TextChanged);
+            this.GuestIn.TextChanged += new System.EventHandler(this.GuestInMoney_TextChanged);
             // 
             // Minus
             // 
@@ -171,7 +171,7 @@
             this.Minus.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Minus.Location = new System.Drawing.Point(125, 350);
             this.Minus.Name = "Minus";
-            this.Minus.Size = new System.Drawing.Size(26, 36);
+            this.Minus.Size = new System.Drawing.Size(33, 46);
             this.Minus.TabIndex = 50;
             this.Minus.Text = "-";
             // 
@@ -181,7 +181,7 @@
             this.LTimeInput.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LTimeInput.Location = new System.Drawing.Point(25, 115);
             this.LTimeInput.Name = "LTimeInput";
-            this.LTimeInput.Size = new System.Drawing.Size(244, 36);
+            this.LTimeInput.Size = new System.Drawing.Size(307, 46);
             this.LTimeInput.TabIndex = 47;
             this.LTimeInput.Text = "Время прихода: ";
             // 
@@ -191,7 +191,7 @@
             this.LTimeOutput.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LTimeOutput.Location = new System.Drawing.Point(25, 160);
             this.LTimeOutput.Name = "LTimeOutput";
-            this.LTimeOutput.Size = new System.Drawing.Size(199, 36);
+            this.LTimeOutput.Size = new System.Drawing.Size(250, 46);
             this.LTimeOutput.TabIndex = 46;
             this.LTimeOutput.Text = "Время ухода:";
             // 
@@ -201,7 +201,7 @@
             this.Lsum.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Lsum.Location = new System.Drawing.Point(25, 250);
             this.Lsum.Name = "Lsum";
-            this.Lsum.Size = new System.Drawing.Size(119, 36);
+            this.Lsum.Size = new System.Drawing.Size(151, 46);
             this.Lsum.TabIndex = 51;
             this.Lsum.Text = "Итого:";
             // 
@@ -211,7 +211,7 @@
             this.SumCalc.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.SumCalc.Location = new System.Drawing.Point(145, 350);
             this.SumCalc.Name = "SumCalc";
-            this.SumCalc.Size = new System.Drawing.Size(0, 36);
+            this.SumCalc.Size = new System.Drawing.Size(0, 46);
             this.SumCalc.TabIndex = 52;
             // 
             // Antiout
@@ -220,7 +220,7 @@
             this.Antiout.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Antiout.Location = new System.Drawing.Point(235, 350);
             this.Antiout.Name = "Antiout";
-            this.Antiout.Size = new System.Drawing.Size(0, 36);
+            this.Antiout.Size = new System.Drawing.Size(0, 46);
             this.Antiout.TabIndex = 54;
             // 
             // ravno
@@ -229,13 +229,13 @@
             this.ravno.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ravno.Location = new System.Drawing.Point(205, 350);
             this.ravno.Name = "ravno";
-            this.ravno.Size = new System.Drawing.Size(33, 36);
+            this.ravno.Size = new System.Drawing.Size(43, 46);
             this.ravno.TabIndex = 55;
             this.ravno.Text = "=";
             // 
             // guestOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(434, 566);
@@ -266,7 +266,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Гость уходит";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.guestOut_FormClosing);
             this.Load += new System.EventHandler(this.guestOut_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

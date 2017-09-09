@@ -6,11 +6,11 @@ using System.Resources;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Anticafe 2.0")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Антикафе 2.0")]
+[assembly: AssemblyDescription("Сметка для Антикафе «Время Терпит»")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("By Stech97")]
-[assembly: AssemblyProduct("Anticafe 2.0")]
+[assembly: AssemblyCompany("Stech97")]
+[assembly: AssemblyProduct("Антикафе 2.0")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -33,6 +33,6 @@ using System.Resources;
 // Можно задать все значения или принять номер построения и номер редакции по умолчанию, 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.1.0.2")]
-[assembly: AssemblyFileVersion("2.1.0.2")]
+[assembly: AssemblyVersion("2.0.3.9")]
+[assembly: AssemblyFileVersion("2.0.3.9")]
 [assembly: NeutralResourcesLanguageAttribute("ru-RU")]

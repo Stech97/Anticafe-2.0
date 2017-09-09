@@ -1,4 +1,4 @@
-﻿namespace Антикафе_2._0
+﻿namespace Anticafe_2._0
 {
     partial class anti
     {
@@ -36,7 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(anti));
             this.Table = new System.Windows.Forms.DataGridView();
             this.Имя = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Тип_подсчета = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Флаер = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Время_прихода = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Время_ухода = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,7 +77,7 @@
             this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Имя,
-            this.Тип_подсчета,
+            this.Tax,
             this.Флаер,
             this.Время_прихода,
             this.Время_ухода,
@@ -100,6 +100,7 @@
             this.Table.RowHeadersWidth = 10;
             this.Table.Size = new System.Drawing.Size(837, 634);
             this.Table.TabIndex = 7;
+            this.Table.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Table_CellDoubleClick);
             // 
             // Имя
             // 
@@ -109,19 +110,11 @@
             this.Имя.ReadOnly = true;
             this.Имя.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Тип_подсчета
+            // Tax
             // 
-            this.Тип_подсчета.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.Тип_подсчета.HeaderText = "Тип подсчета";
-            this.Тип_подсчета.Items.AddRange(new object[] {
-            "Обычный",
-            "Студенческий",
-            "Детский",
-            "Меропр,студудент.",
-            "Меропр,обычный."});
-            this.Тип_подсчета.Name = "Тип_подсчета";
-            this.Тип_подсчета.ReadOnly = true;
-            this.Тип_подсчета.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Tax.HeaderText = "Тип подсчёта";
+            this.Tax.Name = "Tax";
+            this.Tax.ReadOnly = true;
             // 
             // Флаер
             // 
@@ -329,7 +322,7 @@
         private System.Windows.Forms.NotifyIcon trey;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Имя;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Тип_подсчета;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tax;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Флаер;
         private System.Windows.Forms.DataGridViewTextBoxColumn Время_прихода;
         private System.Windows.Forms.DataGridViewTextBoxColumn Время_ухода;

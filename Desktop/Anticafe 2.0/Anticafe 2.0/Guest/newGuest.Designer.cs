@@ -1,4 +1,4 @@
-﻿namespace Антикафе_2._0
+﻿namespace Anticafe_2._0
 {
     partial class newGuest
     {
@@ -40,9 +40,10 @@
             // FirstName
             // 
             this.FirstName.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.FirstName.Location = new System.Drawing.Point(220, 20);
+            this.FirstName.Location = new System.Drawing.Point(293, 25);
+            this.FirstName.Margin = new System.Windows.Forms.Padding(4);
             this.FirstName.Name = "FirstName";
-            this.FirstName.Size = new System.Drawing.Size(240, 49);
+            this.FirstName.Size = new System.Drawing.Size(319, 59);
             this.FirstName.TabIndex = 1;
             this.FirstName.TextChanged += new System.EventHandler(this.Name_TextChanged);
             // 
@@ -51,9 +52,10 @@
             this.Flayer.AutoSize = true;
             this.Flayer.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Flayer.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Flayer.Location = new System.Drawing.Point(35, 135);
+            this.Flayer.Location = new System.Drawing.Point(47, 166);
+            this.Flayer.Margin = new System.Windows.Forms.Padding(4);
             this.Flayer.Name = "Flayer";
-            this.Flayer.Size = new System.Drawing.Size(218, 45);
+            this.Flayer.Size = new System.Drawing.Size(270, 56);
             this.Flayer.TabIndex = 35;
             this.Flayer.Text = "Флаер         ";
             this.Flayer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,9 +69,10 @@
             "Обычный",
             "Студенческий",
             "Детский"});
-            this.tax.Location = new System.Drawing.Point(220, 75);
+            this.tax.Location = new System.Drawing.Point(293, 92);
+            this.tax.Margin = new System.Windows.Forms.Padding(4);
             this.tax.Name = "tax";
-            this.tax.Size = new System.Drawing.Size(240, 49);
+            this.tax.Size = new System.Drawing.Size(319, 60);
             this.tax.TabIndex = 3;
             this.tax.SelectionChangeCommitted += new System.EventHandler(this.tax_SelectionChangeCommitted);
             // 
@@ -77,9 +80,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.Location = new System.Drawing.Point(35, 75);
+            this.label3.Location = new System.Drawing.Point(47, 92);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 41);
+            this.label3.Size = new System.Drawing.Size(166, 52);
             this.label3.TabIndex = 33;
             this.label3.Text = "Тариф:";
             // 
@@ -87,18 +91,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Location = new System.Drawing.Point(35, 20);
+            this.label1.Location = new System.Drawing.Point(47, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 41);
+            this.label1.Size = new System.Drawing.Size(127, 52);
             this.label1.TabIndex = 31;
             this.label1.Text = "Имя:";
             // 
             // Invite
             // 
             this.Invite.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Invite.Location = new System.Drawing.Point(110, 200);
+            this.Invite.Location = new System.Drawing.Point(147, 246);
+            this.Invite.Margin = new System.Windows.Forms.Padding(4);
             this.Invite.Name = "Invite";
-            this.Invite.Size = new System.Drawing.Size(270, 100);
+            this.Invite.Size = new System.Drawing.Size(360, 123);
             this.Invite.TabIndex = 4;
             this.Invite.Text = "Уряя!! Новый гость :-) ";
             this.Invite.UseVisualStyleBackColor = true;
@@ -106,10 +112,10 @@
             // 
             // newGuest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(494, 322);
+            this.ClientSize = new System.Drawing.Size(659, 396);
             this.Controls.Add(this.FirstName);
             this.Controls.Add(this.Flayer);
             this.Controls.Add(this.tax);
@@ -119,11 +125,13 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "newGuest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Новый Гость";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.newGuest_FormClosed);
             this.Load += new System.EventHandler(this.newGuest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

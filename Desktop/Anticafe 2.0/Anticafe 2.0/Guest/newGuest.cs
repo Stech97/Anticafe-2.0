@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
-namespace Антикафе_2._0
+namespace Anticafe_2._0
 {
-    public partial class newGuest : Form
+    public partial class newGuest :Form
     {
-        private bool name;
-        private bool Tx;
+        private Boolean name;
+        private Boolean Tx;
 
         public newGuest()
         {
@@ -23,7 +17,7 @@ namespace Антикафе_2._0
         private void newGuest_Load(object sender, EventArgs e)
         {
             Invite.Enabled = false;
-            if (function.CheckMer)
+            if (Event.EventCheck)
             {
                 tax.Items.Add("Меропр,студудент.");
                 tax.Items.Add("Меропр,обычный.");
@@ -32,32 +26,44 @@ namespace Антикафе_2._0
 
         private void Name_TextChanged(object sender, EventArgs e)
         {
-            if ((Regex.IsMatch(FirstName.Text, "[А-Яа-я]")) && !String.IsNullOrWhiteSpace(FirstName.Text))
+            if ((Regex.IsMatch(FirstName.Text, "[А-Яа-я]")) || !String.IsNullOrWhiteSpace(FirstName.Text))
+            {
                 name = true;
-			
-			if (name && Tx)
-				Invite.Enabled = true;
+                CheckGuest();
+            }
         }
 
         private void tax_SelectionChangeCommitted(object sender, EventArgs e)
         {
             Tx = true;
-            if (name && Tx)
-                Invite.Enabled = true;
+            CheckGuest();
         }
 
         private void Invite_Click(object sender, EventArgs e)
         {
-            function.DGV.Rows.Add();
-            function.DGV.Rows[function.VisitorInValue].Cells[0].Value = FirstName.Text;
-            function.DGV.Rows[function.VisitorInValue].Cells[1].Value = tax.Text;
-            function.DGV.Rows[function.VisitorInValue].Cells[2].Value = Flayer.Checked;
-            function.DGV.Rows[function.VisitorInValue].Cells[3].Value = DateTime.Now.ToShortTimeString();
-            function.TimeInput = DateTime.Now.TimeOfDay;
-            function.HourInput = DateTime.Now.Hour;
-            function.VisitorInValue++;
-            function.DayIn = DateTime.Now.Date;
-            this.Close();
+            Billing.CheckIn = true;
+            Close();
+        }
+
+        private void newGuest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Billing.CheckIn)
+            {
+                Billing.bill.Add(new Billing());
+                Billing.bill[Billing.LogInValue].SetLogIn(FirstName.Text, tax.Text,
+                    Flayer.Checked, DateTime.Now);
+                if ((Billing.bill[Billing.LogInValue].Tax == "Меропр,студудент.")
+                    || (Billing.bill[Billing.LogInValue].Tax == "Меропр,обычный."))
+                        Event.EventValue++;
+            }
+        }
+
+        private void CheckGuest()
+        {
+            if (name && Tx)
+                Invite.Enabled = true;
+            else
+                Invite.Enabled = false;
         }
     }
 }
