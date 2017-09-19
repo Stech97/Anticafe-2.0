@@ -1,18 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-//using Disk.SDK;
-//using Disk.SDK.Provider;
-//using Disk.SDK.Utils;
 
 
 namespace Anticafe_2._0
 {
     public partial class anti : Form
     {
-        //private Disk.SDK.DiskSdkClient Disk;
-        //private Disk.SDK.DiskItemInfo DiskInfo;
-        //internal System.Windows.Controls.WebBrowser browser;
-
         private bool EndSmena;
         
         public anti()
@@ -121,12 +114,6 @@ namespace Anticafe_2._0
 
         private void anti_FormClosed(object sender, FormClosedEventArgs e)
         {
-            /*string nav = "https://oauth.yandex.ru/authorize?response_type=token&client_id=c86cc54948f8474e9a74a909d16838d7";
-            browser = new System.Windows.Controls.WebBrowser();
-            Disk.AuthorizeAsync(new WebBrowserWrapper(browser), "c86cc54948f8474e9a74a909d16838d7", "https://oauth.yandex.ru/verification_code", this.CompleteCallback);
-            Disk = new Disk.SDK.DiskSdkClient();
-            DiskInfo = new Disk.SDK.DiskItemInfo();
-            Disk.MakeDirectoryAsync("Сметки\\" + Year + " год\\" + Month);*/
             Admin.admin[0].SaveInExcel();
         }
 
@@ -163,15 +150,5 @@ namespace Anticafe_2._0
             if (Billing.Del)
                 Table.Rows.RemoveAt(Billing.IdRow);
         }
-        
-        /*private void CompleteCallback(object sender, GenericSdkEventArgs<string> e)
-{
-   if (this.AuthCompleted != null)
-       this.AuthCompleted(this, new GenericSdkEventArgs<string>(e.Result));
-   this.Close();
-}
-//Api яндекс Диска. Я не знаю как это работает, но это нужно(строка выше и ниже)
-//public event EventHandler<GenericSdkEventArgs<string>> AuthCompleted;*/
-
     }
 }

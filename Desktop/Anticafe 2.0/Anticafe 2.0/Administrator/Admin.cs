@@ -20,6 +20,7 @@ namespace Anticafe_2._0
         public Int32 TotalSum;//сумма в сметке
         public Int32 Rashod;//расходы из textBox
         public Int32 Itog;// общий итог после всех подсчетов  
-          
+
+        private String userName;
     }
 }

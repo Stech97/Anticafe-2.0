@@ -1,0 +1,12 @@
+C:\Users\Пользователь\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK\bin\Debug\Disk.SDK.dll
+C:\Users\Пользователь\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK\bin\Debug\Disk.SDK.pdb
+C:\Users\Пользователь\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK\obj\Debug\Disk.SDK.Utils.WebdavResources.resources
+C:\Users\Пользователь\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK\obj\Debug\Disk.SDK.csproj.GenerateResource.Cache
+C:\Users\Пользователь\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK\obj\Debug\Disk.SDK.dll
+C:\Users\Пользователь\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK\obj\Debug\Disk.SDK.pdb
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.Sdk\bin\Debug\Disk.SDK.dll
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.Sdk\bin\Debug\Disk.SDK.pdb
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.Sdk\obj\Debug\Disk.SDK.Utils.WebdavResources.resources
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.Sdk\obj\Debug\Disk.SDK.csproj.GenerateResource.Cache
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.Sdk\obj\Debug\Disk.SDK.dll
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.Sdk\obj\Debug\Disk.SDK.pdb

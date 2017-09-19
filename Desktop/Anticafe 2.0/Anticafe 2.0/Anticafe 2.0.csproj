@@ -8,8 +8,8 @@
     <ProjectGuid>{3CBC5AE1-1BEC-4D84-A641-1316E75E0F32}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Антикафе_2._0</RootNamespace>
-    <AssemblyName>Anticafe 2.0</AssemblyName>
+    <RootNamespace>Anticafe_2._0</RootNamespace>
+    <AssemblyName>Антикафе 2.0</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -85,15 +85,19 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Disk.SDK">
-      <HintPath>..\..\..\..\..\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.Sdk\bin\Debug\Disk.SDK.dll</HintPath>
+    <Reference Include="Disk.SDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Disk.Sdk\bin\Release\Disk.SDK.dll</HintPath>
     </Reference>
-    <Reference Include="Disk.SDK.Provider">
-      <HintPath>..\..\..\..\..\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK.Provider (.NET 4.0)\bin\Debug\Disk.SDK.Provider.dll</HintPath>
+    <Reference Include="Disk.SDK.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Disk.SDK.Provider (.NET 4.0)\bin\Release\Disk.SDK.Provider.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
@@ -101,6 +105,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrator\Admin.cs" />

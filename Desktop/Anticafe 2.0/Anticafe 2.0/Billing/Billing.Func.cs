@@ -102,13 +102,16 @@ namespace Anticafe_2._0
 
                     case "Студенческий":
 
-                        if (TotalTime < 61)
+                    Money = 0;
+                        
+                        if (TotalTime <= 60)
                             Money = TotalTime * 2;
 
-                        if ((TotalTime < 121) && (TotalTime > 60))
-                            Money = 120 + (TotalTime - 60) * 1.5;
-                        else
-                            Money = 210 + (TotalTime - 120);
+                        if ((TotalTime <= 120) && (TotalTime > 60))
+                            Money = 30 + (TotalTime * 1.5);
+                         
+                        if (TotalTime > 120)
+                            Money = 90 + TotalTime;
 
                         if (Money < 90)
                             Money = 90;
@@ -166,14 +169,15 @@ namespace Anticafe_2._0
                     break;
 
                 case "Студенческий":
+                    Money = 0;
 
                     if (TT < 61)
                         Money = TT * 2;
 
-                    if ((TT < 121) && (TT > 60))
-                        Money = 120 + (TT - 60) * 1.5;
-                    else
-                        Money = 210 + (TT - 120);
+                    if ((TT <= 120) && (TT > 60))
+                        Money = 30 + (TT * 1.5);
+                    if (TT > 120)
+                        Money = 90 + TT;
 
                     if (Money < 90)
                         Money = 90;

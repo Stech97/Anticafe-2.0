@@ -98,7 +98,7 @@
             this.Table.Name = "Table";
             this.Table.ReadOnly = true;
             this.Table.RowHeadersWidth = 10;
-            this.Table.Size = new System.Drawing.Size(837, 634);
+            this.Table.Size = new System.Drawing.Size(903, 634);
             this.Table.TabIndex = 7;
             this.Table.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Table_CellDoubleClick);
             // 
@@ -115,6 +115,7 @@
             this.Tax.HeaderText = "Тип подсчёта";
             this.Tax.Name = "Tax";
             this.Tax.ReadOnly = true;
+            this.Tax.Width = 150;
             // 
             // Флаер
             // 
@@ -170,7 +171,7 @@
             // Tarif
             // 
             this.Tarif.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Tarif.Location = new System.Drawing.Point(907, 117);
+            this.Tarif.Location = new System.Drawing.Point(954, 117);
             this.Tarif.Margin = new System.Windows.Forms.Padding(4);
             this.Tarif.Name = "Tarif";
             this.Tarif.Size = new System.Drawing.Size(247, 117);
@@ -182,7 +183,7 @@
             // CHE
             // 
             this.CHE.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.CHE.Location = new System.Drawing.Point(907, 634);
+            this.CHE.Location = new System.Drawing.Point(954, 634);
             this.CHE.Margin = new System.Windows.Forms.Padding(4);
             this.CHE.Name = "CHE";
             this.CHE.Size = new System.Drawing.Size(247, 117);
@@ -194,7 +195,7 @@
             // SmenaEnd
             // 
             this.SmenaEnd.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.SmenaEnd.Location = new System.Drawing.Point(907, 505);
+            this.SmenaEnd.Location = new System.Drawing.Point(954, 505);
             this.SmenaEnd.Margin = new System.Windows.Forms.Padding(4);
             this.SmenaEnd.Name = "SmenaEnd";
             this.SmenaEnd.Size = new System.Drawing.Size(247, 117);
@@ -206,7 +207,7 @@
             // GuestOut
             // 
             this.GuestOut.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.GuestOut.Location = new System.Drawing.Point(907, 375);
+            this.GuestOut.Location = new System.Drawing.Point(954, 375);
             this.GuestOut.Margin = new System.Windows.Forms.Padding(4);
             this.GuestOut.Name = "GuestOut";
             this.GuestOut.Size = new System.Drawing.Size(247, 117);
@@ -218,7 +219,7 @@
             // NewGuest
             // 
             this.NewGuest.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.NewGuest.Location = new System.Drawing.Point(907, 246);
+            this.NewGuest.Location = new System.Drawing.Point(954, 246);
             this.NewGuest.Margin = new System.Windows.Forms.Padding(4);
             this.NewGuest.Name = "NewGuest";
             this.NewGuest.Size = new System.Drawing.Size(247, 117);
@@ -282,7 +283,7 @@
             this.AutoSize = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(1192, 766);
+            this.ClientSize = new System.Drawing.Size(1227, 766);
             this.Controls.Add(this.WhoWork);
             this.Controls.Add(this.Time);
             this.Controls.Add(this.Tarif);

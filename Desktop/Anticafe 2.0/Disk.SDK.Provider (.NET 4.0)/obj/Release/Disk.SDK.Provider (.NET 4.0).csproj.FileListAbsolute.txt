@@ -1,0 +1,6 @@
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK.Provider (.NET 4.0)\bin\Release\Disk.SDK.Provider.dll
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK.Provider (.NET 4.0)\bin\Release\Disk.SDK.Provider.pdb
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK.Provider (.NET 4.0)\bin\Release\Disk.SDK.dll
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK.Provider (.NET 4.0)\bin\Release\Disk.SDK.pdb
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK.Provider (.NET 4.0)\obj\Release\Disk.SDK.Provider.dll
+C:\Users\Max\Desktop\yandex-disk-sdk-csharp-master\SDK\Disk.SDK.Provider (.NET 4.0)\obj\Release\Disk.SDK.Provider.pdb

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Антикафе_2._0.Properties {
+namespace Anticafe_2._0.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

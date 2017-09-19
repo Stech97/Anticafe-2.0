@@ -1,6 +1,12 @@
-﻿using System;
-using System.Text;
+﻿using Disk.SDK;
+using Disk.SDK.Provider;
+using Disk.SDK.Utils;
+using System;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Anticafe_2._0
@@ -67,9 +73,10 @@ namespace Anticafe_2._0
             String Month;
             String Year = DateTime.Now.Year.ToString();
             Month = DateIsStr(DateTime.Now.Month);
-            path = "C:\\" + "Сметки\\" + Year + " год\\" + Month + "\\";
+            userName = Environment.UserName;
+            path = "C:\\Users\\" + userName + "\\YandexDisk\\" + "Сметки\\" + Year + " год\\" + Month + "\\";
             Directory.CreateDirectory(path);
-            path = "C:\\" + "Сметки\\" + Year + " год\\" + Month + "\\" + Day + ".xlsx";
+            path = path + Day + ".xlsx";
 
             //объявление excel файла
             Excel.Workbooks ExcelWBS;
@@ -147,6 +154,5 @@ namespace Anticafe_2._0
                 File.AppendAllText(filename, fullText, Encoding.GetEncoding("Windows-1251"));
             }
         }
-
     }
 }
