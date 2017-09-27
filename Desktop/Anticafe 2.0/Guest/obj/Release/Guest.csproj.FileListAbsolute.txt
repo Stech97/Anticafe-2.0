@@ -1,0 +1,14 @@
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Release\Guest.dll.config
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Release\Guest.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Release\Guest.pdb
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Release\BackEnd.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Release\System.Net.Http.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Release\BackEnd.pdb
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Release\System.Net.Http.xml
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\obj\Release\Guest.csprojResolveAssemblyReference.cache
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\obj\Release\Guest.guestOut.resources
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\obj\Release\Guest.newGuest.resources
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\obj\Release\Guest.Properties.Resources.resources
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\obj\Release\Guest.csproj.GenerateResource.Cache
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\obj\Release\Guest.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\obj\Release\Guest.pdb

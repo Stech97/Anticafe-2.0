@@ -85,17 +85,6 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Disk.SDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Disk.Sdk\bin\Release\Disk.SDK.dll</HintPath>
-    </Reference>
-    <Reference Include="Disk.SDK.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Disk.SDK.Provider (.NET 4.0)\bin\Release\Disk.SDK.Provider.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -108,91 +97,25 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator\Admin.cs" />
-    <Compile Include="Administrator\Admin.Func.cs" />
-    <Compile Include="Billing\Billing.cs" />
-    <Compile Include="Billing\Billing.Func.cs" />
-    <Compile Include="CommonInfo\anti.cs">
+    <Compile Include="Main\anti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CommonInfo\anti.Designer.cs">
+    <Compile Include="Main\anti.Designer.cs">
       <DependentUpon>anti.cs</DependentUpon>
     </Compile>
-    <Compile Include="Event\Event.cs" />
-    <Compile Include="Event\Events.Func.cs" />
-    <Compile Include="Info\clean.cs">
+    <Compile Include="Main\startWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Info\clean.Designer.cs">
-      <DependentUpon>clean.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Guest\guestOut.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Guest\guestOut.Designer.cs">
-      <DependentUpon>guestOut.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Guest\newGuest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Guest\newGuest.Designer.cs">
-      <DependentUpon>newGuest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CloseProject\smenaEnd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CloseProject\smenaEnd.Designer.cs">
-      <DependentUpon>smenaEnd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CommonInfo\startWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CommonInfo\startWindow.Designer.cs">
+    <Compile Include="Main\startWindow.Designer.cs">
       <DependentUpon>startWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Info\DelRow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Info\DelRow.Designer.cs">
-      <DependentUpon>DelRow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CloseProject\OutInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CloseProject\OutInfo.Designer.cs">
-      <DependentUpon>OutInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Service References\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Info\tax.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Info\tax.Designer.cs">
-      <DependentUpon>tax.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="CommonInfo\anti.resx">
+    <EmbeddedResource Include="Main\anti.resx">
       <DependentUpon>anti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Info\clean.resx">
-      <DependentUpon>clean.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Guest\guestOut.resx">
-      <DependentUpon>guestOut.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Guest\newGuest.resx">
-      <DependentUpon>newGuest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CloseProject\smenaEnd.resx">
-      <DependentUpon>smenaEnd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommonInfo\startWindow.resx">
+    <EmbeddedResource Include="Main\startWindow.resx">
       <DependentUpon>startWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Info\DelRow.resx">
-      <DependentUpon>DelRow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CloseProject\OutInfo.resx">
-      <DependentUpon>OutInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,9 +127,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Info\tax.resx">
-      <DependentUpon>tax.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Service References\app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -219,7 +139,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Info\Clean++.xml" />
     <Content Include="ReadMe.txt" />
     <Content Include="Service References\_jpg.ico" />
   </ItemGroup>
@@ -248,7 +167,24 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BackEnd\BackEnd.csproj">
+      <Project>{b94ca921-108a-4699-88fa-67df0099b7a4}</Project>
+      <Name>BackEnd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CloseProject\CloseProject.csproj">
+      <Project>{750b57ff-e2eb-4c94-840e-bac5e3acfbb0}</Project>
+      <Name>CloseProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guest\Guest.csproj">
+      <Project>{597c96ad-c53c-4efb-b740-584ec013fac9}</Project>
+      <Name>Guest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Info\Info.csproj">
+      <Project>{24b711ed-2865-4b96-870e-9bab04ab8919}</Project>
+      <Name>Info</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

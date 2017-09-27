@@ -1,0 +1,11 @@
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\bin\Debug\BackEnd.dll.config
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\bin\Debug\BackEnd.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\bin\Debug\BackEnd.pdb
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\bin\Debug\System.Net.Http.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\bin\Debug\System.Net.Http.xml
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.csprojResolveAssemblyReference.cache
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.csproj.ResolveComReference.cache
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.Properties.Resources.resources
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.Cache
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.pdb
