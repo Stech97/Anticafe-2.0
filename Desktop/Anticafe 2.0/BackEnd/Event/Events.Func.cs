@@ -9,6 +9,7 @@ namespace BackEnd
             DateTime.TryParse(Start, out StartEvent);
         }
 
+        //подсчет денег на мероприятии(запуск нужной трификации)
         public static void CalcEvent()
         {
             switch (bill[IdRow].Tax)
@@ -38,6 +39,7 @@ namespace BackEnd
 
         }
 
+        //подсчет общего времени на мероприятии
         public static void totalTimeEvent()
         {
             if (bill[IdRow].LogOut.TimeOfDay.TotalMinutes < 1321)

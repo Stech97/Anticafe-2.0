@@ -102,6 +102,7 @@
             this.Task6.Name = "Task6";
             this.Task6.Size = new System.Drawing.Size(18, 17);
             this.Task6.TabIndex = 16;
+            this.Task6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Task6.UseVisualStyleBackColor = true;
             // 
             // Task7
@@ -111,6 +112,7 @@
             this.Task7.Name = "Task7";
             this.Task7.Size = new System.Drawing.Size(18, 17);
             this.Task7.TabIndex = 17;
+            this.Task7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Task7.UseVisualStyleBackColor = true;
             // 
             // Task8
@@ -120,6 +122,7 @@
             this.Task8.Name = "Task8";
             this.Task8.Size = new System.Drawing.Size(18, 17);
             this.Task8.TabIndex = 18;
+            this.Task8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Task8.UseVisualStyleBackColor = true;
             // 
             // clean
@@ -127,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(1157, 838);
+            this.ClientSize = new System.Drawing.Size(1157, 853);
             this.Controls.Add(this.Task8);
             this.Controls.Add(this.Task7);
             this.Controls.Add(this.Task6);

@@ -30,6 +30,7 @@ namespace BackEnd
             }
         }
 
+        //перевод времени в деньги(запуск разных тарифов в зависимости от времени ухода) 
         public Int32 TimeIsMoney()
         {
             if (LogIn.DayOfYear == LogIn.DayOfYear)
@@ -60,6 +61,7 @@ namespace BackEnd
             return Money;
         }
 
+        //суммарное время, которое гость провел в Антикафе
         protected void  totalTime()
         {
             if (LogIn.DayOfYear == LogIn.DayOfYear)
@@ -70,6 +72,7 @@ namespace BackEnd
                             + LogOut.TimeOfDay.TotalMinutes);
         }
 
+        //суммарное время, которое гость провел в Антикафе на мероприятии
         public Int32 totalTime(DateTime Event)
         {
             if (LogIn.DayOfYear == LogIn.DayOfYear)
@@ -81,6 +84,7 @@ namespace BackEnd
 
         }
 
+        //тарифы, если гость ушел до 22:00
         private double Tariff() 
         {
             Double Money;
@@ -146,7 +150,7 @@ namespace BackEnd
                 }
             return Money;
         }
-
+        //Тарифы, если гость пришел до 22:00 и ушел после 22:00
         private double Tariff(int TO)
         {
             Double Money;

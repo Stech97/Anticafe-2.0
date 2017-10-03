@@ -26,7 +26,7 @@ namespace Anticafe_2._0
             Admin.admin.Add(new Admin());
             TimeStart.Text = DateTime.Now.ToShortTimeString();
             work.Enabled = false;
-
+            Mer.Text = "Нет";
             CheckMer();
         }
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace BackEnd
@@ -15,6 +14,7 @@ namespace BackEnd
             SumLogIn = sumIn;
         }
 
+        //подсчет денег за смену(z-отчёт)
         public Int32 CalcTotalSum()
         {
             for (int i = 0; i < bill.Count; i++)
@@ -22,12 +22,14 @@ namespace BackEnd
             return TotalSum;
         }
 
+        //подсчет итога
         public Int32 CalcItog()
         {
             Itog = SumLogIn + TotalSum + SumInPrazdnik - Rashod;
             return Itog;
         }
 
+        //преобразование месяца из цифр в символьное представление
         private String DateIsStr(int Mount)
         {
             switch (Mount)
@@ -60,22 +62,25 @@ namespace BackEnd
 
         }
 
-        public void SaveInExcel()
+        //создание файл
+        private void CreatFile()
         {
-            //создание файла
-            string path;
             String Month;
             String Year = DateTime.Now.Year.ToString();
             Month = DateIsStr(DateTime.Now.Month);
             userName = Environment.UserName;
-            path = "C:\\Users\\" + userName + "\\YandexDisk\\" + "Сметки\\" + Year + " год\\" + Month + "\\";
-            Directory.CreateDirectory(path);
-            path = path + Day + ".xlsx";
+            pathDisk = "C:\\Users\\" + userName + "\\YandexDisk\\" + "Сметки\\"
+                + Year + " год\\" + Month + "\\";
+            pathMashine = "C:\\Сметки\\" + Year + " год\\" + Month + "\\";
+            Directory.CreateDirectory(pathDisk);
+            Directory.CreateDirectory(pathMashine);
+            pathDisk = pathDisk + Day + ".xlsx";
+            pathMashine = pathMashine + Day + ".xlsx";
+        }
 
-            //объявление excel файла
-            Excel.Workbooks ExcelWBS;
-            Excel.Workbook ExcelAppWB;
-            Excel.Application ExcelApp = new Excel.Application();
+        //объявление excel файла
+        private void CreatExcel()
+        {
             ExcelApp.SheetsInNewWorkbook = 1;
             ExcelApp.Workbooks.Add(Type.Missing);
             ExcelApp.Columns.ColumnWidth = 20;
@@ -83,8 +88,11 @@ namespace BackEnd
             ExcelAppWB = ExcelWBS[1];
             ExcelApp.Visible = false;
             ExcelApp.DisplayAlerts = false;
+        }
 
-            //заполнение таблицы
+        //заполнение таблицы
+        private void FillExcel()
+        {
             ExcelApp.Cells[1, 1] = "На смене был:";
             ExcelApp.Cells[1, 2] = NameAdmin;
             ExcelApp.Cells[1, 4] = "Время начала смены:";
@@ -125,28 +133,21 @@ namespace BackEnd
                 ExcelApp.Cells[bill.Count + 10, 1] = "Количество людей на мероприятии:";
                 ExcelApp.Cells[bill.Count + 10, 2] = Event.EventValue;
             }
+        }
 
-            // сохранение и закрытие excel-file
-            try
-            {
-                ExcelAppWB.SaveAs(path,
-                    Excel.XlFileFormat.xlOpenXMLWorkbook,
-                    "", " ");
-                ExcelApp.Quit();
-            }
-            catch (Exception ex)
-            {
-                ExcelAppWB.Close(true, @path + Day + ".xlsx");
-                ExcelApp.Quit();
-                string pathToLog = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log");
-                if (!Directory.Exists(pathToLog))
-                    Directory.CreateDirectory(pathToLog); // Создаем директорию, если нужно
-                string filename = Path.Combine(pathToLog, string.Format("{0}_{1:dd.MM.yyy}.log",
-                AppDomain.CurrentDomain.FriendlyName, DateTime.Now));
-                string fullText = string.Format("[{0:dd.MM.yyy HH:mm:ss.fff}] [{1}.{2}()] {3}\r\n",
-                DateTime.Now, ex.TargetSite.DeclaringType, ex.TargetSite.Name, ex.Message);
-                File.AppendAllText(filename, fullText, Encoding.GetEncoding("Windows-1251"));
-            }
+        public void SaveInExcel()
+        {
+            CreatFile();
+            CreatExcel();
+            FillExcel();
+
+            //сохранение на диск
+            ExcelAppWB.SaveAs(pathDisk, Excel.XlFileFormat.xlOpenXMLWorkbook, "", " ");
+            ExcelApp.Quit();
+
+            //сохранение на компьютере
+            ExcelAppWB.SaveAs(pathMashine, Excel.XlFileFormat.xlOpenXMLWorkbook, "", " ");
+            ExcelApp.Quit();
         }
     }
 }
