@@ -21,15 +21,15 @@ namespace Anticafe_2._0
             TimeOnForm.Tick += new EventHandler(TimeOnForm_Tick);
             TimeOnForm.Enabled = true;
             TimeOnForm.Start();
-
-            WhoWork.Text = Admin.admin[0].NameAdmin;
+            Time.Text = DateTime.Now.ToShortTimeString();
+            WhoWork.Text = Admin.admin.NameAdmin;
 
             GuestOut.Enabled = false;
         }
 
         private void TimeOnForm_Tick(object sender, EventArgs e)
         {
-            Time.Value = DateTime.Now;
+            Time.Text = DateTime.Now.ToShortTimeString();
         }
 
         private void Tarif_Click(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace Anticafe_2._0
 
         private void anti_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Admin.admin[0].SaveInExcel();
+            Admin.admin.SaveInExcel();
         }
 
         private void trey_MouseDoubleClick(object sender, MouseEventArgs e)

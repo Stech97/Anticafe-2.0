@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anticafe 2.0", "Anticafe 2.0\Anticafe 2.0.csproj", "{3CBC5AE1-1BEC-4D84-A641-1316E75E0F32}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9B29194A-F491-4856-98A5-1B3548A643B7} = {9B29194A-F491-4856-98A5-1B3548A643B7}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guest", "Guest\Guest.csproj", "{597C96AD-C53C-4EFB-B740-584EC013FAC9}"
 EndProject
@@ -350,8 +353,8 @@ Global
 		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|Any CPU.Build.0 = DVD-5
 		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|ARM.ActiveCfg = DVD-5
 		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|ARM.Build.0 = DVD-5
-		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|Mixed Platforms.ActiveCfg = DVD-5
-		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|Mixed Platforms.Build.0 = DVD-5
+		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|Mixed Platforms.ActiveCfg = SingleImage
+		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|Mixed Platforms.Build.0 = SingleImage
 		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|Win32.ActiveCfg = DVD-5
 		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|Win32.Build.0 = DVD-5
 		{9B29194A-F491-4856-98A5-1B3548A643B7}.Debug|x64.ActiveCfg = DVD-5

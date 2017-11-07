@@ -6,7 +6,7 @@ namespace BackEnd
 {
     public partial class Admin
     {
-        public static List<Admin> admin = new List<Admin>();
+        public static Admin admin = new Admin();
 
         //информация о смене
         public String NameAdmin;

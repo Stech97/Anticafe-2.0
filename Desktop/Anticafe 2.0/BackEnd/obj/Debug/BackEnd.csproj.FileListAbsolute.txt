@@ -8,3 +8,4 @@ C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debu
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.Cache
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.pdb
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\BackEnd\obj\Debug\BackEnd.csprojResolveAssemblyReference.cache

@@ -14,29 +14,29 @@ namespace CloseProject
 
         private void smenaEnd_Load(object sender, EventArgs e)
         {
-            ND.Text = Admin.admin[0].SumLogIn.ToString();
+            ND.Text = Admin.admin.SumLogIn.ToString();
             SumPrazdnik.Text = "0";
             Rashod.Text = "0";
 
-            Z.Text = Admin.admin[0].CalcTotalSum().ToString();
+            Z.Text = Admin.admin.CalcTotalSum().ToString();
 
-            Itog.Text = Admin.admin[0].CalcItog().ToString();
+            Itog.Text = Admin.admin.CalcItog().ToString();
         }
 
         private void Rashod_TextChanged(object sender, EventArgs e)
         {
            if (Regex.IsMatch(Rashod.Text, "[0-9]"))
-                Admin.admin[0].Rashod = Convert.ToInt32(Rashod.Text);
+                Admin.admin.Rashod = Convert.ToInt32(Rashod.Text);
 
-            Itog.Text = Admin.admin[0].CalcItog().ToString();
+            Itog.Text = Admin.admin.CalcItog().ToString();
         }
 
         private void SumPrazdnik_TextChanged(object sender, EventArgs e)
         {
             if (Regex.IsMatch(SumPrazdnik.Text, "[0-9]"))
-                Admin.admin[0].SumInPrazdnik = Convert.ToInt32(SumPrazdnik.Text);
+                Admin.admin.SumInPrazdnik = Convert.ToInt32(SumPrazdnik.Text);
 
-            Itog.Text = Admin.admin[0].CalcItog().ToString();
+            Itog.Text = Admin.admin.CalcItog().ToString();
         }
 
         private void EndSmena_Click(object sender, EventArgs e)

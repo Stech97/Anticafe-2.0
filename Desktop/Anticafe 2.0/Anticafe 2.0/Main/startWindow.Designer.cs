@@ -60,7 +60,7 @@
             this.work.Margin = new System.Windows.Forms.Padding(4);
             this.work.Name = "work";
             this.work.Size = new System.Drawing.Size(401, 85);
-            this.work.TabIndex = 5;
+            this.work.TabIndex = 4;
             this.work.Text = "Начать смену!";
             this.work.UseVisualStyleBackColor = true;
             this.work.Click += new System.EventHandler(this.work_Click);
@@ -82,7 +82,7 @@
             this.Smena.Margin = new System.Windows.Forms.Padding(4);
             this.Smena.Name = "Smena";
             this.Smena.Size = new System.Drawing.Size(377, 61);
-            this.Smena.TabIndex = 6;
+            this.Smena.TabIndex = 2;
             this.Smena.TextChanged += new System.EventHandler(this.smena_TextChanged);
             // 
             // MerStartLabel
@@ -172,7 +172,7 @@
             this.Mer.Margin = new System.Windows.Forms.Padding(4);
             this.Mer.Name = "Mer";
             this.Mer.Size = new System.Drawing.Size(278, 60);
-            this.Mer.TabIndex = 15;
+            this.Mer.TabIndex = 3;
             this.Mer.SelectedIndexChanged += new System.EventHandler(this.Mer_SelectedIndexChanged);
             // 
             // label2

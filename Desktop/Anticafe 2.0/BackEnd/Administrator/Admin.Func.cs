@@ -143,11 +143,20 @@ namespace BackEnd
 
             //сохранение на диск
             ExcelAppWB.SaveAs(pathDisk, Excel.XlFileFormat.xlOpenXMLWorkbook, "", " ");
-            ExcelApp.Quit();
 
             //сохранение на компьютере
-            ExcelAppWB.SaveAs(pathMashine, Excel.XlFileFormat.xlOpenXMLWorkbook, "", " ");
-            ExcelApp.Quit();
+            try
+            {
+                ExcelAppWB.SaveAs(pathMashine,
+                    Excel.XlFileFormat.xlOpenXMLWorkbook,
+                    "", " ");
+                ExcelApp.Quit();
+            }
+            catch (Exception)
+            {
+                ExcelAppWB.Close(true, @pathMashine);
+                ExcelApp.Quit();
+            }
         }
     }
 }

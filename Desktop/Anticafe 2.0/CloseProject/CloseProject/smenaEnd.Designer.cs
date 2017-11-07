@@ -169,7 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(779, 475);
+            this.ClientSize = new System.Drawing.Size(806, 475);
             this.Controls.Add(this.SumPrazdnik);
             this.Controls.Add(this.LSumPrazdnik);
             this.Controls.Add(this.EndSmena);

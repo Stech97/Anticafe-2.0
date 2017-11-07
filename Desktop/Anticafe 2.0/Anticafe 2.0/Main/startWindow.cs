@@ -23,7 +23,6 @@ namespace Anticafe_2._0
 
         private void Start_Load(object sender, EventArgs e)
         {
-            Admin.admin.Add(new Admin());
             TimeStart.Text = DateTime.Now.ToShortTimeString();
             work.Enabled = false;
             Mer.Text = "Нет";
@@ -101,7 +100,7 @@ namespace Anticafe_2._0
                 Event.SetStartEvent(EventStart);
             }
 
-            Admin.admin[0].SetStartPage(
+            Admin.admin.SetStartPage(
                 Smena.Text, DateTime.Now.Day.ToString(), TimeStart.Text, Convert.ToInt32(ND.Text));
 
             form.Show();
