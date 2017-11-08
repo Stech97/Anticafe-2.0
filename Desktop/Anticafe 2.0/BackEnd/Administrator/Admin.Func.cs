@@ -69,11 +69,14 @@ namespace BackEnd
             String Year = DateTime.Now.Year.ToString();
             Month = DateIsStr(DateTime.Now.Month);
             userName = Environment.UserName;
+
             pathDisk = "C:\\Users\\" + userName + "\\YandexDisk\\" + "Сметки\\"
                 + Year + " год\\" + Month + "\\";
             pathMashine = "C:\\Сметки\\" + Year + " год\\" + Month + "\\";
+
             Directory.CreateDirectory(pathDisk);
             Directory.CreateDirectory(pathMashine);
+
             pathDisk = pathDisk + Day + ".xlsx";
             pathMashine = pathMashine + Day + ".xlsx";
         }
@@ -142,14 +145,14 @@ namespace BackEnd
             FillExcel();
 
             //сохранение на диск
-            ExcelAppWB.SaveAs(pathDisk, Excel.XlFileFormat.xlOpenXMLWorkbook, "", " ");
+            ExcelAppWB.SaveAs(pathDisk, Excel.XlFileFormat.xlOpenXMLWorkbook, "", "Timesuffers01022017");
 
             //сохранение на компьютере
             try
             {
                 ExcelAppWB.SaveAs(pathMashine,
                     Excel.XlFileFormat.xlOpenXMLWorkbook,
-                    "", " ");
+                    "", "Timesuffers01022017");
                 ExcelApp.Quit();
             }
             catch (Exception)
@@ -157,6 +160,23 @@ namespace BackEnd
                 ExcelAppWB.Close(true, @pathMashine);
                 ExcelApp.Quit();
             }
+
+            Directory.Delete(pathBackUp);
+        }
+
+        public void SaveBackUp()
+        {
+            String Month;
+            String Year = DateTime.Now.Year.ToString();
+            Month = DateIsStr(DateTime.Now.Month);
+            pathBackUp = "C:\\Сметки\\BackUp\\";
+
+            Directory.CreateDirectory(pathBackUp);
+            CreatExcel();
+            FillExcel();
+
+            ExcelAppWB.SaveAs(pathBackUp + Year + "_" + Month + "_" + Day + ".temp", Excel.XlFileFormat.xlOpenXMLWorkbook, "", "");
+            ExcelApp.Quit();
         }
     }
 }

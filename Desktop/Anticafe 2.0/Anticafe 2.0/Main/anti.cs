@@ -59,16 +59,8 @@ namespace Anticafe_2._0
                 Billing.LogInValue++;
             }
 
-            if (Billing.LogInValue > Billing.LogOutValue)
-            {
-                GuestOut.Enabled = true;
-                SmenaEnd.Enabled = false;
-            }
-            else
-            {
-                GuestOut.Enabled = false;
-                SmenaEnd.Enabled = true;
-            }
+            CheckGuest();
+            Admin.admin.SaveBackUp();
 
         }
 
@@ -97,9 +89,8 @@ namespace Anticafe_2._0
                 Table.Rows[Billing.IdRow].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
             }
 
-                if (Billing.LogInValue == Billing.LogOutValue)
-                    SmenaEnd.Enabled = true;
-            
+            CheckGuest();               
+            Admin.admin.SaveBackUp();
         }
 
         private void SmenaEnd_Click(object sender, EventArgs e)
@@ -155,6 +146,25 @@ namespace Anticafe_2._0
                 Table.Rows.RemoveAt(Billing.IdRow);
                 Billing.LogInValue--;
             }
+
+            CheckGuest();
+        }
+
+        private void CheckGuest()
+        {
+            if (Billing.LogInValue > Billing.LogOutValue)
+            {
+                GuestOut.Enabled = true;
+                SmenaEnd.Enabled = false;
+            }
+            else
+            {
+                GuestOut.Enabled = false;
+                SmenaEnd.Enabled = true;
+            }
+
+            if (Billing.LogInValue == Billing.LogOutValue)
+                SmenaEnd.Enabled = true;
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Info
 
         private Boolean Password(String pass)
         {
-            if (pass == " ")
+            if (pass == "Timesuffers01022017")
                 return true;
             return false;
         }

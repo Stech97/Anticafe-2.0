@@ -14,7 +14,6 @@ namespace Guest
 
         private void guestOut_Load(object sender, EventArgs e)
         {
-
             if (!Billing.bill[Billing.IdRow].CheckOut)
             {
                 Billing.bill[Billing.IdRow].SetLogOut(DateTime.Now);

@@ -35,7 +35,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 41;
+            this.listBox1.ItemHeight = 52;
             this.listBox1.Items.AddRange(new object[] {
             "Обычный:",
             "2 рубля/минута.",
@@ -54,15 +54,15 @@
             this.listBox1.Location = new System.Drawing.Point(0, 0);
             this.listBox1.Margin = new System.Windows.Forms.Padding(0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(915, 619);
+            this.listBox1.Size = new System.Drawing.Size(1119, 732);
             this.listBox1.TabIndex = 1;
             // 
             // tax
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 41F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(25F, 52F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(894, 586);
+            this.ClientSize = new System.Drawing.Size(906, 597);
             this.Controls.Add(this.listBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

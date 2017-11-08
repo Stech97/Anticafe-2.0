@@ -68,7 +68,7 @@
             this.Sum.AutoSize = true;
             this.Sum.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Sum.ForeColor = System.Drawing.Color.Red;
-            this.Sum.Location = new System.Drawing.Point(150, 250);
+            this.Sum.Location = new System.Drawing.Point(229, 249);
             this.Sum.Name = "Sum";
             this.Sum.Size = new System.Drawing.Size(0, 46);
             this.Sum.TabIndex = 40;
@@ -99,9 +99,9 @@
             "Обычный",
             "Студенческий",
             "Детский"});
-            this.tax.Location = new System.Drawing.Point(150, 60);
+            this.tax.Location = new System.Drawing.Point(178, 58);
             this.tax.Name = "tax";
-            this.tax.Size = new System.Drawing.Size(221, 54);
+            this.tax.Size = new System.Drawing.Size(241, 54);
             this.tax.TabIndex = 34;
             this.tax.SelectedIndexChanged += new System.EventHandler(this.tax_SelectedIndexChanged);
             // 
@@ -169,7 +169,7 @@
             // 
             this.Minus.AutoSize = true;
             this.Minus.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Minus.Location = new System.Drawing.Point(125, 350);
+            this.Minus.Location = new System.Drawing.Point(143, 350);
             this.Minus.Name = "Minus";
             this.Minus.Size = new System.Drawing.Size(33, 46);
             this.Minus.TabIndex = 50;
@@ -199,7 +199,7 @@
             // 
             this.Lsum.AutoSize = true;
             this.Lsum.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Lsum.Location = new System.Drawing.Point(25, 250);
+            this.Lsum.Location = new System.Drawing.Point(25, 249);
             this.Lsum.Name = "Lsum";
             this.Lsum.Size = new System.Drawing.Size(151, 46);
             this.Lsum.TabIndex = 51;
@@ -209,7 +209,7 @@
             // 
             this.SumCalc.AutoSize = true;
             this.SumCalc.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.SumCalc.Location = new System.Drawing.Point(145, 350);
+            this.SumCalc.Location = new System.Drawing.Point(197, 350);
             this.SumCalc.Name = "SumCalc";
             this.SumCalc.Size = new System.Drawing.Size(0, 46);
             this.SumCalc.TabIndex = 52;
@@ -218,7 +218,7 @@
             // 
             this.Antiout.AutoSize = true;
             this.Antiout.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Antiout.Location = new System.Drawing.Point(235, 350);
+            this.Antiout.Location = new System.Drawing.Point(350, 341);
             this.Antiout.Name = "Antiout";
             this.Antiout.Size = new System.Drawing.Size(0, 46);
             this.Antiout.TabIndex = 54;
@@ -227,7 +227,7 @@
             // 
             this.ravno.AutoSize = true;
             this.ravno.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.ravno.Location = new System.Drawing.Point(205, 350);
+            this.ravno.Location = new System.Drawing.Point(247, 350);
             this.ravno.Name = "ravno";
             this.ravno.Size = new System.Drawing.Size(43, 46);
             this.ravno.TabIndex = 55;
@@ -238,7 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(434, 566);
+            this.ClientSize = new System.Drawing.Size(487, 566);
             this.Controls.Add(this.ravno);
             this.Controls.Add(this.Antiout);
             this.Controls.Add(this.SumCalc);

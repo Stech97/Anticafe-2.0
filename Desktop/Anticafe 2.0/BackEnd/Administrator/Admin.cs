@@ -25,6 +25,7 @@ namespace BackEnd
         private String userName;
         private string pathDisk;
         private string pathMashine;
+        private string pathBackUp;
 
         Excel.Workbooks ExcelWBS;
         Excel.Workbook ExcelAppWB;
