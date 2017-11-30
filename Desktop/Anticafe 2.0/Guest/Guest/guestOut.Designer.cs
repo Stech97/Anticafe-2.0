@@ -77,7 +77,7 @@
             // 
             this.TimeOutput.AutoSize = true;
             this.TimeOutput.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TimeOutput.Location = new System.Drawing.Point(230, 160);
+            this.TimeOutput.Location = new System.Drawing.Point(290, 161);
             this.TimeOutput.Name = "TimeOutput";
             this.TimeOutput.Size = new System.Drawing.Size(0, 46);
             this.TimeOutput.TabIndex = 39;
@@ -86,7 +86,7 @@
             // 
             this.TimeInput.AutoSize = true;
             this.TimeInput.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TimeInput.Location = new System.Drawing.Point(265, 115);
+            this.TimeInput.Location = new System.Drawing.Point(339, 115);
             this.TimeInput.Name = "TimeInput";
             this.TimeInput.Size = new System.Drawing.Size(0, 46);
             this.TimeInput.TabIndex = 38;
@@ -179,7 +179,7 @@
             // 
             this.LTimeInput.AutoSize = true;
             this.LTimeInput.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LTimeInput.Location = new System.Drawing.Point(25, 115);
+            this.LTimeInput.Location = new System.Drawing.Point(24, 115);
             this.LTimeInput.Name = "LTimeInput";
             this.LTimeInput.Size = new System.Drawing.Size(307, 46);
             this.LTimeInput.TabIndex = 47;
@@ -189,7 +189,7 @@
             // 
             this.LTimeOutput.AutoSize = true;
             this.LTimeOutput.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LTimeOutput.Location = new System.Drawing.Point(25, 160);
+            this.LTimeOutput.Location = new System.Drawing.Point(25, 161);
             this.LTimeOutput.Name = "LTimeOutput";
             this.LTimeOutput.Size = new System.Drawing.Size(250, 46);
             this.LTimeOutput.TabIndex = 46;

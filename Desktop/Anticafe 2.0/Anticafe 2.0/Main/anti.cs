@@ -60,7 +60,7 @@ namespace Anticafe_2._0
             }
 
             CheckGuest();
-            Admin.admin.SaveBackUp();
+            Admin.admin.BackUp = Admin.admin.SaveBackUp();
 
         }
 
@@ -89,8 +89,8 @@ namespace Anticafe_2._0
                 Table.Rows[Billing.IdRow].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
             }
 
-            CheckGuest();               
-            Admin.admin.SaveBackUp();
+            CheckGuest();
+            Admin.admin.BackUp = Admin.admin.SaveBackUp();
         }
 
         private void SmenaEnd_Click(object sender, EventArgs e)

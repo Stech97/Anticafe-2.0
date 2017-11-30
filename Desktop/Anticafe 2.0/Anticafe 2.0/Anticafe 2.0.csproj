@@ -128,6 +128,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Anticafe 2.0_TemporaryKey.pfx" />
+    <None Include="app.config" />
     <None Include="Service References\app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

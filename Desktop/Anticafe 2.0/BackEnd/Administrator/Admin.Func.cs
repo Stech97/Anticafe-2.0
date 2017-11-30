@@ -62,8 +62,8 @@ namespace BackEnd
 
         }
 
-        //создание файл
-        private void CreatFile()
+        //создание файл для диска
+        private void CreatFileDisk()
         {
             String Month;
             String Year = DateTime.Now.Year.ToString();
@@ -72,18 +72,29 @@ namespace BackEnd
 
             pathDisk = "C:\\Users\\" + userName + "\\YandexDisk\\" + "Сметки\\"
                 + Year + " год\\" + Month + "\\";
-            pathMashine = "C:\\Сметки\\" + Year + " год\\" + Month + "\\";
 
             Directory.CreateDirectory(pathDisk);
-            Directory.CreateDirectory(pathMashine);
 
             pathDisk = pathDisk + Day + ".xlsx";
+        }
+
+        //создания файла для машины
+        private void CreatFileMashine()
+        {
+            String Month;
+            String Year = DateTime.Now.Year.ToString();
+            Month = DateIsStr(DateTime.Now.Month);
+
+            pathMashine = "C:\\Сметки\\" + Year + " год\\" + Month + "\\";
+            Directory.CreateDirectory(pathMashine);
+
             pathMashine = pathMashine + Day + ".xlsx";
         }
 
-        //объявление excel файла
-        private void CreatExcel()
+        //работа Excel(создание и заполнение)
+        private void WorkExcel()
         {
+            //создание Excel
             ExcelApp.SheetsInNewWorkbook = 1;
             ExcelApp.Workbooks.Add(Type.Missing);
             ExcelApp.Columns.ColumnWidth = 20;
@@ -91,11 +102,8 @@ namespace BackEnd
             ExcelAppWB = ExcelWBS[1];
             ExcelApp.Visible = false;
             ExcelApp.DisplayAlerts = false;
-        }
 
-        //заполнение таблицы
-        private void FillExcel()
-        {
+            //заполнение Excel
             ExcelApp.Cells[1, 1] = "На смене был:";
             ExcelApp.Cells[1, 2] = NameAdmin;
             ExcelApp.Cells[1, 4] = "Время начала смены:";
@@ -138,33 +146,50 @@ namespace BackEnd
             }
         }
 
+        //сохранение в Excel(в диск, машина и удаление BackUp)
         public void SaveInExcel()
         {
-            CreatFile();
-            CreatExcel();
-            FillExcel();
-
             //сохранение на диск
-            ExcelAppWB.SaveAs(pathDisk, Excel.XlFileFormat.xlOpenXMLWorkbook, "", "Timesuffers01022017");
+            try
+            {
+                CreatFileDisk();
+                WorkExcel();
+                ExcelAppWB.SaveAs(pathDisk, Excel.XlFileFormat.xlOpenXMLWorkbook, "", "Timesuffers01022017", true, true);
+                ExcelApp.Quit();
+            }
+            catch
+            {
+                ExcelAppWB.Close(true, pathDisk);
+                ExcelApp.Quit();
+            }
 
             //сохранение на компьютере
             try
             {
-                ExcelAppWB.SaveAs(pathMashine,
-                    Excel.XlFileFormat.xlOpenXMLWorkbook,
-                    "", "Timesuffers01022017");
-                ExcelApp.Quit();
+                CreatFileMashine();
+                WorkExcel();
+                ExcelAppWB.SaveAs(pathMashine, Excel.XlFileFormat.xlOpenXMLWorkbook, "", "Timesuffers01022017", true, true);
             }
-            catch (Exception)
+            catch
             {
-                ExcelAppWB.Close(true, @pathMashine);
+                ExcelAppWB.Close(true, pathMashine);
                 ExcelApp.Quit();
+                if (BackUp)
+                {
+                    DirectoryInfo di = new DirectoryInfo(pathBackUp);
+                    FileInfo[] fi = di.GetFiles();
+                    //В цикле пробегаемся по всем файлам директории di и удаляем их
+                    foreach (FileInfo f in fi)
+                    {
+                        f.Delete();
+                    }
+                    Directory.Delete(pathBackUp);
+                }
             }
-
-            Directory.Delete(pathBackUp);
         }
 
-        public void SaveBackUp()
+        //создание BackUp после действия с гостем
+        public Boolean SaveBackUp()
         {
             String Month;
             String Year = DateTime.Now.Year.ToString();
@@ -172,11 +197,12 @@ namespace BackEnd
             pathBackUp = "C:\\Сметки\\BackUp\\";
 
             Directory.CreateDirectory(pathBackUp);
-            CreatExcel();
-            FillExcel();
+            WorkExcel();
 
             ExcelAppWB.SaveAs(pathBackUp + Year + "_" + Month + "_" + Day + ".temp", Excel.XlFileFormat.xlOpenXMLWorkbook, "", "");
             ExcelApp.Quit();
+
+            return true;            
         }
     }
 }
