@@ -18,7 +18,10 @@ namespace BackEnd
         public Int32 CalcTotalSum()
         {
             for (int i = 0; i < bill.Count; i++)
-                TotalSum += bill[i].Money;
+                if(bill[i].Card)
+                    ItogCard += bill[i].Money;
+                else
+                    TotalSum += bill[i].Money;
             return TotalSum;
         }
 
@@ -132,17 +135,25 @@ namespace BackEnd
             ExcelApp.Cells[bill.Count + 5, 2] = SumLogIn;
             ExcelApp.Cells[bill.Count + 6, 1] = "Z-отчёт:";
             ExcelApp.Cells[bill.Count + 6, 2] = TotalSum;
-            ExcelApp.Cells[bill.Count + 7, 1] = "Предоплата по ДР";
+            ExcelApp.Cells[bill.Count + 7, 1] = "Предоплата по ДР:";
             ExcelApp.Cells[bill.Count + 7, 2] = SumInPrazdnik;
             ExcelApp.Cells[bill.Count + 8, 1] = "Расход:";
             ExcelApp.Cells[bill.Count + 8, 2] = Rashod;
             ExcelApp.Cells[bill.Count + 9, 1] = "Итог:";
             ExcelApp.Cells[bill.Count + 9, 2] = Itog;
+            ExcelApp.Cells[bill.Count + 10, 1] = "Итог за день по карте:";
+            ExcelApp.Cells[bill.Count + 10, 2] = ItogCard;
 
             if (Event.EventCheck)
             {
                 ExcelApp.Cells[bill.Count + 10, 1] = "Количество людей на мероприятии:";
                 ExcelApp.Cells[bill.Count + 10, 2] = Event.EventValue;
+            }
+
+            if (Event.MafiaCheck)
+            {
+                ExcelApp.Cells[bill.Count + 10, 1] = "Количество людей на мафии:";
+                ExcelApp.Cells[bill.Count + 10, 2] = Event.MafiaValue;
             }
         }
 
@@ -170,21 +181,21 @@ namespace BackEnd
                 WorkExcel();
                 ExcelAppWB.SaveAs(pathMashine, Excel.XlFileFormat.xlOpenXMLWorkbook, "", "Timesuffers01022017", true, true);
             }
+
             catch
             {
                 ExcelAppWB.Close(true, pathMashine);
                 ExcelApp.Quit();
-                if (BackUp)
-                {
-                    DirectoryInfo di = new DirectoryInfo(pathBackUp);
-                    FileInfo[] fi = di.GetFiles();
-                    //В цикле пробегаемся по всем файлам директории di и удаляем их
-                    foreach (FileInfo f in fi)
-                    {
-                        f.Delete();
-                    }
-                    Directory.Delete(pathBackUp);
-                }
+            }
+
+            finally
+            {
+                DirectoryInfo di = new DirectoryInfo(pathBackUp);
+                FileInfo[] fi = di.GetFiles();
+                //В цикле пробегаемся по всем файлам директории di и удаляем их
+                foreach (FileInfo f in fi)
+                    f.Delete();
+                Directory.Delete(pathBackUp);
             }
         }
 

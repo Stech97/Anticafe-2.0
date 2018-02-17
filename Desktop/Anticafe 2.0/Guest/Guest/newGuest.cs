@@ -23,6 +23,12 @@ namespace Guest
                 tax.Items.Add("Меропр,студудент.");
                 tax.Items.Add("Меропр,обычный.");
             }
+
+            if (Event.MafiaCheck)
+            {
+                tax.Items.Add("Мафия,обычный");
+                tax.Items.Add("Мафия,студудент");
+            }
         }
 
         private void Name_TextChanged(object sender, EventArgs e)
@@ -53,9 +59,14 @@ namespace Guest
                 Billing.bill.Add(new Billing());
                 Billing.bill[Billing.LogInValue].SetLogIn(FirstName.Text, tax.Text,
                     Flayer.Checked, DateTime.Now);
+
                 if ((Billing.bill[Billing.LogInValue].Tax == "Меропр,студудент.")
                     || (Billing.bill[Billing.LogInValue].Tax == "Меропр,обычный."))
                         Event.EventValue++;
+
+                if ((Billing.bill[Billing.LogInValue].Tax == "Мафия,обычный")
+                    || (Billing.bill[Billing.LogInValue].Tax == "Мафия,студудент"))
+                    Event.MafiaValue++;
             }
         }
 

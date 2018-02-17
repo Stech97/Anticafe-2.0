@@ -167,6 +167,7 @@
             this.Mer.FormattingEnabled = true;
             this.Mer.Items.AddRange(new object[] {
             "Есть",
+            "Мафия",
             "Нет"});
             this.Mer.Location = new System.Drawing.Point(380, 245);
             this.Mer.Margin = new System.Windows.Forms.Padding(4);

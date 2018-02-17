@@ -18,7 +18,8 @@ namespace BackEnd
         public Int32 SumInPrazdnik; //получено по предоплате за ДР
         public Int32 TotalSum; //сумма в сметке
         public Int32 Rashod; //расходы из textBox
-        public Int32 Itog; //общий итог после всех подсчетов  
+        public Int32 Itog; //общий итог после всех подсчетов 
+        public Int32 ItogCard; //сумма оплаченной по карте 
 
 
         //сохранение в Excel

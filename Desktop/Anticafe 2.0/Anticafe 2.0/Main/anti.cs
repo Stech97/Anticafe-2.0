@@ -25,6 +25,10 @@ namespace Anticafe_2._0
             WhoWork.Text = Admin.admin.NameAdmin;
 
             GuestOut.Enabled = false;
+
+            //чистота и уют не работает
+            ToolTip tool = new ToolTip();
+            tool.SetToolTip(CHE, "Я заболела, меня лечат. Надеюсь скоро поправлюсь");
         }
 
         private void TimeOnForm_Tick(object sender, EventArgs e)
@@ -56,6 +60,8 @@ namespace Anticafe_2._0
                 Table.Rows[Billing.LogInValue].Cells[3].Value =
                     Billing.bill[Billing.LogInValue].LogIn.ToShortTimeString();
 
+                Table.Rows[Billing.LogInValue].Cells[7].Value = false;
+
                 Billing.LogInValue++;
             }
 
@@ -84,6 +90,9 @@ namespace Anticafe_2._0
                 Table.Rows[Billing.IdRow].Cells[6].Value =
                     Billing.bill[Billing.IdRow].Money;
 
+                Table.Rows[Billing.IdRow].Cells[7].Value =
+                    Billing.bill[Billing.IdRow].Card;
+
                 Table.Rows[Billing.IdRow].ReadOnly = true;
 
                 Table.Rows[Billing.IdRow].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
@@ -100,11 +109,13 @@ namespace Anticafe_2._0
             form.ShowDialog();
         }
 
-        private void CHE_Click(object sender, EventArgs e)
+        /*private void CHE_Click(object sender, EventArgs e)
         {
-            clean form = new clean();
-            form.ShowDialog();
+             clean form = new clean();
+             form.Show();
         }
+        не забудь убрать коменнтарии в anti.Designer
+             */
 
         private void anti_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -166,5 +177,6 @@ namespace Anticafe_2._0
             if (Billing.LogInValue == Billing.LogOutValue)
                 SmenaEnd.Enabled = true;
         }
+
     }
 }

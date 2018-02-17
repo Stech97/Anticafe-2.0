@@ -6,11 +6,9 @@ C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Антикафе 2.0.exe
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Антикафе 2.0.pdb
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\BackEnd.dll
-C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\CloseProject.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Guest.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Info.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\BackEnd.pdb
-C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\CloseProject.pdb
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Guest.pdb
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Release\Info.pdb
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.csprojResolveAssemblyReference.cache
@@ -19,3 +17,4 @@ C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe_2._0.Properties.Resources.resources
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Anticafe 2.0.csproj.GenerateResource.Cache
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\Антикафе 2.0.application
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Release\CloseProject.smenaEnd.resources

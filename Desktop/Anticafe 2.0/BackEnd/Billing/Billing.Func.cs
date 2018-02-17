@@ -23,15 +23,24 @@ namespace BackEnd
                 Event.totalTimeEvent();
                 Event.CalcEvent();
             }
+            
             else
             {
                 totalTime();
                 TimeIsMoney();
             }
+
+            if ((bill[IdRow].Tax == "Мафия,обычный")
+                || (bill[IdRow].Tax == "Мафия,студудент"))
+            {
+                totalTime();
+                Event.totalTimeEvent();
+                Event.CalcMafia();
+            }
         }
 
         //перевод времени в деньги(запуск разных тарифов в зависимости от времени ухода) 
-        public Int32 TimeIsMoney()
+        private Int32 TimeIsMoney()
         {
             if (LogIn.DayOfYear == LogIn.DayOfYear)
             {
@@ -51,10 +60,10 @@ namespace BackEnd
             else
             {
                 if (LogIn.TimeOfDay.TotalMinutes < 1321)
-                    Money = (int)(Tariff(1320) + 240 + TotalTime * 2);
+                    Money = (int)(Tariff(1320) + 240 + (LogOut.TimeOfDay.TotalMinutes * 2));
 
                 if (LogIn.TimeOfDay.TotalMinutes > 1320)
-                    Money = (int) ((1440 - LogIn.TimeOfDay.TotalMinutes) * 2 + TotalTime * 2);
+                    Money = (int) ( ((1440 - LogIn.TimeOfDay.TotalMinutes) * 2) + (LogOut.TimeOfDay.TotalMinutes * 2) );
 
             }
 
@@ -62,7 +71,7 @@ namespace BackEnd
         }
 
         //суммарное время, которое гость провел в Антикафе
-        protected void  totalTime()
+        private void  totalTime()
         {
             if (LogIn.DayOfYear == LogIn.DayOfYear)
                 TotalTime = (Int32)LogOut.Subtract(LogIn).TotalMinutes;
@@ -150,6 +159,7 @@ namespace BackEnd
                 }
             return Money;
         }
+
         //Тарифы, если гость пришел до 22:00 и ушел после 22:00
         private double Tariff(int TO)
         {

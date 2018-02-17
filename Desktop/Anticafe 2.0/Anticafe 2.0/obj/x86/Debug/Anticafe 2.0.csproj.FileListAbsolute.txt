@@ -12,10 +12,9 @@ C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Антикафе 2.0.pdb
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\Anticafe 2.0.csprojResolveAssemblyReference.cache
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\BackEnd.dll
-C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\CloseProject.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\Guest.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\Info.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\BackEnd.pdb
-C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\CloseProject.pdb
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\Guest.pdb
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\bin\Debug\Info.pdb
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Anticafe 2.0\obj\x86\Debug\CloseProject.smenaEnd.resources

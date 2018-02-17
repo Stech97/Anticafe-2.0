@@ -47,6 +47,7 @@
             this.SumCalc = new System.Windows.Forms.Label();
             this.Antiout = new System.Windows.Forms.Label();
             this.ravno = new System.Windows.Forms.Label();
+            this.Card = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // flayer
@@ -109,7 +110,7 @@
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.name.Location = new System.Drawing.Point(114, 14);
+            this.name.Location = new System.Drawing.Point(143, 9);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(0, 46);
             this.name.TabIndex = 32;
@@ -128,7 +129,7 @@
             // 
             this.LName.AutoSize = true;
             this.LName.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LName.Location = new System.Drawing.Point(24, 14);
+            this.LName.Location = new System.Drawing.Point(25, 9);
             this.LName.Name = "LName";
             this.LName.Size = new System.Drawing.Size(112, 46);
             this.LName.TabIndex = 29;
@@ -137,7 +138,7 @@
             // outVis
             // 
             this.outVis.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.outVis.Location = new System.Drawing.Point(100, 450);
+            this.outVis.Location = new System.Drawing.Point(101, 512);
             this.outVis.Name = "outVis";
             this.outVis.Size = new System.Drawing.Size(250, 90);
             this.outVis.TabIndex = 28;
@@ -149,7 +150,7 @@
             // 
             this.Calc.AutoSize = true;
             this.Calc.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Calc.Location = new System.Drawing.Point(25, 295);
+            this.Calc.Location = new System.Drawing.Point(26, 357);
             this.Calc.Name = "Calc";
             this.Calc.Size = new System.Drawing.Size(394, 46);
             this.Calc.TabIndex = 48;
@@ -158,7 +159,7 @@
             // GuestIn
             // 
             this.GuestIn.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.GuestIn.Location = new System.Drawing.Point(25, 350);
+            this.GuestIn.Location = new System.Drawing.Point(26, 412);
             this.GuestIn.MaxLength = 4;
             this.GuestIn.Name = "GuestIn";
             this.GuestIn.Size = new System.Drawing.Size(100, 53);
@@ -169,7 +170,7 @@
             // 
             this.Minus.AutoSize = true;
             this.Minus.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Minus.Location = new System.Drawing.Point(143, 350);
+            this.Minus.Location = new System.Drawing.Point(144, 412);
             this.Minus.Name = "Minus";
             this.Minus.Size = new System.Drawing.Size(33, 46);
             this.Minus.TabIndex = 50;
@@ -199,7 +200,7 @@
             // 
             this.Lsum.AutoSize = true;
             this.Lsum.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Lsum.Location = new System.Drawing.Point(25, 249);
+            this.Lsum.Location = new System.Drawing.Point(25, 258);
             this.Lsum.Name = "Lsum";
             this.Lsum.Size = new System.Drawing.Size(151, 46);
             this.Lsum.TabIndex = 51;
@@ -209,7 +210,7 @@
             // 
             this.SumCalc.AutoSize = true;
             this.SumCalc.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.SumCalc.Location = new System.Drawing.Point(197, 350);
+            this.SumCalc.Location = new System.Drawing.Point(198, 412);
             this.SumCalc.Name = "SumCalc";
             this.SumCalc.Size = new System.Drawing.Size(0, 46);
             this.SumCalc.TabIndex = 52;
@@ -218,7 +219,7 @@
             // 
             this.Antiout.AutoSize = true;
             this.Antiout.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Antiout.Location = new System.Drawing.Point(350, 341);
+            this.Antiout.Location = new System.Drawing.Point(351, 403);
             this.Antiout.Name = "Antiout";
             this.Antiout.Size = new System.Drawing.Size(0, 46);
             this.Antiout.TabIndex = 54;
@@ -227,18 +228,32 @@
             // 
             this.ravno.AutoSize = true;
             this.ravno.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.ravno.Location = new System.Drawing.Point(247, 350);
+            this.ravno.Location = new System.Drawing.Point(248, 412);
             this.ravno.Name = "ravno";
             this.ravno.Size = new System.Drawing.Size(43, 46);
             this.ravno.TabIndex = 55;
             this.ravno.Text = "=";
+            // 
+            // Card
+            // 
+            this.Card.AutoSize = true;
+            this.Card.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Card.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Card.Location = new System.Drawing.Point(25, 298);
+            this.Card.Name = "Card";
+            this.Card.Size = new System.Drawing.Size(369, 50);
+            this.Card.TabIndex = 56;
+            this.Card.Text = "Оплата картой    ";
+            this.Card.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Card.UseVisualStyleBackColor = true;
             // 
             // guestOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(487, 566);
+            this.ClientSize = new System.Drawing.Size(487, 627);
+            this.Controls.Add(this.Card);
             this.Controls.Add(this.ravno);
             this.Controls.Add(this.Antiout);
             this.Controls.Add(this.SumCalc);
@@ -292,5 +307,6 @@
         private System.Windows.Forms.Label SumCalc;
         private System.Windows.Forms.Label Antiout;
         private System.Windows.Forms.Label ravno;
+        private System.Windows.Forms.CheckBox Card;
     }
 }

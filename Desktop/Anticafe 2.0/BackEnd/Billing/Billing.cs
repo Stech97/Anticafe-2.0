@@ -17,6 +17,7 @@ namespace BackEnd
         public Boolean Flayer;
         public Int32 TotalTime;
         public Int32 Money;
+        public Boolean Card;
 
         //вход гостя
         public DateTime LogIn;

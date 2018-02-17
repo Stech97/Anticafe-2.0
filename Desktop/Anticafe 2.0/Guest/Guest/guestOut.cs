@@ -22,7 +22,13 @@ namespace Guest
                 {
                     tax.Items.Add("Меропр,студудент.");
                     tax.Items.Add("Меропр,обычный.");
-                }                 
+                }
+
+                if (Event.MafiaCheck)
+                {
+                    tax.Items.Add("Мафия,обычный");
+                    tax.Items.Add("Мафия,студудент");
+                }
             }
 
             name.Text = Billing.bill[Billing.IdRow].Name;
@@ -37,6 +43,7 @@ namespace Guest
         private void outVis_Click(object sender, EventArgs e)
         {
             Close();
+            Billing.bill[Billing.IdRow].Card = Card.Checked;
             Billing.bill[Billing.IdRow].CheckOut = true;
         }
 
@@ -49,9 +56,13 @@ namespace Guest
 
                 Event.CalcEvent();
             else
-                Billing.bill[Billing.IdRow].TimeIsMoney();
+                Billing.bill[Billing.IdRow].SetLogOut(Billing.bill[Billing.IdRow].LogOut);
 
-            Billing.bill[Billing.IdRow].TimeIsMoney();
+            if ((Billing.bill[Billing.IdRow].Tax == "Мафия,обычный")
+                || (Billing.bill[Billing.IdRow].Tax == "Мафия,студудент"))
+                Event.CalcMafia();
+
+            Billing.bill[Billing.IdRow].SetLogOut(Billing.bill[Billing.IdRow].LogOut);
 
             Sum.Text = Billing.bill[Billing.IdRow].Money.ToString();
             SumCalc.Text = Sum.Text;
@@ -63,10 +74,13 @@ namespace Guest
 
             if ((Billing.bill[Billing.IdRow].Tax == "Меропр,студудент.")
                 || (Billing.bill[Billing.IdRow].Tax == "Меропр,обычный."))
-
                 Event.CalcEvent();
             else
-                Billing.bill[Billing.IdRow].TimeIsMoney();
+                Billing.bill[Billing.IdRow].SetLogOut(Billing.bill[Billing.IdRow].LogOut);
+
+            if ((Billing.bill[Billing.IdRow].Tax == "Мафия,обычный")
+                || (Billing.bill[Billing.IdRow].Tax == "Мафия,студудент"))
+                Event.CalcMafia();
 
             Sum.Text = Billing.bill[Billing.IdRow].Money.ToString();
             SumCalc.Text = Sum.Text;

@@ -61,19 +61,27 @@ namespace Anticafe_2._0
 
         private void Mer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Mer.Text == "Есть")
+            switch (Mer.Text)
             {
-                Event.EventCheck = true;
-                CheckWork();
-                CheckMer();
-            }
+                case "Нет":
+                    Event.EventCheck = false;
+                    EventSet = true;
+                    CheckWork();
+                    CheckMer();
+                break;
 
-            if (Mer.Text == "Нет")
-            {
-                Event.EventCheck = false;
-                EventSet = true;
-                CheckWork();
-                CheckMer();
+                case "Мафия":
+                    Event.MafiaCheck = true;
+                    CheckWork();
+                    CheckMer();
+                break;
+
+                case "Есть":
+                    Event.EventCheck = true;
+                    CheckWork();
+                    CheckMer();
+                break;
+
             }
         }
 

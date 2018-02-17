@@ -111,6 +111,12 @@
     </Compile>
     <Compile Include="Service References\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main\smenaEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\smenaEnd.Designer.cs">
+      <DependentUpon>smenaEnd.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main\anti.resx">
       <DependentUpon>anti.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +133,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Main\smenaEnd.resx">
+      <DependentUpon>smenaEnd.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Anticafe 2.0_TemporaryKey.pfx" />
     <None Include="app.config" />
     <None Include="Service References\app.config" />
@@ -173,10 +182,6 @@
     <ProjectReference Include="..\BackEnd\BackEnd.csproj">
       <Project>{b94ca921-108a-4699-88fa-67df0099b7a4}</Project>
       <Name>BackEnd</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CloseProject\CloseProject.csproj">
-      <Project>{750b57ff-e2eb-4c94-840e-bac5e3acfbb0}</Project>
-      <Name>CloseProject</Name>
     </ProjectReference>
     <ProjectReference Include="..\Guest\Guest.csproj">
       <Project>{597c96ad-c53c-4efb-b740-584ec013fac9}</Project>
