@@ -178,7 +178,6 @@
             this.CHE.TabIndex = 5;
             this.CHE.Text = "Чистота и Уют";
             this.CHE.UseVisualStyleBackColor = true;
-            //this.CHE.Click += new System.EventHandler(this.CHE_Click);
             // 
             // SmenaEnd
             // 
@@ -212,7 +211,7 @@
             // 
             this.WhoWork.AutoSize = true;
             this.WhoWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.WhoWork.Location = new System.Drawing.Point(411, 43);
+            this.WhoWork.Location = new System.Drawing.Point(439, 43);
             this.WhoWork.Margin = new System.Windows.Forms.Padding(0);
             this.WhoWork.Name = "WhoWork";
             this.WhoWork.Size = new System.Drawing.Size(0, 42);
@@ -266,7 +265,7 @@
             this.Time.AutoSize = true;
             this.Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Time.Location = new System.Drawing.Point(1328, 43);
+            this.Time.Location = new System.Drawing.Point(1362, 44);
             this.Time.Name = "Time";
             this.Time.Size = new System.Drawing.Size(0, 42);
             this.Time.TabIndex = 17;

@@ -4,13 +4,12 @@ using BackEnd;
 using Info;
 using CloseProject;
 
-
 namespace Anticafe_2._0
 {
     public partial class anti : Form
     {
         private bool EndSmena;
-        
+
         public anti()
         {
             InitializeComponent();
@@ -51,16 +50,11 @@ namespace Anticafe_2._0
             {
                 Table.Rows.Add();
 
-                Table.Rows[Billing.LogInValue].Cells[0].Value = Billing.bill[Billing.LogInValue].Name;
-
-                Table.Rows[Billing.LogInValue].Cells[1].Value = Billing.bill[Billing.LogInValue].Tax;
-
-                Table.Rows[Billing.LogInValue].Cells[2].Value = Billing.bill[Billing.LogInValue].Flayer;
-
-                Table.Rows[Billing.LogInValue].Cells[3].Value =
-                    Billing.bill[Billing.LogInValue].LogIn.ToShortTimeString();
-
-                Table.Rows[Billing.LogInValue].Cells[7].Value = false;
+                Table[Billing.LogInValue, 0].Value = Billing.bill[Billing.LogInValue].Name;
+                Table[Billing.LogInValue, 1].Value = Billing.bill[Billing.LogInValue].Tax;
+                Table[Billing.LogInValue, 2].Value = Billing.bill[Billing.LogInValue].Flayer;
+                Table[Billing.LogInValue, 3].Value = Billing.bill[Billing.LogInValue].LogIn.ToShortTimeString();
+                Table[Billing.LogInValue, 7].Value = false;
 
                 Billing.LogInValue++;
             }
@@ -81,20 +75,12 @@ namespace Anticafe_2._0
             {
                 Billing.LogOutValue++;
 
-                Table.Rows[Billing.IdRow].Cells[4].Value =
-                    Billing.bill[Billing.IdRow].LogOut.ToShortTimeString();
-
-                Table.Rows[Billing.IdRow].Cells[5].Value =
-                    Billing.bill[Billing.IdRow].TotalTime;
-
-                Table.Rows[Billing.IdRow].Cells[6].Value =
-                    Billing.bill[Billing.IdRow].Money;
-
-                Table.Rows[Billing.IdRow].Cells[7].Value =
-                    Billing.bill[Billing.IdRow].Card;
+                Table[Billing.IdRow, 4].Value = Billing.bill[Billing.IdRow].LogOut.ToShortTimeString();
+                Table[Billing.IdRow, 5].Value = Billing.bill[Billing.IdRow].TotalTime;
+                Table[Billing.IdRow, 6].Value = Billing.bill[Billing.IdRow].Money;
+                Table[Billing.IdRow, 7].Value = Billing.bill[Billing.IdRow].Card;
 
                 Table.Rows[Billing.IdRow].ReadOnly = true;
-
                 Table.Rows[Billing.IdRow].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
             }
 

@@ -47,23 +47,23 @@ namespace BackEnd
                 if ((LogIn.TimeOfDay.TotalMinutes > 960) && (LogOut.TimeOfDay.TotalMinutes < 1321)) //1321 - 22:01
                     Money = (int)Tariff();
 
-                if ((LogIn.TimeOfDay.TotalMinutes > 960) && (LogOut.TimeOfDay.TotalMinutes > 1320)) //1440 - 00:01
-                    Money = (int) (Tariff(1320) + (1440 - LogOut.TimeOfDay.TotalMinutes) * 2);
+                if ((LogIn.TimeOfDay.TotalMinutes > 960) && (LogOut.TimeOfDay.TotalMinutes > 1320)) //1440 - 00:00
+                        Money = (int)(Tariff(1320) + (1440 - LogOut.TimeOfDay.TotalMinutes) * 2);
 
                 if ((LogIn.TimeOfDay.TotalMinutes > 1321) && (LogOut.TimeOfDay.TotalMinutes < 1441))
-                   Money = (int) ((1440 - LogOut.TimeOfDay.TotalMinutes) * 2);
+                   Money = (1440 - (int)LogOut.TimeOfDay.TotalMinutes) * 2;
 
                 if (LogIn.TimeOfDay.TotalMinutes < 960)
-                    Money = (int) TotalTime * 2;
+                    Money = TotalTime * 2;
             }
 
             else
             {
                 if (LogIn.TimeOfDay.TotalMinutes < 1321)
-                    Money = (int)(Tariff(1320) + 240 + (LogOut.TimeOfDay.TotalMinutes * 2));
+                    Money = (int)(Tariff(1320) + 240 + (int)(LogOut.TimeOfDay.TotalMinutes * 2));
 
                 if (LogIn.TimeOfDay.TotalMinutes > 1320)
-                    Money = (int) ( ((1440 - LogIn.TimeOfDay.TotalMinutes) * 2) + (LogOut.TimeOfDay.TotalMinutes * 2) );
+                    Money = ((1440 - (int)LogIn.TimeOfDay.TotalMinutes) * 2) + (int)LogOut.TimeOfDay.TotalMinutes * 2;
 
             }
 
@@ -94,7 +94,7 @@ namespace BackEnd
         }
 
         //тарифы, если гость ушел до 22:00
-        private double Tariff() 
+        private Double Tariff() 
         {
             Double Money;
                 switch (Tax)
@@ -161,7 +161,7 @@ namespace BackEnd
         }
 
         //Тарифы, если гость пришел до 22:00 и ушел после 22:00
-        private double Tariff(int TO)
+        private Double Tariff(int TO)
         {
             Double Money;
             Double TT;
@@ -189,7 +189,7 @@ namespace BackEnd
                         Money = TT * 2;
 
                     if ((TT <= 120) && (TT > 60))
-                        Money = 30 + (TT * 1.5);
+                        Money = 30 + (int)(TT * 1.5);
                     if (TT > 120)
                         Money = 90 + TT;
 
