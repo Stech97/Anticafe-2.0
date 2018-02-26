@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BackEnd
 {
-       public partial class Billing
+    public partial class Billing
     {
         public static List<Billing> bill = new List<Billing>();
 
