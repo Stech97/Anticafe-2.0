@@ -18,4 +18,5 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <system.windows.forms jitDebugging="true" /> 
 </asmv1:assembly>
