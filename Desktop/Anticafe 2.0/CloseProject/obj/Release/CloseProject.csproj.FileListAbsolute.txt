@@ -1,0 +1,14 @@
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\bin\Release\CloseProject.dll.config
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\bin\Release\CloseProject.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\bin\Release\CloseProject.pdb
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\bin\Release\BackEnd.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\bin\Release\System.Net.Http.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\bin\Release\BackEnd.pdb
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\bin\Release\System.Net.Http.xml
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\obj\Release\CloseProject.csprojResolveAssemblyReference.cache
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\obj\Release\CloseProject.OutInfo.resources
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\obj\Release\CloseProject.smenaEnd.resources
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\obj\Release\CloseProject.Properties.Resources.resources
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\obj\Release\CloseProject.csproj.GenerateResource.Cache
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\obj\Release\CloseProject.dll
+C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\CloseProject\obj\Release\CloseProject.pdb
