@@ -19,7 +19,7 @@ namespace Anticafe_2._0
         private Boolean HourEvent;
         private Boolean MinEvent;
         private String EventStart;
-
+        private Int32 NDInt;
 
         private void Start_Load(object sender, EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace Anticafe_2._0
 
         private void new_day_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(ND.Text, "[0-9]") || !String.IsNullOrWhiteSpace(ND.Text))
+            if (Int32.TryParse(ND.Text, out NDInt))
             {
                 StartDay = true;
                 CheckWork();
@@ -45,8 +45,7 @@ namespace Anticafe_2._0
             
         private void smena_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(Smena.Text, "[А-Яа-я]") ||
-                !String.IsNullOrWhiteSpace(Smena.Text))
+            if (Regex.IsMatch(Smena.Text, "[А-Яа-я]"))
             {
                 Who = true;
                 CheckWork();
@@ -109,7 +108,7 @@ namespace Anticafe_2._0
             }
 
             Admin.admin.SetStartPage(
-                Smena.Text, DateTime.Now.Day.ToString(), TimeStart.Text, Convert.ToInt32(ND.Text));
+                Smena.Text, DateTime.Now.Day.ToString(), TimeStart.Text, NDInt);
 
             form.Show();
         }

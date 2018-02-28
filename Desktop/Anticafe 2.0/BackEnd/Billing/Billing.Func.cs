@@ -4,17 +4,17 @@ namespace BackEnd
 {
     partial class Billing
     {
-        public void SetLogIn(String Name, String Tax, Boolean Flayer, DateTime LogIn)
+        public void SetLogIn(String name, String tax, Boolean flayer, DateTime logIn)
         {
-            this.Name = Name;
-            this.Tax = Tax;
-            this.Flayer = Flayer;
-            this.LogIn = LogIn;
+            Name = name;
+            Tax = tax;
+            Flayer = flayer;
+            LogIn = logIn;
         }
 
-        public void SetLogOut(DateTime LogOut)
+        public void SetLogOut(DateTime logOut)
         {
-            this.LogOut = LogOut;
+            LogOut = logOut;
 
             if ((bill[IdRow].Tax == "Меропр,студудент.")
                 || (bill[IdRow].Tax == "Меропр,обычный."))
