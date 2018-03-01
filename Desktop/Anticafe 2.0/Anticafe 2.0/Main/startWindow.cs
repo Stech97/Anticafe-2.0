@@ -21,6 +21,8 @@ namespace Anticafe_2._0
         private String EventStart;
         private Int32 NDInt;
 
+        //MerStartLabel.Text = Mer.Text + " начнется в:";
+
         private void Start_Load(object sender, EventArgs e)
         {
             TimeStart.Text = DateTime.Now.ToShortTimeString();
@@ -63,6 +65,7 @@ namespace Anticafe_2._0
             switch (Mer.Text)
             {
                 case "Нет":
+                    Event.MafiaCheck = false;
                     Event.EventCheck = false;
                     EventSet = true;
                     CheckWork();
@@ -71,12 +74,14 @@ namespace Anticafe_2._0
 
                 case "Мафия":
                     Event.MafiaCheck = true;
+                    Event.EventCheck = false;
                     CheckWork();
                     CheckMer();
                 break;
 
                 case "Есть":
                     Event.EventCheck = true;
+                    Event.MafiaCheck = false;
                     CheckWork();
                     CheckMer();
                 break;
@@ -99,7 +104,7 @@ namespace Anticafe_2._0
         private void work_Click(object sender, EventArgs e)
         {
             anti form = new anti();
-            this.Hide();
+            Hide();
 
             if (HourEvent && MinEvent)
             {
@@ -115,7 +120,7 @@ namespace Anticafe_2._0
 
         private void CheckWork()
         {
-            if (!Event.EventCheck)
+            if (!Event.EventCheck || !Event.MafiaCheck)
             {
                 if (StartDay && Who && EventSet)
                     work.Enabled = true;
@@ -133,18 +138,18 @@ namespace Anticafe_2._0
 
         private void CheckMer()
         {
-            if (Event.EventCheck)
+            if (Event.EventCheck || Event.MafiaCheck)
             {
-                this.Height = 530;
+                Height = 530;
+                work.Location = new Point(75, 410);
                 MerStartLabel.Visible = true;
                 HourMerStart.Visible = true;
                 label1.Visible = true;
                 MinMerStart.Visible = true;
-                work.Location = new Point(75, 410);
             }
             else
             {
-                this.Height = 380;
+                Height = 380;
                 work.Location = new Point(75, 260);
 
                 MerStartLabel.Visible = false;
