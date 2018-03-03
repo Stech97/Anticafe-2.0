@@ -75,10 +75,10 @@ namespace Anticafe_2._0
             {
                 Billing.LogOutValue++;
 
-                Table[4, Billing.LogInValue].Value = Billing.bill[Billing.IdRow].LogOut.ToShortTimeString();
-                Table[5, Billing.LogInValue].Value = Billing.bill[Billing.IdRow].TotalTime;
-                Table[6, Billing.LogInValue].Value = Billing.bill[Billing.IdRow].Money;
-                Table[7, Billing.LogInValue].Value = Billing.bill[Billing.IdRow].Card;
+                Table[4, Billing.IdRow].Value = Billing.bill[Billing.IdRow].LogOut.ToShortTimeString();
+                Table[5, Billing.IdRow].Value = Billing.bill[Billing.IdRow].TotalTime;
+                Table[6, Billing.IdRow].Value = Billing.bill[Billing.IdRow].Money;
+                Table[7, Billing.IdRow].Value = Billing.bill[Billing.IdRow].Card;
 
                 Table.Rows[Billing.IdRow].ReadOnly = true;
                 Table.Rows[Billing.IdRow].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
