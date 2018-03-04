@@ -75,13 +75,13 @@ namespace Anticafe_2._0
             {
                 Billing.LogOutValue++;
 
-                Table[4, Billing.IdRow].Value = Billing.bill[Billing.IdRow].LogOut.ToShortTimeString();
-                Table[5, Billing.IdRow].Value = Billing.bill[Billing.IdRow].TotalTime;
-                Table[6, Billing.IdRow].Value = Billing.bill[Billing.IdRow].Money;
-                Table[7, Billing.IdRow].Value = Billing.bill[Billing.IdRow].Card;
+                Table[4, Table.CurrentRow.Index].Value = Billing.bill[Table.CurrentRow.Index].LogOut.ToShortTimeString();
+                Table[5, Table.CurrentRow.Index].Value = Billing.bill[Table.CurrentRow.Index].TotalTime;
+                Table[6, Table.CurrentRow.Index].Value = Billing.bill[Table.CurrentRow.Index].Money;
+                Table[7, Table.CurrentRow.Index].Value = Billing.bill[Table.CurrentRow.Index].Card;
 
-                Table.Rows[Billing.IdRow].ReadOnly = true;
-                Table.Rows[Billing.IdRow].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+                Table.Rows[Table.CurrentRow.Index].ReadOnly = true;
+                Table.Rows[Table.CurrentRow.Index].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
             }
 
             CheckGuest();
@@ -131,9 +131,54 @@ namespace Anticafe_2._0
             }
         }
 
+        private void Table_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (Table.CurrentCell.ColumnIndex == 0)
+            {
+                if(Table.Rows[Table.CurrentRow.Index].ReadOnly)
+                {
+                    Table.Rows[Table.CurrentRow.Index].ReadOnly = false;
+                    Table.BeginEdit(true);
+                    Billing.bill[Table.CurrentRow.Index].Name =
+                        Table[Table.CurrentCell.ColumnIndex, Table.CurrentRow.Index].Value.ToString();
+                }
+                else
+                {
+                    Table.BeginEdit(true);
+                    Billing.bill[Table.CurrentRow.Index].Name =
+                        Table[Table.CurrentCell.ColumnIndex, Table.CurrentRow.Index].Value.ToString();
+                }
+            }
+
+            if (Table.CurrentCell.ColumnIndex == 7)
+            {
+                if (Table.Rows[Table.CurrentRow.Index].ReadOnly)
+                {
+                    Table.Rows[Table.CurrentRow.Index].ReadOnly = false;
+
+                    Table.BeginEdit(true);
+                    Billing.bill[Table.CurrentRow.Index].Card =
+                    (Boolean)Table[Table.CurrentCell.ColumnIndex, Table.CurrentRow.Index].Value;
+                }
+                else
+                {
+                    Table.BeginEdit(true);
+                    Billing.bill[Table.CurrentRow.Index].Card =
+                    (Boolean)Table[Table.CurrentCell.ColumnIndex, Table.CurrentRow.Index].Value;
+                }
+            }
+        }
+
+        private void Table_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Table.Rows[Table.CurrentRow.Index].DefaultCellStyle.BackColor == System.Drawing.Color.Red)
+                Table.Rows[Table.CurrentRow.Index].ReadOnly = true;
+            Table.EndEdit();
+        }
+
         private void Table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Billing.IdRow = Table.CurrentRow.Index;
+           Billing.IdRow = Table.CurrentRow.Index;
 
             DelRow form = new DelRow();
             form.ShowDialog();
@@ -163,6 +208,5 @@ namespace Anticafe_2._0
             if (Billing.LogInValue == Billing.LogOutValue)
                 SmenaEnd.Enabled = true;
         }
-
     }
 }

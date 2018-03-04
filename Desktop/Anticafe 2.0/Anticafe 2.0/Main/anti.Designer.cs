@@ -18,10 +18,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(anti));
             this.Table = new System.Windows.Forms.DataGridView();
             this.NameTabel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,19 +52,19 @@
             this.Table.AllowUserToDeleteRows = false;
             this.Table.AllowUserToResizeColumns = false;
             this.Table.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle9.NullValue = null;
-            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.NullValue = null;
+            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Table.BackgroundColor = System.Drawing.Color.White;
             this.Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Table.ColumnHeadersHeight = 120;
             this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -76,31 +76,31 @@
             this.TotalTime,
             this.Sum,
             this.Card});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.DefaultCellStyle = dataGridViewCellStyle4;
             this.Table.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.Table.GridColor = System.Drawing.Color.SandyBrown;
             this.Table.Location = new System.Drawing.Point(27, 105);
             this.Table.Margin = new System.Windows.Forms.Padding(1);
             this.Table.Name = "Table";
-            this.Table.ReadOnly = true;
             this.Table.RowHeadersWidth = 10;
-            this.Table.Size = new System.Drawing.Size(1241, 815);
+            this.Table.Size = new System.Drawing.Size(1231, 815);
             this.Table.TabIndex = 7;
             this.Table.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Table_CellDoubleClick);
+            this.Table.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Table_CellEndEdit);
+            this.Table.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Table_CellMouseDown);
             // 
             // NameTabel
             // 
             this.NameTabel.HeaderText = "Имя";
             this.NameTabel.MaxInputLength = 10;
             this.NameTabel.Name = "NameTabel";
-            this.NameTabel.ReadOnly = true;
             this.NameTabel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.NameTabel.Width = 120;
             // 
@@ -109,6 +109,7 @@
             this.Tax.HeaderText = "Тип подсчёта";
             this.Tax.Name = "Tax";
             this.Tax.ReadOnly = true;
+            this.Tax.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Tax.Width = 120;
             // 
             // Flayer
@@ -121,15 +122,14 @@
             // 
             // LogIn
             // 
-            dataGridViewCellStyle11.Format = "t";
-            dataGridViewCellStyle11.NullValue = null;
-            this.LogIn.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Format = "t";
+            dataGridViewCellStyle3.NullValue = null;
+            this.LogIn.DefaultCellStyle = dataGridViewCellStyle3;
             this.LogIn.HeaderText = "Время прихода";
             this.LogIn.MaxInputLength = 8;
             this.LogIn.Name = "LogIn";
             this.LogIn.ReadOnly = true;
             this.LogIn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.LogIn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.LogIn.Width = 120;
             // 
             // LogOut
@@ -166,7 +166,6 @@
             // 
             this.Card.HeaderText = "Оплата картой";
             this.Card.Name = "Card";
-            this.Card.ReadOnly = true;
             // 
             // CHE
             // 
@@ -327,6 +326,8 @@
         private System.Windows.Forms.Label WhoOnWork;
         private System.Windows.Forms.Button GuestIn;
         private System.Windows.Forms.Button TaxBut;
+        private System.Windows.Forms.Label Time;
+        private System.Windows.Forms.Label LTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameTabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tax;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Flayer;
@@ -334,8 +335,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LogOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sum;
-        private System.Windows.Forms.Label Time;
-        private System.Windows.Forms.Label LTime;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Card;
     }
 }
