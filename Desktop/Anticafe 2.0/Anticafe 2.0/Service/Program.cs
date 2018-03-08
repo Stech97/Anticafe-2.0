@@ -10,7 +10,7 @@ namespace Anticafe_2._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Start());
+            Application.Run(new StartWindows());
         }
     }
 }

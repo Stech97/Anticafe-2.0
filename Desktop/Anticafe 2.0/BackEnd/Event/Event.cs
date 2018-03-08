@@ -13,7 +13,6 @@ namespace BackEnd
         public static Int32 EventValue;
         public static Int32 MafiaValue;
 
-        [Flags]
         public enum EventList
         {
             None = 0,

@@ -1,34 +1,31 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using BackEnd;
 
 namespace Anticafe_2._0
 {
-    public partial class Start : Form
+    public partial class StartWindows : Form
     {        
-        public Start()
+        public StartWindows()
         {
             InitializeComponent();
         }
 
         private Boolean StartDay;
         private Boolean Who;
-        private Boolean EventSet;
+        private Int32 Mer;
         private Boolean HourEvent;
         private Boolean MinEvent;
         private String EventStart;
         private Int32 NDInt;
 
-        //MerStartLabel.Text = Mer.Text + " начнется в:";
-
         private void Start_Load(object sender, EventArgs e)
         {
-            TimeStart.Text = DateTime.Now.ToShortTimeString();
+            startWIndow.Text = DateTime.Now.ToShortTimeString();
             work.Enabled = false;
-            Mer.Text = "Нет";
-            CheckMer();
+            colMer.Value = 0;
+            Width = 530;
         }
 
         private void new_day_TextChanged(object sender, EventArgs e)
@@ -60,33 +57,205 @@ namespace Anticafe_2._0
 
         }
 
-        private void Mer_SelectedIndexChanged(object sender, EventArgs e)
+        private void colMer_ValueChanged(object sender, EventArgs e)
         {
-            switch (Mer.Text)
+            switch ((int)colMer.Value)
             {
-                case "Нет":
-                    Event.MafiaCheck = false;
-                    Event.EventCheck = false;
-                    EventSet = true;
-                    CheckWork();
-                    CheckMer();
-                break;
-
-                case "Мафия":
-                    Event.MafiaCheck = true;
-                    Event.EventCheck = false;
-                    CheckWork();
-                    CheckMer();
-                break;
-
-                case "Есть":
-                    Event.EventCheck = true;
-                    Event.MafiaCheck = false;
-                    CheckWork();
-                    CheckMer();
-                break;
-
+                case 0:
+                    Width = 530;
+                    break;
+                case 1:
+                    Width = 870;
+                    break;
+                case 2:
+                    Width = 1210;
+                    break;
             }
+        }
+
+        private void work_Click(object sender, EventArgs e)
+        {
+            anti form = new anti();
+            Hide();
+
+            if (HourEvent && MinEvent)
+            {
+                EventStart = HourMerStart1.Text + ":" + MinMerStart1.Text;
+                Event.SetStartEvent(EventStart);
+            }
+
+            Admin.admin.SetStartPage(
+                Smena.Text, DateTime.Now.Day.ToString(), startWIndow.Text, NDInt);
+
+            form.Show();
+        }
+
+        private void Mer11_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Mer11.Checked)
+            {
+                Mer = Mer + (Int16)Event.EventList.Event;
+                if (colMer.Value == 1)
+                {
+                    Mer12.Enabled = false;
+                    Mer13.Enabled = false;
+                }
+                if (colMer.Value == 2)
+                {
+                    Mer12.Enabled = false;
+                    Mer13.Enabled = false;
+                    Mer21.Enabled = false;
+                }
+            }
+            else
+            {
+                Mer = Mer - (Int16)Event.EventList.Event;
+                if (colMer.Value == 1)
+                {
+                    Mer12.Enabled = true;
+                    Mer13.Enabled = true;
+                }
+                if (colMer.Value == 2)
+                {
+                    Mer12.Enabled = true;
+                    Mer13.Enabled = true;
+                    Mer21.Enabled = true;
+                }
+            }
+            CheckMer();
+        }
+
+        private void Mer12_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Mer12.Checked)
+            {
+                Mer = Mer + (Int16)Event.EventList.Mafia;
+                if (colMer.Value == 1)
+                {
+                    Mer11.Enabled = false;
+                    Mer13.Enabled = false;
+                }
+                if (colMer.Value == 2)
+                {
+                    Mer11.Enabled = false;
+                    Mer13.Enabled = false;
+                    Mer22.Enabled = false;
+                } 
+            }
+            else
+            {
+                Mer = Mer - (Int16)Event.EventList.Mafia;
+                if (colMer.Value == 1)
+                {
+                    Mer11.Enabled = true;
+                    Mer13.Enabled = true;
+                }
+                if (colMer.Value == 2)
+                {
+                    Mer11.Enabled = true;
+                    Mer13.Enabled = true;
+                    Mer22.Enabled = true;
+                }
+            }
+
+            CheckMer();
+        }
+
+        private void Mer13_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Mer13.Checked)
+            {
+                Mer = Mer + (Int16)Event.EventList.CinemaNight;
+                if (colMer.Value == 1)
+                {
+                    Mer11.Enabled = false;
+                    Mer12.Enabled = false;
+                }
+                if (colMer.Value == 2)
+                {
+                    Mer11.Enabled = false;
+                    Mer12.Enabled = false;
+                    Mer23.Enabled = false;
+                }
+            }
+            else
+            {
+                Mer = Mer - (Int16)Event.EventList.CinemaNight;
+                if (colMer.Value == 1)
+                {
+                    Mer11.Enabled = true;
+                    Mer12.Enabled = true;
+                }
+                if (colMer.Value == 2)
+                {
+                    Mer11.Enabled = true;
+                    Mer12.Enabled = true;
+                    Mer23.Enabled = true;
+                }
+            }
+            CheckMer();
+        }
+
+        private void Mer21_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Mer21.Checked)
+            {
+                Mer = Mer + (Int16)Event.EventList.Event;
+                Mer22.Enabled = false;
+                Mer23.Enabled = false;
+            }
+            else
+            {
+                Mer = Mer - (Int16)Event.EventList.Event;
+                if (Mer12.Checked)
+                    Mer22.Enabled = false;
+                else
+                    Mer22.Enabled = true;
+
+                if (Mer13.Checked)
+                    Mer23.Enabled = false;
+                else
+                    Mer23.Enabled = true;
+            }
+            CheckMer();
+        }
+
+        private void Mer22_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Mer22.Checked)
+            {
+                Mer = Mer + (Int16)Event.EventList.Mafia;
+                Mer21.Enabled = false;
+                Mer23.Enabled = false;
+            }
+            else
+            {
+                Mer = Mer - (Int16)Event.EventList.Mafia;
+                if (Mer11.Checked)
+                    Mer21.Enabled = false;
+                else 
+                    Mer21.Enabled = true;
+                if (Mer13.Checked)
+                    Mer23.Enabled = false;
+                else
+                    Mer23.Enabled = true;
+            }
+            CheckMer();
+        }
+
+        private void Mer23_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Mer23.Checked)
+            {
+                Mer = Mer + (Int16)Event.EventList.CinemaNight;
+                Mer21.Enabled = false;
+            }
+            else
+            {
+                Mer = Mer - (Int16)Event.EventList.CinemaNight;
+                Mer21.Enabled = true;
+            }
+            CheckMer();
         }
 
         private void HourMerStart_SelectedIndexChanged(object sender, EventArgs e)
@@ -101,28 +270,12 @@ namespace Anticafe_2._0
             CheckWork();
         }
 
-        private void work_Click(object sender, EventArgs e)
-        {
-            anti form = new anti();
-            Hide();
-
-            if (HourEvent && MinEvent)
-            {
-                EventStart = HourMerStart.Text + ":" + MinMerStart.Text;
-                Event.SetStartEvent(EventStart);
-            }
-
-            Admin.admin.SetStartPage(
-                Smena.Text, DateTime.Now.Day.ToString(), TimeStart.Text, NDInt);
-
-            form.Show();
-        }
-
+        //переписать метод.
         private void CheckWork()
         {
-            if (!Event.EventCheck || !Event.MafiaCheck)
+            if (!CheckMer())
             {
-                if (StartDay && Who && EventSet)
+                if (StartDay && Who)
                     work.Enabled = true;
                 else
                     work.Enabled = false;
@@ -136,28 +289,48 @@ namespace Anticafe_2._0
             }
         }
 
-        private void CheckMer()
+        //выгрузка для мероприятий
+        private Boolean CheckMer()
         {
-            if (Event.EventCheck || Event.MafiaCheck)
+            if (colMer.Value == 1)
             {
-                Height = 530;
-                work.Location = new Point(75, 410);
-                MerStartLabel.Visible = true;
-                HourMerStart.Visible = true;
-                label1.Visible = true;
-                MinMerStart.Visible = true;
+                switch (Mer)
+                {
+                    case 0:
+                        return false;
+                    case 1:
+                        return true;
+                    case 2:
+                        return true;
+                    case 4:
+                        return true;
+                }
             }
-            else
-            {
-                Height = 380;
-                work.Location = new Point(75, 260);
 
-                MerStartLabel.Visible = false;
-                HourMerStart.Visible = false;
-                label1.Visible = false;
-                MinMerStart.Visible = false;
+            if (colMer.Value == 2)
+            {
+                switch (Mer)
+                {
+                    case 0:
+                        return false;
+                    case 1:
+                        return false;
+                    case 2:
+                        return false;
+                    case 4:
+                        return false;
+                    case 3:
+                        return true;
+                    case 5:
+                        return true;
+                    case 6:
+                        return true;
+                }
             }
+
+            return false;
         }
+
     }
 }
 
