@@ -18,7 +18,7 @@ namespace Guest
         private void newGuest_Load(object sender, EventArgs e)
         {
             Invite.Enabled = false;
-            if (Event.EventCheck)
+            /*if (Event.EventCheck)
             {
                 tax.Items.Add("Меропр,студудент.");
                 tax.Items.Add("Меропр,обычный.");
@@ -28,7 +28,7 @@ namespace Guest
             {
                 tax.Items.Add("Мафия,обычный");
                 tax.Items.Add("Мафия,студудент");
-            }
+            }*/
         }
 
         private void Name_TextChanged(object sender, EventArgs e)

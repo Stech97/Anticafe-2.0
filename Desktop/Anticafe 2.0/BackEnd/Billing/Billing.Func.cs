@@ -48,7 +48,10 @@ namespace BackEnd
                     Money = (int)Tariff();
 
                 if ((LogIn.TimeOfDay.TotalMinutes > 960) && (LogOut.TimeOfDay.TotalMinutes > 1320)) //1440 - 00:00
-                        Money = (int)(Tariff(1320) + (1440 - LogOut.TimeOfDay.TotalMinutes) * 2);
+                {
+                    Money = (int) (Tariff(1320));
+                    Money =+ (int) ((1440 - LogOut.TimeOfDay.TotalMinutes) * 2);
+                }
 
                 if ((LogIn.TimeOfDay.TotalMinutes > 1321) && (LogOut.TimeOfDay.TotalMinutes < 1441))
                    Money = (1440 - (int)LogOut.TimeOfDay.TotalMinutes) * 2;
@@ -141,7 +144,7 @@ namespace BackEnd
                         if (TotalTime < 61)
                             Money = TotalTime * 1.5;
                         else
-                            Money = 90 + (TotalTime - 60);
+                            Money = 30 + TotalTime;
 
                         if (Money < 90)
                             Money = 90;

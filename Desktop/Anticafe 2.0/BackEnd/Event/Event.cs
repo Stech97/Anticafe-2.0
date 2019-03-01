@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BackEnd
 {
     public partial class Event
     {
-        public static Boolean EventCheck;
-        public static Boolean MafiaCheck;
+        public static Int32 colMer;
+        public static EventList EList = 0;
 
-        public static DateTime StartEvent;
+        public static DateTime StartEvent1;
+        public static DateTime StartEvent2;
         public static Int32 TotalTimeEvent;
 
         public static Int32 EventValue;

@@ -144,7 +144,7 @@ namespace BackEnd
             ExcelApp.Cells[bill.Count + 10, 1] = "Итог за день по карте:";
             ExcelApp.Cells[bill.Count + 10, 2] = ItogCard;
 
-            if (Event.EventCheck)
+           /* if (Event.EventCheck)
             {
                 ExcelApp.Cells[bill.Count + 10, 1] = "Количество людей на мероприятии:";
                 ExcelApp.Cells[bill.Count + 10, 2] = Event.EventValue;
@@ -154,7 +154,7 @@ namespace BackEnd
             {
                 ExcelApp.Cells[bill.Count + 10, 1] = "Количество людей на мафии:";
                 ExcelApp.Cells[bill.Count + 10, 2] = Event.MafiaValue;
-            }
+            }*/
         }
 
         //сохранение в Excel(в диск, машина и удаление BackUp)

@@ -6,7 +6,13 @@ namespace BackEnd
     {
         public static void SetStartEvent(String Start)
         {
-            DateTime.TryParse(Start, out StartEvent);
+            DateTime.TryParse(Start, out StartEvent1);
+        }
+
+        public static void SetStartEvent(String Start1, String Start2)
+        {
+            DateTime.TryParse(Start1, out StartEvent1);
+            DateTime.TryParse(Start2, out StartEvent2);
         }
 
         //подсчет денег на мероприятии(запуск нужной трификации)
@@ -67,13 +73,18 @@ namespace BackEnd
 
         }
 
+        public static void CalcKino()
+        {
+
+        }
+
         //подсчет общего времени на мероприятии
         public static void totalTimeEvent()
         {
             if (bill[IdRow].LogOut.TimeOfDay.TotalMinutes < 1321)
-                TotalTimeEvent = (Int32)bill[IdRow].LogOut.Subtract(StartEvent).TotalMinutes;
+                TotalTimeEvent = (Int32)bill[IdRow].LogOut.Subtract(StartEvent1).TotalMinutes;
             else
-                TotalTimeEvent = bill[IdRow].totalTime(StartEvent);
+                TotalTimeEvent = bill[IdRow].totalTime(StartEvent1);
         }
     }
 }

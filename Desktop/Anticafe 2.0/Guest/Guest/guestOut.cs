@@ -18,7 +18,7 @@ namespace Guest
             {
                 Billing.bill[Billing.IdRow].SetLogOut(DateTime.Now);
 
-                if (Event.EventCheck)
+              /*  if (Event.EventCheck)
                 {
                     tax.Items.Add("Меропр,студудент.");
                     tax.Items.Add("Меропр,обычный.");
@@ -28,7 +28,7 @@ namespace Guest
                 {
                     tax.Items.Add("Мафия,обычный");
                     tax.Items.Add("Мафия,студудент");
-                }
+                } */
             }
 
             name.Text = Billing.bill[Billing.IdRow].Name;

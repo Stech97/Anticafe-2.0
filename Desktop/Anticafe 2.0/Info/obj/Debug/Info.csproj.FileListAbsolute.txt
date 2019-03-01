@@ -2,9 +2,7 @@ C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\bin\Debug\I
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\bin\Debug\Info.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\bin\Debug\Info.pdb
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\bin\Debug\BackEnd.dll
-C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\bin\Debug\System.Net.Http.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\bin\Debug\BackEnd.pdb
-C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\bin\Debug\System.Net.Http.xml
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\obj\Debug\Info.csprojResolveAssemblyReference.cache
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\obj\Debug\Info.clean.resources
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Info\obj\Debug\Info.DelRow.resources

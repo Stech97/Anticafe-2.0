@@ -7,8 +7,6 @@ C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Debug\
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Debug\Guest.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Debug\Guest.pdb
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Debug\BackEnd.dll
-C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Debug\System.Net.Http.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Debug\BackEnd.pdb
-C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\bin\Debug\System.Net.Http.xml
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\obj\Debug\Guest.dll
 C:\Users\Max\Documents\GitHub\Anticafe-2.0\Desktop\Anticafe 2.0\Guest\obj\Debug\Guest.pdb

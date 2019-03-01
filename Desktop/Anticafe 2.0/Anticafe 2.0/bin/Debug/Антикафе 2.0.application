@@ -4,7 +4,7 @@
   <description asmv2:publisher="Hewlett-Packard" asmv2:product="Антикафе 2.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="Антикафе 2.0.exe.manifest" size="12853">
@@ -13,8 +13,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4OXQmSaWyOoHP5EF5ppwLDpPSJ0=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4X/966C7xyPBUWmxOZl8BbkwZP75JjPV4vX8p+EENpQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -124,7 +124,7 @@
             this.HourMerStart1.Name = "HourMerStart1";
             this.HourMerStart1.Size = new System.Drawing.Size(172, 60);
             this.HourMerStart1.TabIndex = 10;
-            this.HourMerStart1.SelectedIndexChanged += new System.EventHandler(this.HourMerStart_SelectedIndexChanged);
+            this.HourMerStart1.SelectedIndexChanged += new System.EventHandler(this.HourMerStart1_SelectedIndexChanged);
             // 
             // MinMerStart1
             // 
@@ -140,7 +140,7 @@
             this.MinMerStart1.Name = "MinMerStart1";
             this.MinMerStart1.Size = new System.Drawing.Size(172, 60);
             this.MinMerStart1.TabIndex = 11;
-            this.MinMerStart1.SelectedIndexChanged += new System.EventHandler(this.MinMerSatrt_SelectedIndexChanged);
+            this.MinMerStart1.SelectedIndexChanged += new System.EventHandler(this.MinMerSatrt1_SelectedIndexChanged);
             // 
             // L1
             // 
@@ -246,6 +246,7 @@
             this.MinMerStart2.Name = "MinMerStart2";
             this.MinMerStart2.Size = new System.Drawing.Size(172, 60);
             this.MinMerStart2.TabIndex = 22;
+            this.MinMerStart2.SelectedIndexChanged += new System.EventHandler(this.MinMerStart2_SelectedIndexChanged);
             // 
             // HourMerStart2
             // 
@@ -262,6 +263,7 @@
             this.HourMerStart2.Name = "HourMerStart2";
             this.HourMerStart2.Size = new System.Drawing.Size(172, 60);
             this.HourMerStart2.TabIndex = 21;
+            this.HourMerStart2.SelectedIndexChanged += new System.EventHandler(this.HourMerStart2_SelectedIndexChanged);
             // 
             // MerStartLabel2
             // 
