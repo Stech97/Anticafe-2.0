@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Forms;
 using System.Windows.Input;
+
 
 namespace Anticafe_4._0
 {
@@ -10,7 +10,6 @@ namespace Anticafe_4._0
         public StartWindow()
         {
             InitializeComponent();
-            TSum.PreviewTextInput += new TextCompositionEventHandler(TSum_PreviewTextInput);
         }
 
         private void TSum_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -19,15 +18,19 @@ namespace Anticafe_4._0
         }
         private void TOnSmena_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (InputLanguage.CurrentInputLanguage.Culture.ToString() != "ru-RU") e.Handled = true;
+            if (System.Windows.Forms.InputLanguage.CurrentInputLanguage.Culture.ToString() != "ru-RU") e.Handled = true;
         }
-
-
         private void BStatrt_Click(object sender, RoutedEventArgs e)
         {
+            Administrator.NameAdmin = TOnSmena.Text;
+            Administrator.StartSum = int.Parse(TSum.Text);
+            Administrator.StartTime = DateTime.Now;
+            //Добавить код, когда придумаю что делать с мероприятиями
 
+            MainWindow anti = new MainWindow();
+            anti.Show();
+            Close();
         }
-
        
     }
 }

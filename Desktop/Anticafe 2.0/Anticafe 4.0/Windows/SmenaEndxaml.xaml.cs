@@ -14,12 +14,9 @@ using System.Windows.Shapes;
 
 namespace Anticafe_4._0
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class SmenaEnd : Window
     {
-        public MainWindow()
+        public SmenaEnd()
         {
             InitializeComponent();
         }
