@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Anticafe_4._0"
         mc:Ignorable="d"
         Title="Новый гость" Height="500" Width="400" Background="SandyBrown"
-        WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Service/1.ico">
+        WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Service/1.ico"
+        FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic">
     <Grid>
         <!-- занесение в бд пока не придумал структуру-->
     </Grid>

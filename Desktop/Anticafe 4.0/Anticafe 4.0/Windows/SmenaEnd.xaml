@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:Anticafe_4._0"
         mc:Ignorable="d"
         Title="Конец смены" Height="400" Width="500" Background="SandyBrown" 
-        Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic">
+    <Window.Resources>
+        <Style TargetType="Label" x:Key="LabelLeft">
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Grid.Column" Value="0"/>
+        </Style>
+        <Style TargetType="Label" x:Key="LabelRight">
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Grid.Column" Value="1"/>
+        </Style>
+        <Style TargetType="Button" x:Name="BaseButton">
+            <Setter Property="Margin" Value="70,10,70,10"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="15*"/>
@@ -19,34 +34,19 @@
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="LStartDay" Content="Начало дня:" Margin="15,10,15,10" 
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-               Grid.Column="0" Grid.Row="0"/>
-        <Label x:Name="StartDay" Content="" Margin="15,10,15,10" 
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-               Grid.Column="1" Grid.Row="0"/>
-        <Label x:Name="LZ" Content="Z-отчёт:" Margin="15,10,15,10" 
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-               Grid.Column="0" Grid.Row="1"/>
-        <Label x:Name="Z" Content="" Margin="15,10,15,10" 
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-               Grid.Column="1" Grid.Row="1"/>
-        <Label x:Name="LSumHB" Content="Предоплата по ДР:" Margin="15,10,15,10" 
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-               Grid.Column="0" Grid.Row="2"/>
+        <Label Style="{StaticResource LabelLeft}" x:Name="LStartDay" Content="Начало дня:" Grid.Row="0"/>
+        <Label Style="{StaticResource LabelRight}" x:Name="StartDay" Content="" Grid.Row="0"/>
+        <Label Style="{StaticResource LabelLeft}" x:Name="LZ" Content="Z-отчёт:" Grid.Row="1"/>
+        <Label Style="{StaticResource LabelRight}" x:Name="Z" Content="" Grid.Row="1"/>
+        <Label Style="{StaticResource LabelLeft}" x:Name="LSumHB" Content="Предоплата по ДР:" Grid.Row="2"/>
         <TextBox x:Name="SumHB" Text="" Margin="15,10,15,10" 
                  FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-                 Grid.Column="1" Grid.Row="2" MaxLines="1" PreviewTextInput="SumHP_PreviewTextInput"/>
-        <Label x:Name="LResult" Content="Итог:" Margin="15,10,15,10" 
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-               Grid.Column="0" Grid.Row="3"/>
-        <Label x:Name="Result" Content="" Margin="15,10,15,10" 
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-               Grid.Column="1" Grid.Row="3"/>
+                 Grid.Column="1" Grid.Row="2" MaxLines="1" />
+        <Label Style="{StaticResource LabelLeft}" x:Name="LResult" Content="Итог:" Grid.Row="3"/>
+        <Label Style="{StaticResource LabelRight}" x:Name="Result" Content="" Grid.Row="3"/>
         <Button x:Name="BEnd" Content="Конец смены" Margin="160,15,160,15" 
                 FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-                Grid.ColumnSpan="2" Grid.Row="4" IsEnabled="{Binding ElementName=SumHB, Path=Text.Length}" 
-                Click="BEnd_Click"/>
+                Grid.ColumnSpan="2" Grid.Row="4" IsEnabled="{Binding ElementName=SumHB, Path=Text.Length}" />
         
     </Grid>
 </Window>

@@ -6,7 +6,44 @@
         xmlns:local="clr-namespace:Anticafe_4._0"
         mc:Ignorable="d"
         Title="Гость пришёл" Height="250" Width="360" Background="SandyBrown" 
-        Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic">
+    <Window.Resources>
+        <Style TargetType="ComboBox" x:Name="BaseComboBox">
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Grid.Row" Value="1"/>
+        </Style>
+        <Style TargetType="Label" x:Name="BaseLabel">
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Grid.Column" Value="0"/>
+        </Style>
+        <Style TargetType="TextBox" x:Name="BaseTextBox">
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Grid.Row" Value="0"/>
+            <Setter Property="MaxLines" Value="1"/>
+        </Style>
+        <Style TargetType="Button" x:Name="BaseButton">
+            <Setter Property="Margin" Value="70,15,70,15"/>
+            <Setter Property="Grid.ColumnSpan" Value="2"/>
+            <Setter Property="Grid.Row" Value="2"/>
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding ElementName=TName, Path=Text.Length}" Value="0" />
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="IsEnabled" Value="False" />
+                </MultiDataTrigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding ElementName=CTax, Path=Text.Length}" Value="0" />
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="IsEnabled" Value="False" />
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
@@ -17,44 +54,14 @@
             <RowDefinition Height="15*"/>
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
-        <Label x:Name="LName" Content="Имя:" Margin="15,10,15,10" 
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-               Grid.Column="0" Grid.Row="0"/>
-        <TextBox x:Name="TName" Text="" Margin="15,10,15,10" 
-                 FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-                 Grid.Column="1" Grid.Row="0" MaxLines="1" PreviewTextInput="TName_PreviewTextInput"/>
-        <Label x:Name="LTax" Content="Тариф:" Margin="15,10,15,10" 
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-               Grid.Column="0" Grid.Row="1"/>
-        <ComboBox x:Name="CTax" Margin="15,10,15,10" 
-                  FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-                  Grid.Column="1" Grid.Row="1" >
+        <Label x:Name="LName" Content="Имя:" Grid.Row="0"/>
+        <TextBox x:Name="TName" Text=""/>
+        <Label x:Name="LTax" Content="Тариф:" Grid.Row="1"/>
+        <ComboBox x:Name="CTax">
             <TextBlock>Обычный</TextBlock>
             <TextBlock>Студенческий</TextBlock>
             <TextBlock>Детский</TextBlock>
         </ComboBox>
-        <Button x:Name="BNew" Content="Ура, новый гость" Margin="70,15,70,15" 
-                FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-                Grid.ColumnSpan="2" Grid.Row="2"  Click="BNew_Click">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Style.Triggers>
-                        <MultiDataTrigger>
-                            <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding ElementName=TName, Path=Text.Length}" Value="0" />
-                            </MultiDataTrigger.Conditions>
-                            <Setter Property="IsEnabled" Value="False" />
-                        </MultiDataTrigger>
-                        <MultiDataTrigger>
-                            <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding ElementName=CTax, Path=Text.Length}" Value="0" />
-                            </MultiDataTrigger.Conditions>
-                            <Setter Property="IsEnabled" Value="False" />
-                        </MultiDataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
-
+        <Button x:Name="BNew" Content="Ура, новый гость"/>
     </Grid>
 </Window>

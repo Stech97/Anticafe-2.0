@@ -3,10 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Anticafe_4._0"
-        mc:Ignorable="d" Title="Гость уходит" Height="450" Width="300"
-         Background="SandyBrown" Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" >
-    <Grid>
+        mc:Ignorable="d" Title="Гость уходит" Height="350" Width="350"
+        Background="SandyBrown" Icon="/Anticafe 4.0;component/Service/1.ico" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic">
+    <Window.Resources>
+        <Style TargetType="Label" x:Key="LabelLeft">
+            <Setter Property="Margin" Value="15,0,0,0"/>
+            <Setter Property="Grid.Column" Value="0"/>
+        </Style>
+        <Style TargetType="Label" x:Key="LabelRight">
+            <Setter Property="Margin" Value="0,0,15,0"/>
+            <Setter Property="Grid.Column" Value="1"/>
+        </Style>
+        <Style TargetType="Button" x:Name="BaseButton">
+            <Setter Property="Margin" Value="70,10,70,10"/>
+            <Setter Property="Grid.Row" Value="5"/>
+            <Setter Property="Grid.ColumnSpan" Value="2"/>
+        </Style>
+    </Window.Resources>
+    <Grid Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="20*"/>
@@ -16,43 +32,21 @@
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150*"/>
-            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="80*"/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="LName" Content="Имя:" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="0" Grid.Row="0"/>
-        <Label x:Name="Name" Content="" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="1" Grid.Row="0"/>
-        <Label x:Name="LTax" Content="Тариф:" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="0" Grid.Row="1"/>
-        <Label x:Name="Tax" Content="" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="1" Grid.Row="1"/>
-        <Label x:Name="LIn" Content="Пришёл в:" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="0" Grid.Row="2"/>
-        <Label x:Name="In" Content="" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="1" Grid.Row="2"/>
-        <Label x:Name="LOut" Content="Уходит в:" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="0" Grid.Row="3"/>
-        <Label x:Name="Out" Content="" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="1" Grid.Row="3"/>
-        <Label x:Name="LSum" Content="Итого:" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="0" Grid.Row="4"/>
-        <Label x:Name="Sum" Content="" Margin="15,10,15,10"
-               FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-               Grid.Column="1" Grid.Row="4"/>
-        <Button x:Name="BOk" Content="Гость ушёл" Margin="70,15,70,15" 
-                FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-                Grid.Row="5" Grid.ColumnSpan="2" Click="BOk_Click"/>
+        <Label Style="{StaticResource LabelLeft}" x:Name="LNameGuest" Content="Имя:" Grid.Row="0"/>
+        <Label Style="{StaticResource LabelRight}" x:Name="NameGuest" Content="" Grid.Row="0"/>
+        <Label Style="{StaticResource LabelLeft}" x:Name="LTax" Content="Тариф:" Grid.Row="1"/>
+        <Label Style="{StaticResource LabelRight}" x:Name="Tax" Content="" Grid.Row="1"/>
+        <Label Style="{StaticResource LabelLeft}" x:Name="LIn" Content="Пришёл в:" Grid.Row="2"/>
+        <Label Style="{StaticResource LabelRight}" x:Name="In" Content="" Grid.Row="2"/>
+        <Label Style="{StaticResource LabelLeft}" x:Name="LOut" Content="Уходит в:" Grid.Row="3"/>
+        <Label Style="{StaticResource LabelRight}" x:Name="Out" Content="" Grid.Row="3"/>
+        <Label Style="{StaticResource LabelLeft}" x:Name="LSum" Content="Итого:" Grid.Row="4"/>
+        <Label Style="{StaticResource LabelRight}" x:Name="Sum" Content="" Grid.Row="4"/>
+        <Button x:Name="BOk" Content="Гость ушёл"/>
 
     </Grid>
 </Window>
