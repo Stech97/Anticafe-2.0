@@ -13,8 +13,14 @@
 *.config
 *.pdb
 *.dbmdl
-Desktop/Anticafe 4.0/Anticafe 4.0/obj/
-Desktop/Anticafe 4.0/Anticafe 4.0/bin/Debug/
+*.gitconfig
+*.gitattributes
+*.gitignore
 Desktop/Anticafe 4.0/.vs/
-Desktop/Anticafe 4.0/Anticafe 4.0 Model/obj
+Desktop/Anticafe 4.0/packages/
+Desktop/Anticafe 4.0/Anticafe 4.0/obj/
+Desktop/Anticafe 4.0/Anticafe 4.0/obj/Debug/
+Desktop/Anticafe 4.0/Anticafe 4.0/bin/Debug/
+Desktop/Anticafe 4.0/Anticafe 4.0 Model/obj/
 Desktop/Anticafe 4.0/Anticafe 4.0 Model/bin/Debug/
+Desktop/Anticafe 4.0/Anticafe 4.0 Model/obj/Debug/
