@@ -17,6 +17,7 @@
 *.gitattributes
 *.gitignore
 .vs/
+packages/
 Desktop/obj/
 Desktop/bin/Debug/
 Desktop/obj/Debug/
@@ -28,3 +29,6 @@ Anticafe 4.0 ModelView/obj/
 Anticafe 4.0 ModelView/bin/Debug/
 Anticafe 4.0 ModelView/obj/Debug/
 Desktop/bin/Release/Anticafe 4.0.vshost.exe
+DBServise/obj/
+DBServise/obj/Debug/
+DBServise/bin/Debug/

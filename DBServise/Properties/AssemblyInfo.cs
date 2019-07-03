@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Anticafe 4.0 ModelView")]
-[assembly: AssemblyDescription("Взаимодействие между View и Model и загрузка в БД")]
+[assembly: AssemblyTitle("DBServise")]
+[assembly: AssemblyDescription("Сервис для работы с Базой Данных Антикафе")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Maksstech97")]
-[assembly: AssemblyProduct("Anticafe 4.0 ModelView")]
+[assembly: AssemblyProduct("DBServise")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("73221b40-9cfe-4a1e-acf7-7798f0680a5e")]
+[assembly: Guid("4f173ea1-9b45-4723-b9ec-e143e77ed93b")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номер сборки и номер редакции по умолчанию.
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.1")]
-[assembly: AssemblyFileVersion("1.0.0.1")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
