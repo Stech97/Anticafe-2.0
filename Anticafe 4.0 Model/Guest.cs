@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Anticafe_4._0.Model
 {
-	public class Guest
+	//класс описание Информации о Госте для работы с БД через Code-First
+	public class GuestInfo
 	{
 		public int ID { get; set; }
 		[Required(ErrorMessage = "Фамилия гостя не установлена")]

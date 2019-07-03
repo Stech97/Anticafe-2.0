@@ -2,9 +2,10 @@
 
 namespace Anticafe_4._0.Model
 {
+	//Класс для создания и работы с БД и таблицей GuestInfo
 	class GuestContext : DbContext
 	{
-		public DbSet<Guest> GuestInfo { get; set; }
+		public DbSet<GuestInfo> GuestInfo { get; set; }
 
 		public GuestContext()
 		{
