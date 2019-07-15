@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.ServiceModel;
 
 namespace Anticafe_4._0
 {
