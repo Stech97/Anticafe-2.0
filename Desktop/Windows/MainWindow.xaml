@@ -1,0 +1,57 @@
+﻿<Window x:Class="Anticafe_4._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Anticafe_4._0"
+        mc:Ignorable="d" Height="400" Width="950"
+        Title="{Binding Source={x:Static local:MainWindow.WindowTitle}}" Margin="0,0,0,0" 
+        Background="SandyBrown" Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" 
+        Topmost="True" MinHeight="400" MinWidth="950" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" 
+        FontStyle="Italic">
+    <Window.Resources>
+        <Style TargetType="DataGrid" x:Name="BaseDataGrid">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="ColumnWidth" Value="*"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+            <Setter Property="CanUserReorderColumns" Value="False"/>
+            <Setter Property="CanUserResizeColumns" Value="False"/>
+            <Setter Property="CanUserSortColumns" Value="False"/>
+            <Setter Property="CanUserResizeRows" Value="False"/>
+            <Setter Property="CanUserResizeColumns" Value="False"/>
+        </Style>
+        <Style TargetType="Button" x:Name="BaseButton">
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Grid.Column" Value="1"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500*"/>
+            <ColumnDefinition Width="150*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="GuestTable" Grid.Column="0" Grid.RowSpan="5">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="name" Header="Имя" MinWidth="170" Binding="{Binding Name}"/>
+                <DataGridTextColumn x:Name="Tax" Header="Тариф" MinWidth="170" Binding="{Binding Tax}"/>
+                <DataGridTextColumn x:Name="Start" Header="Пришёл" MinWidth="110" Binding="{Binding Start, StringFormat='HH:mm'}"/>
+                <DataGridTextColumn x:Name="End" Header="Ушёл" MinWidth="110" Binding="{Binding End, StringFormat='HH:mm'}"/>
+                <DataGridTextColumn x:Name="Sum" Header="Сумма" MinWidth="150" Binding="{Binding Sum}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BTax" Content="Тарифы" Grid.Row="0" />
+        <Button x:Name="BNewGuest" Content="Новый гость" Grid.Row="1"/>
+        <Button x:Name="BGuestIn" Content="Гость пришёл" Grid.Row="2"/>
+        <Button x:Name="BGuestOut" Content="Гость уходит" Grid.Row="3" />
+        <Button x:Name="BSmenaEnd" Content="Конец смены" Grid.Row="4"/>
+    </Grid>
+</Window>
