@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
+﻿using System.ServiceModel;
+using Anticafe_4._0.Model;
 
 
 //Создание сервиса для взаимодействия между View и Model
-namespace Anticafe_4._0_Service
+namespace Anticafe_4._0_ModelView
 {
 	[ServiceContract]
 	public interface IWorkDB
@@ -16,18 +11,9 @@ namespace Anticafe_4._0_Service
 		[OperationContract]
 		string TestConnection();
 
-		//[OperationContract]
-		//string 
+		[OperationContract]
+		GuestInfo CreateGuestInfo(string secondName, string firstName, string middleName,
+							string dis, string BD, string email, string phone, byte[] photo);
 	}
 
-
-	[DataContract]
-	public class CompositeType
-	{
-		public string TestConnection()
-		{
-			return "OK";
-		}
-
-	}
 }
