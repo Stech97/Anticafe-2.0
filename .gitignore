@@ -16,23 +16,11 @@
 *.gitconfig
 *.gitattributes
 *.gitignore
-.vs/
-packages/
-Desktop/obj/
-Desktop/bin/Debug/
-Desktop/obj/Debug/
-Desktop/packages/
-Anticafe 4.0 Model/obj/
-Anticafe 4.0 Model/bin/Debug/
-Anticafe 4.0 Model/obj/Debug/
-Anticafe 4.0 ModelView/obj/
-Anticafe 4.0 ModelView/bin/Debug/
-Anticafe 4.0 ModelView/obj/Debug/
-Desktop/bin/Release/Anticafe 4.0.vshost.exe
-DBServise/obj/
-DBServise/obj/Debug/
-DBServise/bin/Debug/
-Web Anticafe 4.0/obj/
-Web Anticafe 4.0/obj/Debug/
-Web Anticafe 4.0/bin/Debug/
-Web/
+Desktop/Anticafe 4.0/.vs/
+Desktop/Anticafe 4.0/packages/
+Desktop/Anticafe 4.0/Anticafe 4.0/obj/
+Desktop/Anticafe 4.0/Anticafe 4.0/obj/Debug/
+Desktop/Anticafe 4.0/Anticafe 4.0/bin/Debug/
+Desktop/Anticafe 4.0/Anticafe 4.0 Model/obj/
+Desktop/Anticafe 4.0/Anticafe 4.0 Model/bin/Debug/
+Desktop/Anticafe 4.0/Anticafe 4.0 Model/obj/Debug/
