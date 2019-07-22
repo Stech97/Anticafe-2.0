@@ -62,6 +62,6 @@
         <Label x:Name="LEvent" Content="Мероприятия:" Margin="15,10,15,0" Grid.Column="0" Grid.Row="3"/>
         <CheckBox x:Name="CBEvent" Content="" Margin="15,25,15,25" Grid.Column="1" Grid.Row="3"/>
  //-->
-        <Button x:Name="BStatrt" Content="Начать смену!"/>
+        <Button x:Name="BStatrt" Content="Начать смену!" Click="BStatrt_Click"/>
     </Grid>
 </Window>
