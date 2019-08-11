@@ -76,7 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Administrator.cs" />
-    <Compile Include="Back\Billing.cs" />
     <Compile Include="Entity\Guest.cs" />
     <Compile Include="Entity\GuestInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -96,7 +95,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
