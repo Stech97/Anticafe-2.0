@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using Anticafe_4._0_Model;
+using Anticafe_4._0_Model.Models;
 using System.Data.Entity;
 
 namespace Anticafe_4._0
@@ -8,19 +8,19 @@ namespace Anticafe_4._0
     {
         public static string WindowTitle { get; set; }
 
-		GuestInfoContext db = new GuestInfoContext();
+		TestContext db = new TestContext();
 
 		public MainWindow()
         {
             InitializeComponent();
-			db.GuestInfo.Load();
-			GuestTable.DataContext = db.GuestInfo.Local.ToBindingList();
-			var list = db.GuestInfo.Local.ToBindingList();
+			db.GuestInfoes.Load();
+			GuestTable.DataContext = db.GuestInfoes.Local.ToBindingList();
+			var list = db.GuestInfoes.Local.ToBindingList();
 		}
 
 		private void GuestTable_SourceUpdated(object sender, System.Windows.Data.DataTransferEventArgs e)
 		{
-			GuestTable.DataContext = db.GuestInfo.Local.ToBindingList();
+			GuestTable.DataContext = db.GuestInfoes.Local.ToBindingList();
 			
 		}
 

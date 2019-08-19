@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows;
-using Anticafe_4._0_Model;
-using Anticafe_4._0_Model.Entity;
+using Anticafe_4._0_Model.Models;
 
 namespace Anticafe_4._0
 {
@@ -14,7 +13,7 @@ namespace Anticafe_4._0
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			DBConnect db = new DBConnect();
+			TestContext db = new TestContext();
 
 			GuestInfo gi = new GuestInfo
 			{
@@ -28,7 +27,8 @@ namespace Anticafe_4._0
 				Email = BEmail.Text
 			};
 
-			db.AddGuestInfo(gi);
+			db.GuestInfoes.Add(gi);
+			db.SaveChanges();
 			Close();
 		}
 	}

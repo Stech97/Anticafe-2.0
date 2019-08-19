@@ -81,11 +81,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBConnect.cs" />
-    <Compile Include="Entity\Administrator.cs" />
-    <Compile Include="Entity\Guest.cs" />
-    <Compile Include="Entity\GuestInfo.cs" />
-    <Compile Include="GuestContext.cs" />
+    <Compile Include="Models\GuestInfo.cs" />
+    <Compile Include="Models\Mapping\GuestInfoMap.cs" />
+    <Compile Include="Models\TestContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
