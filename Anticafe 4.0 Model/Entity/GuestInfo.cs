@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Anticafe_4._0_Model.Entity
 {
-	class GuestInfo
+	public class GuestInfo
 	{
 		public int ID { get; set; }
 
@@ -19,8 +19,8 @@ namespace Anticafe_4._0_Model.Entity
 
 		public string Email { get; set; }
 
-		public string Phone { get; set; }
+		//public string Phone { get; set; }
 
-		public byte[] Photo { get; set; }
+		//public byte[] Photo { get; set; }
 	}
 }

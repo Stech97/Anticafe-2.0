@@ -39,7 +39,7 @@
             <ColumnDefinition Width="500*"/>
             <ColumnDefinition Width="150*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="GuestTable" Grid.Column="0" Grid.RowSpan="5">
+        <DataGrid x:Name="GuestTable" Grid.Column="0" Grid.RowSpan="5" Binding.SourceUpdated="GuestTable_SourceUpdated">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="name" Header="Имя" MinWidth="170" Binding="{Binding Name}"/>
                 <DataGridTextColumn x:Name="Tax" Header="Тариф" MinWidth="170" Binding="{Binding Tax}"/>
@@ -49,7 +49,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="BTax" Content="Тарифы" Grid.Row="0" />
-        <Button x:Name="BNewGuest" Content="Новый гость" Grid.Row="1"/>
+        <Button x:Name="BNewGuest" Content="Новый гость" Grid.Row="1" Click="BNewGuest_Click"/>
         <Button x:Name="BGuestIn" Content="Гость пришёл" Grid.Row="2"/>
         <Button x:Name="BGuestOut" Content="Гость уходит" Grid.Row="3" />
         <Button x:Name="BSmenaEnd" Content="Конец смены" Grid.Row="4"/>

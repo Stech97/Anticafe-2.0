@@ -9,6 +9,24 @@
         WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Service/1.ico"
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic">
     <Grid>
-        <!-- занесение в бд пока не придумал структуру-->
+        <Label Name="name" Content="Имя" Margin="10,10,-10,420"/>
+        <TextBox Name="BName" Margin="228,10,0,430"/>
+
+        <Label Name="Sname" Content="Фамилия" Margin="10,59,-10,371"/>
+        <TextBox Name="BSName" Margin="240,59,10,371"/>
+        
+        <Label Name="Mname" Content="Отчество" Margin="0,114,0,316"/>
+        <TextBox Name="BMName" Margin="240,114,10,316"/>
+        
+        <Label Name="Dis" Content="Дисконт" Margin="0,191,0,239"/>
+        <TextBox Name="BDis" Margin="228,191,22,237"/>
+        
+        <Label Name="BD" Content="ДР" Margin="10,258,-10,172"/>
+        <TextBox Name="BBD" Margin="228,258,22,157"/>
+
+        <Label Name="Email" Content="email" Margin="10,328,-10,102"/>
+        <TextBox Name="BEmail" Margin="228,317,22,102"/>
+
+        <Button Content="Button" Width="75" Height="50" Click="Button_Click" Margin="161,409,156,10"/>
     </Grid>
 </Window>

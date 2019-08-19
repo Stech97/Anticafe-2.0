@@ -7,6 +7,13 @@ namespace Anticafe_4._0
         public StartWindow()
         {
             InitializeComponent();
-        }       
-    }
+        }
+
+		private void BStatrt_Click(object sender, RoutedEventArgs e)
+		{
+			MainWindow Window = new MainWindow();
+			Window.Show();
+			Hide();
+		}
+	}
 }
