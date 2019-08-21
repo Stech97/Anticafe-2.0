@@ -4,11 +4,11 @@ using System.Data.Entity;
 using Anticafe_4._0_Model;
 using System.Data.SqlClient;
 using Anticafe_4._0_Model.Models;
-
+using System;
 
 namespace Anticafe_4._0
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, IDisposable
     {
         public static string WindowTitle { get; set; }
 
@@ -38,8 +38,8 @@ namespace Anticafe_4._0
 
 		private void BNewGuest_Click(object sender, RoutedEventArgs e)
 		{
-			NewGuest NG = new NewGuest();
-			NG.Show();
+			using (NewGuest newGuest = new NewGuest())
+				newGuest.ShowDialog();
 		}
 
 		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -58,6 +58,11 @@ namespace Anticafe_4._0
 		private void NotificayVisibly_Click(object sender, RoutedEventArgs e)
 		{
 			Visibility = Visibility.Visible;
+		}
+
+		void IDisposable.Dispose()
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

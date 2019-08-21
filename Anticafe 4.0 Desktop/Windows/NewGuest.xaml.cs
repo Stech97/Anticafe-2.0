@@ -4,7 +4,7 @@ using Anticafe_4._0_Model.Models;
 
 namespace Anticafe_4._0
 {
-    public partial class NewGuest : Window
+    public partial class NewGuest : Window, IDisposable
     {
         public NewGuest()
         {
@@ -17,8 +17,6 @@ namespace Anticafe_4._0
 
 			GuestInfo gi = new GuestInfo
 			{
-				//поменять на динамичское добавление
-				ID = 10,
 				FirstName = BName.Text,
 				SecondName = BSName.Text,
 				MiddleName = BMName.Text,
@@ -30,6 +28,11 @@ namespace Anticafe_4._0
 			db.GuestInfoes.Add(gi);
 			db.SaveChanges();
 			Close();
+		}
+
+		void IDisposable.Dispose()
+		{
+			throw new NotImplementedException();
 		}
 	}
 }
