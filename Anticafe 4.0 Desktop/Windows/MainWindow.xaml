@@ -1,4 +1,5 @@
 ﻿<Window x:Class="Anticafe_4._0.MainWindow"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,7 +9,7 @@
         Title="{Binding Source={x:Static local:MainWindow.WindowTitle}}" Margin="0,0,0,0" 
         Background="SandyBrown" Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" 
         Topmost="True" MinHeight="400" MinWidth="950" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" 
-        FontStyle="Italic">
+        FontStyle="Italic" ShowActivated="False" Closing="Window_Closing">
     <Window.Resources>
         <Style TargetType="DataGrid" x:Name="BaseDataGrid">
             <Setter Property="Margin" Value="0"/>
@@ -39,7 +40,7 @@
             <ColumnDefinition Width="500*"/>
             <ColumnDefinition Width="150*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="GuestTable" Grid.Column="0" Grid.RowSpan="5" Binding.SourceUpdated="GuestTable_SourceUpdated">
+        <DataGrid x:Name="GuestTable" Grid.Column="0" Grid.RowSpan="5">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="name" Header="Имя" MinWidth="170" Binding="{Binding Name}"/>
                 <DataGridTextColumn x:Name="Tax" Header="Тариф" MinWidth="170" Binding="{Binding Tax}"/>
@@ -53,5 +54,18 @@
         <Button x:Name="BGuestIn" Content="Гость пришёл" Grid.Row="2"/>
         <Button x:Name="BGuestOut" Content="Гость уходит" Grid.Row="3" />
         <Button x:Name="BSmenaEnd" Content="Конец смены" Grid.Row="4"/>
+
+        <!--https://www.codeproject.com/Articles/36468/WPF-NotifyIcon-2#hello-->
+
+        <tb:TaskbarIcon Name="NI" IconSource="/Anticafe 4.0;component/Service/1.ico" 
+                        ToolTipText="Биллинг Антикафе" >
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu Background="White">
+                    <MenuItem Header="Развернуть" Click="NotificayVisibly_Click" />
+                    <MenuItem Header="Выход" Click="NotificayExit_Click"/>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+
     </Grid>
 </Window>
