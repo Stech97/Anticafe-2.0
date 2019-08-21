@@ -52,6 +52,7 @@ namespace Anticafe_4._0
 		{
 			Application.Current.Shutdown(1);
 			Logger.Log("Close Application with notification icon");
+			Logger.Log("Exit");
 		}
 
 		private void NotificayVisibly_Click(object sender, RoutedEventArgs e)

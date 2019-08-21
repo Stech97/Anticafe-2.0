@@ -14,7 +14,10 @@ namespace Anticafe_4._0_Model
 			path = path + "\\" + DateTime.Now.Date.ToShortDateString() + ".log";
 			using (StreamWriter logger = new StreamWriter(path,true))
 			{
-				logger.WriteLine(DateTime.Now.ToLongTimeString() + " - " + message);
+				if (message.Equals("Exit"))
+					logger.WriteLine();
+				else
+					logger.WriteLine(DateTime.Now.ToLongTimeString() + " - " + message);
 			}
 		}
 
