@@ -19,11 +19,9 @@ namespace Anticafe_4._0
 			Logger.Log(mes);
 			Logger.Log("Open main window");
 
-			using (MainWindow mainWindow = new MainWindow())
-			{
-				mainWindow.Show();
-				Close();
-			}
+			MainWindow mainWindow = new MainWindow();
+			mainWindow.Show();
+			Close();
 		}
 	}
 }

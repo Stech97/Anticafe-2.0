@@ -5,10 +5,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anticafe_4._0"
-        mc:Ignorable="d" Height="400" Width="950"
+        mc:Ignorable="d" Height="400" Width="886"
         Title="{Binding Source={x:Static local:MainWindow.WindowTitle}}" Margin="0,0,0,0" 
         Background="SandyBrown" Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" 
-        Topmost="True" MinHeight="400" MinWidth="950" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" 
+        Topmost="True" MinHeight="400" MinWidth="1000" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" 
         FontStyle="Italic" ShowActivated="False" Closing="Window_Closing">
     <Window.Resources>
         <Style TargetType="DataGrid" x:Name="BaseDataGrid">
@@ -42,11 +42,11 @@
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="GuestTable" Grid.Column="0" Grid.RowSpan="5">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="name" Header="Имя" MinWidth="170" Binding="{Binding Name}"/>
-                <DataGridTextColumn x:Name="Tax" Header="Тариф" MinWidth="170" Binding="{Binding Tax}"/>
-                <DataGridTextColumn x:Name="Start" Header="Пришёл" MinWidth="110" Binding="{Binding Start, StringFormat='HH:mm'}"/>
-                <DataGridTextColumn x:Name="End" Header="Ушёл" MinWidth="110" Binding="{Binding End, StringFormat='HH:mm'}"/>
-                <DataGridTextColumn x:Name="Sum" Header="Сумма" MinWidth="150" Binding="{Binding Sum}"/>
+                <DataGridTextColumn x:Name="ID" Header="№ карты" MinWidth="70" Binding="{Binding ID}"/>
+                <DataGridTextColumn x:Name="Suname" Header="Фамилия" MinWidth="170" Binding="{Binding SecondName}"/>
+                <DataGridTextColumn x:Name="Name" Header="Имя" MinWidth="150" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn x:Name="MiddleName" Header="Отчество" MinWidth="150" Binding="{Binding MiddleName}"/>
+                <DataGridTextColumn x:Name="Dis" Header="Тип Карты" MinWidth="110" Binding="{Binding Discount}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="BTax" Content="Тарифы" Grid.Row="0" />

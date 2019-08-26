@@ -4,11 +4,10 @@ using System.Data.Entity;
 using Anticafe_4._0_Model;
 using System.Data.SqlClient;
 using Anticafe_4._0_Model.Models;
-using System;
 
 namespace Anticafe_4._0
 {
-    public partial class MainWindow : Window, IDisposable
+    public partial class MainWindow : Window
     {
         public static string WindowTitle { get; set; }
 
@@ -19,7 +18,7 @@ namespace Anticafe_4._0
             InitializeComponent();
 
 			WindowTitle = "На смене:";
-
+		
 			SqlConnection MyConnection = new SqlConnection();
 			if (MyConnection.State == ConnectionState.Open)
 			{
@@ -60,9 +59,5 @@ namespace Anticafe_4._0
 			Visibility = Visibility.Visible;
 		}
 
-		void IDisposable.Dispose()
-		{
-			throw new NotImplementedException();
-		}
 	}
 }
