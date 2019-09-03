@@ -18,13 +18,17 @@ namespace Anticafe_4._0
             InitializeComponent();
 
 			WindowTitle = "На смене:";
-		
+
+			/*GuestTable.DataContext = db.GuestInfoes.Local.ToBindingList();
+			Прписать ModelView для изменнеия ячейки и следующей привязкии её в бд
+			Так же изменить строку в бд на свои данные*/
 			SqlConnection MyConnection = new SqlConnection();
-			if (MyConnection.State == ConnectionState.Open)
+			if (MyConnection.State != ConnectionState.Open)
 			{
+				var cs = MyConnection.State;
+				Logger.Log(cs.ToString());
 				db.GuestInfoes.Load();
-				GuestTable.DataContext = db.GuestInfoes.Local.ToBindingList();
-				var list = db.GuestInfoes.Local.ToBindingList();
+				GuestTable.ItemsSource = db.GuestInfoes.Local.ToBindingList();
 				Logger.Log("Connect to database correct");
 			}
 			else
@@ -37,8 +41,10 @@ namespace Anticafe_4._0
 
 		private void BNewGuest_Click(object sender, RoutedEventArgs e)
 		{
-			using (NewGuest newGuest = new NewGuest())
-				newGuest.ShowDialog();
+			NewGuest newGuest = new NewGuest();
+			newGuest.ShowDialog();
+			db.GuestInfoes.Load();
+			GuestTable.ItemsSource = db.GuestInfoes.Local.ToBindingList();
 		}
 
 		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -58,6 +64,5 @@ namespace Anticafe_4._0
 		{
 			Visibility = Visibility.Visible;
 		}
-
 	}
 }

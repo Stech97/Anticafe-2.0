@@ -5,10 +5,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anticafe_4._0"
-        mc:Ignorable="d" Height="400" Width="886"
+        mc:Ignorable="d" Height="400" Width="1750"
         Title="{Binding Source={x:Static local:MainWindow.WindowTitle}}" Margin="0,0,0,0" 
-        Background="SandyBrown" Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" 
-        Topmost="True" MinHeight="400" MinWidth="1000" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" 
+        Background="SandyBrown" Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" MinHeight="400" MinWidth="1750" FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" 
         FontStyle="Italic" ShowActivated="False" Closing="Window_Closing">
     <Window.Resources>
         <Style TargetType="DataGrid" x:Name="BaseDataGrid">
@@ -38,15 +37,17 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="500*"/>
-            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="GuestTable" Grid.Column="0" Grid.RowSpan="5">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="ID" Header="№ карты" MinWidth="70" Binding="{Binding ID}"/>
-                <DataGridTextColumn x:Name="Suname" Header="Фамилия" MinWidth="170" Binding="{Binding SecondName}"/>
-                <DataGridTextColumn x:Name="Name" Header="Имя" MinWidth="150" Binding="{Binding FirstName}"/>
-                <DataGridTextColumn x:Name="MiddleName" Header="Отчество" MinWidth="150" Binding="{Binding MiddleName}"/>
-                <DataGridTextColumn x:Name="Dis" Header="Тип Карты" MinWidth="110" Binding="{Binding Discount}"/>
+                <DataGridTextColumn x:Name="ID" Header="№ карты" MinWidth="70" Binding="{Binding ID,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Suname" Header="Фамилия" MinWidth="170" Binding="{Binding SecondName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Name" Header="Имя" MinWidth="150" Binding="{Binding FirstName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="MiddleName" Header="Отчество" MinWidth="150" Binding="{Binding MiddleName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Dis" Header="Тип Карты" MinWidth="110" Binding="{Binding Discount,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Email" Header="E-mail" MinWidth="150" Binding="{Binding Email,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Phone" Header="Телефон" MinWidth="110" Binding="{Binding Phone,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="BTax" Content="Тарифы" Grid.Row="0" />

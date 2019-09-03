@@ -20,6 +20,7 @@ namespace Anticafe_4._0_Model.Models.Mapping
             this.Property(t => t.Discount).HasColumnName("Discount");
             this.Property(t => t.BDay).HasColumnName("BDay");
             this.Property(t => t.Email).HasColumnName("Email");
-        }
+			this.Property(t => t.Phone).HasColumnName("Phone");
+		}
     }
 }

@@ -4,7 +4,7 @@ using Anticafe_4._0_Model.Models;
 
 namespace Anticafe_4._0
 {
-    public partial class NewGuest : Window, IDisposable
+    public partial class NewGuest : Window
     {
         public NewGuest()
         {
@@ -22,17 +22,13 @@ namespace Anticafe_4._0
 				MiddleName = BMName.Text,
 				Discount = int.Parse(BDis.Text),
 				BDay = DateTime.Parse(BBD.Text),
-				Email = BEmail.Text
+				Email = BEmail.Text,
+				Phone = BPhone.Text
 			};
 
 			db.GuestInfoes.Add(gi);
 			db.SaveChanges();
 			Close();
-		}
-
-		void IDisposable.Dispose()
-		{
-			throw new NotImplementedException();
 		}
 	}
 }
