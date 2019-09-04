@@ -8,11 +8,11 @@ using System.Windows;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("Anticafe 4.0 Model")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Сметка для Антикафе 'Время Терпит'")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Hewlett-Packard")]
-[assembly: AssemblyProduct("Anticafe 4.0 Model")]
-[assembly: AssemblyCopyright("Copyright © Hewlett-Packard 2019")]
+[assembly: AssemblyCompany("MaksStech97")]
+[assembly: AssemblyProduct("Anticafe 4.0")]
+[assembly: AssemblyCopyright("Apache Licence 2.0")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,5 +51,5 @@ using System.Windows;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("4.0.0.6")]
+[assembly: AssemblyFileVersion("4.0.0.6")]

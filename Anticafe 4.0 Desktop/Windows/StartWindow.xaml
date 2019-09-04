@@ -7,7 +7,7 @@
         mc:Ignorable="d" Title="Антикафе приветствует тебя на работе и желает хорошой смены)" 
         Height="420" Width="570" MinHeight="400" MinWidth="570" WindowStartupLocation="CenterOwner" Background="SandyBrown"
         Icon="/Anticafe 4.0;component/Service/1.ico" FontFamily="Times New Roman" FontSize="37" FontWeight="Bold" 
-        FontStyle="Italic">
+        FontStyle="Italic" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="Label" x:Name="BaseLabel">
             <Setter Property="Margin" Value="15,10,15,10"/>
@@ -18,6 +18,10 @@
             <Setter Property="Grid.Column" Value="1"/>
             <Setter Property="MaxLines" Value="1"/>
         </Style>
+        <Style TargetType="PasswordBox" x:Name="BasePasswordBox">
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Grid.Column" Value="1"/>
+        </Style>
         <Style TargetType="Button" x:Name="BaseButton">
             <Setter Property="Margin" Value="120,15,120,15"/>
             <Setter Property="Grid.ColumnSpan" Value="2"/>
@@ -25,13 +29,13 @@
             <Style.Triggers>
                 <MultiDataTrigger>
                     <MultiDataTrigger.Conditions>
-                        <Condition Binding="{Binding ElementName=TSum, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=TLogin, Path=Text.Length}" Value="0" />
                     </MultiDataTrigger.Conditions>
                     <Setter Property="IsEnabled" Value="False" />
                 </MultiDataTrigger>
                 <MultiDataTrigger>
                     <MultiDataTrigger.Conditions>
-                        <Condition Binding="{Binding ElementName=TOnSmena, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=TPassword, Path=Text.Length}" Value="0" />
                     </MultiDataTrigger.Conditions>
                     <Setter Property="IsEnabled" Value="False" />
                 </MultiDataTrigger>
@@ -50,18 +54,17 @@
             <RowDefinition Height="20*" />
             <RowDefinition Height="20*" />
         </Grid.RowDefinitions>
-        <Label x:Name="LSum" Content="Сумма в кошельке:" Grid.Row="0"/>
-        <TextBox x:Name="TSum" Text="" Grid.Row="0" />
-        <Label x:Name="LTime" Content="Время начала смены:" Grid.Column="0" Grid.Row="1"/>
+        <Label x:Name="LLogin" Content="Логин:" Grid.Row="0"/>
+        <TextBox x:Name="TLogin" Text="" Grid.Row="0" />
+        
+        <Label x:Name="LPassword" Content="Пароль:" Grid.Row="1"/>
+        <PasswordBox x:Name="TPassword" Grid.Row="1"/>
+
+        <Label x:Name="LTime" Content="Время начала смены:" Grid.Column="0" Grid.Row="2"/>
         <TextBox x:Name="TTime" Text="{Binding Source={x:Static sys:DateTime.Now}, Mode=OneWay,  StringFormat='HH:mm'}" 
-                  IsEnabled="False" Grid.Column="1" Grid.Row="1"/>
-        <Label x:Name="LOnSmena" Content="На смене:" Grid.Row="2"/>
-        <TextBox x:Name="TOnSmena" Text="" Grid.Row="2" />
-        <!--//   
-        Придумаем с мероприятиями, добавлю, а пока просто пустое место
-        <Label x:Name="LEvent" Content="Мероприятия:" Margin="15,10,15,0" Grid.Column="0" Grid.Row="3"/>
-        <CheckBox x:Name="CBEvent" Content="" Margin="15,25,15,25" Grid.Column="1" Grid.Row="3"/>
- //-->
-        <Button x:Name="BStatrt" Content="Начать смену!"/>
+                  IsEnabled="False" Grid.Column="1" Grid.Row="2"/>
+
+        <Button x:Name="BStatrt" Content="Начать смену!" Click="BStatrt_Click"/>
+       
     </Grid>
 </Window>
