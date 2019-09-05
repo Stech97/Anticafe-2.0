@@ -13,5 +13,12 @@ namespace Anticafe_4._0_Model.Models
         public DateTime BDay { get; set; }
         public string Email { get; set; }
 		public string Phone { get; set; }
-    }
+
+		public override string ToString()
+		{
+			string GuestInfoString;
+			GuestInfoString = SecondName + " " + FirstName + " " + MiddleName;
+			return GuestInfoString;
+		}
+	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using Anticafe_4._0_Model;
 using Anticafe_4._0_Model.Models;
 
 namespace Anticafe_4._0
@@ -28,6 +29,7 @@ namespace Anticafe_4._0
 
 			db.GuestInfoes.Add(gi);
 			db.SaveChanges();
+			Logger.Log("Добавлен новый гость " + gi.ToString());
 			Close();
 		}
 	}

@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Windows;
 using System.Data.Entity;
 using Anticafe_4._0_Model;
@@ -22,20 +23,27 @@ namespace Anticafe_4._0
 			/*GuestTable.DataContext = db.GuestInfoes.Local.ToBindingList();
 			Прписать ModelView для изменнеия ячейки и следующей привязкии её в бд
 			Так же изменить строку в бд на свои данные*/
-			SqlConnection MyConnection = new SqlConnection();
-			if (MyConnection.State != ConnectionState.Open)
+			
+			try
 			{
+				SqlConnection MyConnection = new SqlConnection();
 				var cs = MyConnection.State;
-				Logger.Log(cs.ToString());
+				Logger.Log("Connection state: " + cs.ToString());
 				db.GuestInfoes.Load();
 				GuestTable.ItemsSource = db.GuestInfoes.Local.ToBindingList();
 				Logger.Log("Connect to database correct");
 			}
-			else
+			catch (System.Data.SqlClient.SqlException e)
 			{
 				BNewGuest.IsEnabled = false;
-				Logger.Log("Connect to database isn't open");
+				Logger.Log("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());  
 			}
+			catch (System.Data.Entity.Core.EntityException e)
+			{
+				BNewGuest.IsEnabled = false;
+				Logger.Log("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
+			}
+			
 
 		}
 
@@ -55,7 +63,7 @@ namespace Anticafe_4._0
 
 		private void NotificayExit_Click(object sender, RoutedEventArgs e)
 		{
-			Application.Current.Shutdown(1);
+			Environment.Exit(1);
 			Logger.Log("Close Application with notification icon");
 			Logger.Log("Exit");
 		}
