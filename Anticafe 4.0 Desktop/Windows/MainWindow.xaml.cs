@@ -10,7 +10,7 @@ namespace Anticafe_4._0
 {
     public partial class MainWindow : Window
     {
-        public static string WindowTitle { get; set; }
+        public static string WindowTitle = "На смене:" + "admin";
 
 		TestContext db = new TestContext();
 
@@ -18,12 +18,10 @@ namespace Anticafe_4._0
         {
             InitializeComponent();
 
-			WindowTitle = "На смене:";
-
 			/*GuestTable.DataContext = db.GuestInfoes.Local.ToBindingList();
 			Прписать ModelView для изменнеия ячейки и следующей привязкии её в бд
 			Так же изменить строку в бд на свои данные*/
-			
+
 			try
 			{
 				SqlConnection MyConnection = new SqlConnection();
@@ -33,7 +31,7 @@ namespace Anticafe_4._0
 				GuestTable.ItemsSource = db.GuestInfoes.Local.ToBindingList();
 				Logger.Log("Connect to database correct");
 			}
-			catch (System.Data.SqlClient.SqlException e)
+			catch (SqlException e)
 			{
 				BNewGuest.IsEnabled = false;
 				Logger.Log("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());  
