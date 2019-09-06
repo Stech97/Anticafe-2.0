@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Windows;
 using System.Data.Entity;
 using Anticafe_4._0_Model;
@@ -101,8 +100,9 @@ namespace Anticafe_4._0
 			SmenaEnd smenaEnd = new SmenaEnd();
 			smenaEnd.ShowDialog();
 			Logger.Log("Smena End and Close");
-			Logger.Log("Application close whith code 0");
-			Environment.Exit(0);
+            Logger.Log("Close Application with code 0");
+            Logger.Log("Exit");
+            Environment.Exit(0);
 		}
 	}
 }

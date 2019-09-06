@@ -18,6 +18,7 @@ namespace Anticafe_4._0
 
 			GuestInfo gi = new GuestInfo
 			{
+				NumberCard = BNCard.Text,
 				FirstName = BName.Text,
 				SecondName = BSName.Text,
 				MiddleName = BMName.Text,

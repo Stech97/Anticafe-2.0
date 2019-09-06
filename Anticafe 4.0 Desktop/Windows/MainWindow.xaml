@@ -45,7 +45,7 @@
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="GuestTable" Grid.Column="0" Grid.RowSpan="5">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="ID" Header="№ карты" MinWidth="130" Width="130*" Binding="{Binding ID,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="ID" Header="№ карты" MinWidth="130" Width="130*" Binding="{Binding NuberCard,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                 <DataGridTextColumn x:Name="Suname" Header="Фамилия" MinWidth="170" Width="170*" Binding="{Binding SecondName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                 <DataGridTextColumn x:Name="Name" Header="Имя" MinWidth="150" Width="150*" Binding="{Binding FirstName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
                 <DataGridTextColumn x:Name="MiddleName" Header="Отчество" MinWidth="150" Width="150*" Binding="{Binding MiddleName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
