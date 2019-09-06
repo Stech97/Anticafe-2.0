@@ -57,8 +57,8 @@
         <Button x:Name="BTax" Content="Тарифы" Grid.Row="0" Grid.Column="1" Click="BTax_Click" />
         <Button x:Name="BNewGuest" Content="Новый гость" Grid.Row="1" Grid.Column="1" Click="BNewGuest_Click" />
         <Button x:Name="BGuestIn" Content="Гость пришёл" Grid.Row="2" Grid.Column="1" Click="BGuestIn_Click" />
-        <Button x:Name="BGuestOut" Content="Гость уходит" Grid.Row="3" Grid.Column="1" />
-        <Button x:Name="BSmenaEnd" Content="Конец смены" Grid.Row="4" Grid.Column="1" />
+        <Button x:Name="BGuestOut" Content="Гость уходит" Grid.Row="3" Grid.Column="1" Click="BGuestOut_Click" />
+        <Button x:Name="BSmenaEnd" Content="Конец смены" Grid.Row="4" Grid.Column="1" Click="BSmenaEnd_Click" />
 
         <!--https://www.codeproject.com/Articles/36468/WPF-NotifyIcon-2#hello-->
 
