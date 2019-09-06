@@ -54,9 +54,9 @@
                 <DataGridTextColumn x:Name="Phone" Header="Телефон" MinWidth="110" Width="110*" Binding="{Binding Phone,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="BTax" Content="Тарифы" Grid.Row="0" Grid.Column="1" />
-        <Button x:Name="BNewGuest" Content="Новый гость" Grid.Row="1" Click="BNewGuest_Click" Grid.Column="1" RenderTransformOrigin="0.551,-1.225" />
-        <Button x:Name="BGuestIn" Content="Гость пришёл" Grid.Row="2" Grid.Column="1" />
+        <Button x:Name="BTax" Content="Тарифы" Grid.Row="0" Grid.Column="1" Click="BTax_Click" />
+        <Button x:Name="BNewGuest" Content="Новый гость" Grid.Row="1" Grid.Column="1" Click="BNewGuest_Click" />
+        <Button x:Name="BGuestIn" Content="Гость пришёл" Grid.Row="2" Grid.Column="1" Click="BGuestIn_Click" />
         <Button x:Name="BGuestOut" Content="Гость уходит" Grid.Row="3" Grid.Column="1" />
         <Button x:Name="BSmenaEnd" Content="Конец смены" Grid.Row="4" Grid.Column="1" />
 

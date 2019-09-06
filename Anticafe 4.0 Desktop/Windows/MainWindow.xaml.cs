@@ -70,5 +70,39 @@ namespace Anticafe_4._0
 		{
 			Visibility = Visibility.Visible;
 		}
+
+		private void BTax_Click(object sender, RoutedEventArgs e)
+		{
+			Logger.Log("Open Tax Window");
+			Tax tax = new Tax();
+			tax.ShowDialog();
+			Logger.Log("Close Tax Window");
+		}
+
+		private void BGuestIn_Click(object sender, RoutedEventArgs e)
+		{
+			Logger.Log("Guest In");
+			GuestIn GI = new GuestIn();
+			GI.ShowDialog();
+			Logger.Log("Guest In close");
+		}
+
+		private void BGuestOut_Click(object sender, RoutedEventArgs e)
+		{
+			Logger.Log("Guest Out");
+			GuestOut GO = new GuestOut();
+			GO.ShowDialog();
+			Logger.Log("Guest Out close");
+		}
+
+		private void BSmenaEnd_Click(object sender, RoutedEventArgs e)
+		{
+			Logger.Log("SMena End");
+			SmenaEnd smenaEnd = new SmenaEnd();
+			smenaEnd.ShowDialog();
+			Logger.Log("Smena End and Close");
+			Logger.Log("Application close whith code 0");
+			Environment.Exit(0);
+		}
 	}
 }
