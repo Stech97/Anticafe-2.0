@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anticafe_4._0"
         mc:Ignorable="d"
-        Title="Новый гость" Height="680" Width="420" Background="SandyBrown"
+        Title="Новый гость" Height="720" Width="420" Background="SandyBrown"
         WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Service/1.ico"
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-        MinHeight="620" MinWidth="420">
+        MinHeight="720" MinWidth="420">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150*"/>

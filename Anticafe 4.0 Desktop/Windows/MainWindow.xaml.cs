@@ -9,9 +9,10 @@ namespace Anticafe_4._0
 {
     public partial class MainWindow : Window
     {
-        public static string WindowTitle = "На смене:" + "admin";
+		private const string ConnectionString = @"Data Source=MAX-PC\ANTICAFE_DB;Initial Catalog=Test;Integrated Security=True;MultipleActiveResultSets=True";
+		public static string WindowTitle = "На смене:" + "admin";
 
-		TestContext db = new TestContext();
+		private readonly TestContext _context = new TestContext();
 
 		public MainWindow()
         {
@@ -23,11 +24,11 @@ namespace Anticafe_4._0
 
 			try
 			{
-				SqlConnection MyConnection = new SqlConnection();
-				var cs = MyConnection.State;
+				var mSqlConnectionyConnection = new SqlConnection(connectionString: ConnectionString);
+				var cs = mSqlConnectionyConnection.State;
 				Logger.Log("Connection state: " + cs.ToString());
-				db.GuestInfoes.Load();
-				GuestTable.ItemsSource = db.GuestInfoes.Local.ToBindingList();
+				_context.GuestInfoes.Load();
+				GuestTable.ItemsSource = _context.GuestInfoes.Local.ToBindingList();
 				Logger.Log("Connect to database correct");
 			}
 			catch (SqlException e)
@@ -48,8 +49,8 @@ namespace Anticafe_4._0
 		{
 			NewGuest newGuest = new NewGuest();
 			newGuest.ShowDialog();
-			db.GuestInfoes.Load();
-			GuestTable.ItemsSource = db.GuestInfoes.Local.ToBindingList();
+			_context.GuestInfoes.Load();
+			GuestTable.ItemsSource = _context.GuestInfoes.Local.ToBindingList();
 		}
 
 		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -58,19 +59,16 @@ namespace Anticafe_4._0
 			Visibility = Visibility.Hidden;
 		}
 
-		private void NotificayExit_Click(object sender, RoutedEventArgs e)
+        private void NotificayExit_Click(object sender, RoutedEventArgs e)
 		{
-			Environment.Exit(1);
-			Logger.Log("Close Application with notification icon");
-			Logger.Log("Exit");
-		}
+            Logger.Log("Close Application with notification icon");
+            Logger.Log("Exit");
+            Environment.Exit(1);
+        }
 
-		private void NotificayVisibly_Click(object sender, RoutedEventArgs e)
-		{
-			Visibility = Visibility.Visible;
-		}
+		private void NotificayVisibly_Click(object sender, RoutedEventArgs e) => Visibility = Visibility.Visible;
 
-		private void BTax_Click(object sender, RoutedEventArgs e)
+        private void BTax_Click(object sender, RoutedEventArgs e)
 		{
 			Logger.Log("Open Tax Window");
 			Tax tax = new Tax();
@@ -96,7 +94,7 @@ namespace Anticafe_4._0
 
 		private void BSmenaEnd_Click(object sender, RoutedEventArgs e)
 		{
-			Logger.Log("SMena End");
+			Logger.Log("Smena End");
 			SmenaEnd smenaEnd = new SmenaEnd();
 			smenaEnd.ShowDialog();
 			Logger.Log("Smena End and Close");

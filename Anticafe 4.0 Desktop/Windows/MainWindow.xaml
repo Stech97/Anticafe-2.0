@@ -12,13 +12,14 @@
 
     <Window.Resources>
         <Style TargetType="DataGrid" x:Name="BaseDataGrid">
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="VerticalScrollBarVisibility" Value="Visible"/>
+            <Setter Property="HorizontalScrollBarVisibility" Value="Visible"/>
             <Setter Property="Margin" Value="0"/>
             <Setter Property="AutoGenerateColumns" Value="False"/>
-            <Setter Property="ColumnWidth" Value="150"/>
             <Setter Property="IsReadOnly" Value="False"/>
             <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
             <Setter Property="CanUserReorderColumns" Value="False"/>
-            <Setter Property="CanUserResizeColumns" Value="False"/>
             <Setter Property="CanUserSortColumns" Value="False"/>
             <Setter Property="CanUserResizeRows" Value="False"/>
             <Setter Property="CanUserResizeColumns" Value="True"/>
@@ -41,24 +42,24 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150*"/>
-            <ColumnDefinition Width="30*"/>
+           <!-- <ColumnDefinition Width="30*"/> -->
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="GuestTable" Grid.Column="0" Grid.RowSpan="5">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="ID" Header="№ карты" MinWidth="130" Width="130*" Binding="{Binding NuberCard,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                <DataGridTextColumn x:Name="Suname" Header="Фамилия" MinWidth="170" Width="170*" Binding="{Binding SecondName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                <DataGridTextColumn x:Name="Name" Header="Имя" MinWidth="150" Width="150*" Binding="{Binding FirstName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                <DataGridTextColumn x:Name="MiddleName" Header="Отчество" MinWidth="150" Width="150*" Binding="{Binding MiddleName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                <DataGridTextColumn x:Name="Dis" Header="Тип Карты" MinWidth="150" Width="150*" Binding="{Binding Discount,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                <DataGridTextColumn x:Name="Email" Header="E-mail" MinWidth="150" Width="150*" Binding="{Binding Email,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
-                <DataGridTextColumn x:Name="Phone" Header="Телефон" MinWidth="110" Width="110*" Binding="{Binding Phone,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="ID" Header="№ карты" Width="130*" Binding="{Binding NuberCard,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Suname" Header="Фамилия" Width="170*" Binding="{Binding SecondName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Name" Header="Имя" Width="150*" Binding="{Binding FirstName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="MiddleName" Header="Отчество" Width="150*" Binding="{Binding MiddleName,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Dis" Header="Тип Карты" Width="150*" Binding="{Binding Discount,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Email" Header="E-mail" Width="150*" Binding="{Binding Email,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+                <DataGridTextColumn x:Name="Phone" Header="Телефон" Width="110*" Binding="{Binding Phone,  Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="BTax" Content="Тарифы" Grid.Row="0" Grid.Column="1" Click="BTax_Click" />
+       <!-- <Button x:Name="BTax" Content="Тарифы" Grid.Row="0" Grid.Column="1" Click="BTax_Click" /> -->
         <Button x:Name="BNewGuest" Content="Новый гость" Grid.Row="1" Grid.Column="1" Click="BNewGuest_Click" />
-        <Button x:Name="BGuestIn" Content="Гость пришёл" Grid.Row="2" Grid.Column="1" Click="BGuestIn_Click" />
+        <!--<Button x:Name="BGuestIn" Content="Гость пришёл" Grid.Row="2" Grid.Column="1" Click="BGuestIn_Click" />
         <Button x:Name="BGuestOut" Content="Гость уходит" Grid.Row="3" Grid.Column="1" Click="BGuestOut_Click" />
-        <Button x:Name="BSmenaEnd" Content="Конец смены" Grid.Row="4" Grid.Column="1" Click="BSmenaEnd_Click" />
+        <Button x:Name="BSmenaEnd" Content="Конец смены" Grid.Row="4" Grid.Column="1" Click="BSmenaEnd_Click" /> -->
 
         <!--https://www.codeproject.com/Articles/36468/WPF-NotifyIcon-2#hello-->
 
