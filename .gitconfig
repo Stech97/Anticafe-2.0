@@ -9,3 +9,5 @@
 	email = Maksstech97@gmail.com
 [user]
 	signingkey = C342A7A287439284
+[pull]
+    rebase = true
