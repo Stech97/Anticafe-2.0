@@ -5,13 +5,13 @@ namespace Anticafe_4._0_Model
 {
 	public static class Logger
 	{
-		public static void Log(string message)
+		public static void TraceLog(string message)
 		{
-			var path = Environment.CurrentDirectory + "\\log";
+			var path = "C:\\log\\Anticafe";
 
 			Directory.CreateDirectory(path);
 
-			path = path + "\\" + DateTime.Now.Date.ToShortDateString() + ".log";
+			path = path + "\\trace_" + DateTime.Now.Date.ToShortDateString() + ".log";
 			using (StreamWriter logger = new StreamWriter(path,true))
 			{
                 if (message.Equals("Exit"))
@@ -23,6 +23,19 @@ namespace Anticafe_4._0_Model
                 }
                 else
                     logger.WriteLine(DateTime.Now.ToLongTimeString() + " - " + message);
+			}
+		}
+
+		public static void ExeptionLog(Exception exp)
+		{
+			var path = "C:\\log\\Anticafe";
+
+			Directory.CreateDirectory(path);
+
+			path = path + "\\exeption_" + DateTime.Now.Date.ToShortDateString() + ".log";
+			using (StreamWriter logger = new StreamWriter(path, true))
+			{
+				//реализовать exeption
 			}
 		}
 
