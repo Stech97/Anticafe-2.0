@@ -30,7 +30,7 @@ namespace Anticafe_4._0
 
 			db.GuestInfoes.Add(gi);
 			db.SaveChanges();
-			Logger.Log("Добавлен новый гость " + gi.ToString());
+			Logger.TraceLog("Добавлен новый гость " + gi.ToString());
 			Close();
 		}
 	}

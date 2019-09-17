@@ -26,20 +26,20 @@ namespace Anticafe_4._0
 			{
 				var mSqlConnectionyConnection = new SqlConnection(connectionString: ConnectionString);
 				var cs = mSqlConnectionyConnection.State;
-				Logger.Log("Connection state: " + cs.ToString());
+				Logger.TraceLog("Connection state: " + cs.ToString());
 				_context.GuestInfoes.Load();
 				GuestTable.ItemsSource = _context.GuestInfoes.Local.ToBindingList();
-				Logger.Log("Connect to database correct");
+				Logger.TraceLog("Connect to database correct");
 			}
 			catch (SqlException e)
 			{
 				BNewGuest.IsEnabled = false;
-				Logger.Log("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());  
+				Logger.TraceLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());  
 			}
 			catch (System.Data.Entity.Core.EntityException e)
 			{
 				BNewGuest.IsEnabled = false;
-				Logger.Log("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
+				Logger.TraceLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
 			}
 			
 
@@ -61,8 +61,8 @@ namespace Anticafe_4._0
 
         private void NotificayExit_Click(object sender, RoutedEventArgs e)
 		{
-            Logger.Log("Close Application with notification icon");
-            Logger.Log("Exit");
+            Logger.TraceLog("Close Application with notification icon");
+            Logger.TraceLog("Exit");
             Environment.Exit(1);
         }
 
@@ -70,36 +70,36 @@ namespace Anticafe_4._0
 
         private void BTax_Click(object sender, RoutedEventArgs e)
 		{
-			Logger.Log("Open Tax Window");
+			Logger.TraceLog("Open Tax Window");
 			Tax tax = new Tax();
 			tax.ShowDialog();
-			Logger.Log("Close Tax Window");
+			Logger.TraceLog("Close Tax Window");
 		}
 
 		private void BGuestIn_Click(object sender, RoutedEventArgs e)
 		{
-			Logger.Log("Guest In");
+			Logger.TraceLog("Guest In");
 			GuestIn GI = new GuestIn();
 			GI.ShowDialog();
-			Logger.Log("Guest In close");
+			Logger.TraceLog("Guest In close");
 		}
 
 		private void BGuestOut_Click(object sender, RoutedEventArgs e)
 		{
-			Logger.Log("Guest Out");
+			Logger.TraceLog("Guest Out");
 			GuestOut GO = new GuestOut();
 			GO.ShowDialog();
-			Logger.Log("Guest Out close");
+			Logger.TraceLog("Guest Out close");
 		}
 
 		private void BSmenaEnd_Click(object sender, RoutedEventArgs e)
 		{
-			Logger.Log("Smena End");
+			Logger.TraceLog("Smena End");
 			SmenaEnd smenaEnd = new SmenaEnd();
 			smenaEnd.ShowDialog();
-			Logger.Log("Smena End and Close");
-            Logger.Log("Close Application with code 0");
-            Logger.Log("Exit");
+			Logger.TraceLog("Smena End and Close");
+            Logger.TraceLog("Close Application with code 0");
+            Logger.TraceLog("Exit");
             Environment.Exit(0);
 		}
 	}
