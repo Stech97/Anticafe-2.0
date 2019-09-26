@@ -82,7 +82,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logger.cs" />
+    <Compile Include="Models\AdministratorInfo.cs" />
+    <Compile Include="Models\Error.cs" />
     <Compile Include="Models\GuestInfo.cs" />
+    <Compile Include="Models\Mapping\AdministratorInfoMap.cs" />
+    <Compile Include="Models\Mapping\ErrorMap.cs" />
     <Compile Include="Models\Mapping\GuestInfoMap.cs" />
     <Compile Include="Models\TestContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -98,6 +102,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SaveToDB.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

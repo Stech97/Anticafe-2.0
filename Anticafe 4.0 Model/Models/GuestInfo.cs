@@ -5,7 +5,8 @@ namespace Anticafe_4._0_Model.Models
     public partial class GuestInfo
     {
         public int ID { get; set; }
-		public string NumberCard { get; set; }
+        public bool IsInside { get; set; }
+        public string NumberCard { get; set; }
         public string SecondName { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }

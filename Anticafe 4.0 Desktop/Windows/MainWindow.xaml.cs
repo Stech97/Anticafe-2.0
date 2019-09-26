@@ -34,13 +34,14 @@ namespace Anticafe_4._0
 			catch (SqlException e)
 			{
 				BNewGuest.IsEnabled = false;
-				Logger.TraceLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());  
+				Logger.ExeptionLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());  
 			}
 			catch (System.Data.Entity.Core.EntityException e)
 			{
 				BNewGuest.IsEnabled = false;
-				Logger.TraceLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
-			}
+				Logger.ExeptionLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
+
+            }
 			
 
 		}
