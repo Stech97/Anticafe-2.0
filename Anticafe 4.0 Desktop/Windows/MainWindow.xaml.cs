@@ -1,60 +1,32 @@
-﻿using System;
+﻿using Anticafe_4._0_Model;
 using System.Windows;
-using System.Data.Entity;
-using Anticafe_4._0_Model;
-using System.Data.SqlClient;
-using Anticafe_4._0_Model.Models;
+using System;
 
 namespace Anticafe_4._0
 {
     public partial class MainWindow : Window
     {
-		private const string ConnectionString = @"Data Source=MAX-PC\ANTICAFE_DB;Initial Catalog=Test;Integrated Security=True;MultipleActiveResultSets=True";
 		public static string WindowTitle = "На смене:" + "admin";
-
-		private readonly TestContext _context = new TestContext();
 
 		public MainWindow()
         {
             InitializeComponent();
-
-			/*GuestTable.DataContext = db.GuestInfoes.Local.ToBindingList();
-			Прписать ModelView для изменнеия ячейки и следующей привязкии её в бд
-			Так же изменить строку в бд на свои данные*/
-
-			try
-			{
-				var mSqlConnectionyConnection = new SqlConnection(connectionString: ConnectionString);
-				var cs = mSqlConnectionyConnection.State;
-				Logger.TraceLog("Connection state: " + cs.ToString());
-				_context.GuestInfoes.Load();
-				GuestTable.ItemsSource = _context.GuestInfoes.Local.ToBindingList();
-				Logger.TraceLog("Connect to database correct");
-			}
-			catch (SqlException e)
-			{
-				BNewGuest.IsEnabled = false;
-				Logger.ExeptionLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());  
-			}
-			catch (System.Data.Entity.Core.EntityException e)
-			{
-				BNewGuest.IsEnabled = false;
-				Logger.ExeptionLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
-
-            }
-			
-
-		}
-
-		private void BNewGuest_Click(object sender, RoutedEventArgs e)
+        }
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (GetFromDB.GetStateDB())
+                GuestTable.ItemsSource = GetFromDB.GetGuestInfo();
+            else
+                BNewGuest.IsEnabled = false;
+        }
+        private void BNewGuest_Click(object sender, RoutedEventArgs e)
 		{
 			NewGuest newGuest = new NewGuest();
 			newGuest.ShowDialog();
-			_context.GuestInfoes.Load();
-			GuestTable.ItemsSource = _context.GuestInfoes.Local.ToBindingList();
-		}
+            GuestTable.ItemsSource = GetFromDB.GetGuestInfo();
+        }
 
-		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 		{
 			e.Cancel = true;
 			Visibility = Visibility.Hidden;

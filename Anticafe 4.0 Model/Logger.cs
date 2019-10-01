@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+   Перекрутить на NLogs
+ */
+
+using System;
 using System.IO;
 
 namespace Anticafe_4._0_Model
