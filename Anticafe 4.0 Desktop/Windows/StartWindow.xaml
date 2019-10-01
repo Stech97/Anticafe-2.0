@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" Title="Антикафе приветствует тебя на работе и желает хорошой смены)" 
         Height="420" Width="570" MinHeight="400" MinWidth="570" WindowStartupLocation="CenterOwner" Background="SandyBrown"
-        Icon="/Anticafe 4.0;component/Service/1.ico" FontFamily="Times New Roman" FontSize="37" FontWeight="Bold" 
+        Icon="/Anticafe 4.0;component/Icon.ico" FontFamily="Times New Roman" FontSize="37" FontWeight="Bold" 
         FontStyle="Italic" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="Label" x:Name="BaseLabel">

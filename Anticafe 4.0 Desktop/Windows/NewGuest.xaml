@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Anticafe_4._0"
         mc:Ignorable="d"
         Title="Новый гость" Height="720" Width="420" Background="SandyBrown"
-        WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Service/1.ico"
+        WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Icon.ico"
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
         MinHeight="720" MinWidth="420">
     <Grid>

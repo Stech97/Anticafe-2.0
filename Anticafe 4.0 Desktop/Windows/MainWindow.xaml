@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anticafe_4._0"
         mc:Ignorable="d" Title="{Binding Source={x:Static  local:MainWindow.WindowTitle}}"
-        Background="SandyBrown" Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" 
+        Background="SandyBrown" Icon="/Anticafe 4.0;component/Icon.ico" WindowStartupLocation="CenterScreen" 
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" 
         FontStyle="Italic" ShowActivated="False" Closing="Window_Closing" MinWidth="1320" MinHeight="300" >
 
@@ -63,7 +63,7 @@
 
         <!--https://www.codeproject.com/Articles/36468/WPF-NotifyIcon-2#hello-->
 
-        <tb:TaskbarIcon Name="NI" IconSource="/Anticafe 4.0;component/Service/1.ico" 
+        <tb:TaskbarIcon Name="NI" IconSource="/Anticafe 4.0;component/Icon.ico" 
                         ToolTipText="Биллинг Антикафе" >
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu Background="White">

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Anticafe_4._0"
         mc:Ignorable="d"
         Title="Конец смены" Height="400" Width="500" Background="SandyBrown" 
-        Icon="/Anticafe 4.0;component/Service/1.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Icon="/Anticafe 4.0;component/Icon.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic">
     <Window.Resources>
         <Style TargetType="Label" x:Key="LabelLeft">
