@@ -1,24 +1,80 @@
-﻿using System;
+﻿/*
+   Перекрутить на NLogs
+ */
+
+using System;
 using System.IO;
 
 namespace Anticafe_4._0_Model
 {
 	public static class Logger
 	{
-		public static void Log(string message)
+        public static void TraceLog(string trace)
+        {
+            var _path = "C:\\log\\Anticafe";
+            
+            if (Directory.Exists(_path))
+            {
+                _path = _path + "\\trace_" + DateTime.Now.Date.ToShortDateString() + ".log";
+                using (StreamWriter logger = new StreamWriter(_path, true))
+                {
+                    if (trace.Equals("Exit"))
+                    {
+                        logger.WriteLine();
+                        logger.WriteLine();
+                        logger.WriteLine();
+                        logger.WriteLine();
+                    }
+                    else
+                        logger.WriteLine(DateTime.Now.ToLongTimeString() + " - " + trace);
+                }
+            }
+            else
+            {
+                Directory.CreateDirectory(_path);
+
+                _path = _path + "\\trace_" + DateTime.Now.Date.ToShortDateString() + ".log";
+                using (StreamWriter logger = new StreamWriter(_path, true))
+                {
+                    if (trace.Equals("Exit"))
+                    {
+                        logger.WriteLine();
+                        logger.WriteLine();
+                        logger.WriteLine();
+                        logger.WriteLine();
+                    }
+                    else
+                        logger.WriteLine(DateTime.Now.ToLongTimeString() + " - " + trace);
+                }
+            }
+		}
+
+		public static void ExeptionLog(string exp)
 		{
-			var path = Environment.CurrentDirectory + "\\log";
+            var _path = "C:\\log\\Anticafe";
 
-			Directory.CreateDirectory(path);
+            if (Directory.Exists(_path))
+            {
+                _path = _path + "\\exeption_" + DateTime.Now.Date.ToShortDateString() + ".log";
+                using (StreamWriter logger = new StreamWriter(_path, true))
+                {
+                    logger.WriteLine(DateTime.Now.ToLongTimeString() + " - " + exp);
+                }
 
-			path = path + "\\" + DateTime.Now.Date.ToShortDateString() + ".log";
-			using (StreamWriter logger = new StreamWriter(path,true))
-			{
-				if (message.Equals("Exit"))
-					logger.WriteLine();
-				else
-					logger.WriteLine(DateTime.Now.ToLongTimeString() + " - " + message);
-			}
+                SaveToDB.SaveExeptionToDB(DateTime.Now, exp);
+            }
+            else
+            {
+                Directory.CreateDirectory(_path);
+
+                _path = _path + "\\exeption_" + DateTime.Now.Date.ToShortDateString() + ".log";
+                using (StreamWriter logger = new StreamWriter(_path, true))
+                {
+                    logger.WriteLine(DateTime.Now.ToLongTimeString() + " - " + exp);
+                }
+
+                SaveToDB.SaveExeptionToDB(DateTime.Now, exp);
+            }
 		}
 
 	}

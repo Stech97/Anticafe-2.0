@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows;
-using Anticafe_4._0_Model.Models;
+using Anticafe_4._0_Model;
 
 namespace Anticafe_4._0
 {
@@ -13,21 +13,8 @@ namespace Anticafe_4._0
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			TestContext db = new TestContext();
-
-			GuestInfo gi = new GuestInfo
-			{
-				FirstName = BName.Text,
-				SecondName = BSName.Text,
-				MiddleName = BMName.Text,
-				Discount = int.Parse(BDis.Text),
-				BDay = DateTime.Parse(BBD.Text),
-				Email = BEmail.Text,
-				Phone = BPhone.Text
-			};
-
-			db.GuestInfoes.Add(gi);
-			db.SaveChanges();
+            SaveToDB.SaveGuestInfoToDB(BNCard.Text, BName.Text, BSName.Text, BMName.Text, BDis.Text,
+                BBD.Text, BEmail.Text, BPhone.Text);
 			Close();
 		}
 	}

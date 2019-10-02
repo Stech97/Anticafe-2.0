@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anticafe_4._0"
         mc:Ignorable="d"
-        Title="Новый гость" Height="620" Width="420" Background="SandyBrown"
-        WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Service/1.ico"
+        Title="Новый гость" Height="720" Width="420" Background="SandyBrown"
+        WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Icon.ico"
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-        MinHeight="620" MinWidth="420">
+        MinHeight="720" MinWidth="420">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150*"/>
@@ -24,29 +24,33 @@
             <RowDefinition Height="20*"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
 
-        <Label Name="Sname" Content="Фамилия" Grid.Row="0" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BSName" Grid.Row="0" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="NCard" Content="№ Карты" Grid.Row="0" Grid.Column="0" Margin="10,15,10,15"/>
+        <TextBox Name="BNCard" Grid.Row="0" Grid.Column="1" Margin="10,15,10,15"/>
+        
+        <Label Name="Sname" Content="Фамилия" Grid.Row="1" Grid.Column="0" Margin="10,15,10,15"/>
+        <TextBox Name="BSName" Grid.Row="1" Grid.Column="1" Margin="10,15,10,15"/>
 
-        <Label Name="name" Content="Имя" Grid.Row="1" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BName" Grid.Row="1" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="name" Content="Имя" Grid.Row="2" Grid.Column="0" Margin="10,15,10,15"/>
+        <TextBox Name="BName" Grid.Row="2" Grid.Column="1" Margin="10,15,10,15"/>
 
-        <Label Name="Mname" Content="Отчество"  Grid.Row="2" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BMName"  Grid.Row="2" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="Mname" Content="Отчество"  Grid.Row="3" Grid.Column="0" Margin="10,15,10,15"/>
+        <TextBox Name="BMName"  Grid.Row="3" Grid.Column="1" Margin="10,15,10,15"/>
 
-        <Label Name="BD" Content="День Рожденья" Grid.Row="3" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BBD" Grid.Row="3" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="BD" Content="День Рожденья" Grid.Row="4" Grid.Column="0" Margin="10,15,10,15"/>
+        <TextBox Name="BBD" Grid.Row="4" Grid.Column="1" Margin="10,15,10,15"/>
 
-        <Label Name="Email" Content="E-mail"  Grid.Row="4" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BEmail" Grid.Row="4" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="Email" Content="E-mail"  Grid.Row="5" Grid.Column="0" Margin="10,15,10,15"/>
+        <TextBox Name="BEmail" Grid.Row="5" Grid.Column="1" Margin="10,15,10,15"/>
 
-        <Label Name="Phone" Content="Телефон"  Grid.Row="5" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BPhone" Grid.Row="5" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="Phone" Content="Телефон"  Grid.Row="6" Grid.Column="0" Margin="10,15,10,15"/>
+        <TextBox Name="BPhone" Grid.Row="6" Grid.Column="1" Margin="10,15,10,15"/>
 
-        <Label Name="Dis" Content="Дисконт"  Grid.Row="6" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BDis"  Grid.Row="6" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="Dis" Content="Дисконт"  Grid.Row="7" Grid.Column="0" Margin="10,15,10,15"/>
+        <TextBox Name="BDis"  Grid.Row="7" Grid.Column="1" Margin="10,15,10,15"/>
 
-        <Button Content="Добавить нового гостя" Height="50" Click="Button_Click"  Grid.Row="8" Grid.ColumnSpan="2" Margin="60,10,60,10"/>
+        <Button Content="Добавить нового гостя" Height="50" Click="Button_Click"  Grid.Row="9" Grid.ColumnSpan="2" Margin="60,10,60,10"/>
     </Grid>
 </Window>

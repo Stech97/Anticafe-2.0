@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anticafe_4._0"
-        mc:Ignorable="d" Background="White" Icon="/Anticafe 4.0;component/Service/1.ico" 
+        mc:Ignorable="d" Background="White" Icon="/Anticafe 4.0;component/Icon.ico"
         WindowStartupLocation="CenterScreen" Title="Тарифы" Height="300" Width="300" ResizeMode="NoResize">
     <Grid>
 <!-- Сделана основа для написания тарифов. Надо узнать у лёши, будут ли они меняться, и если будут, то написать xml  с тарифами -->

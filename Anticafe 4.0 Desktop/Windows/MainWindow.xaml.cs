@@ -1,68 +1,79 @@
-﻿using System.Data;
+﻿using Anticafe_4._0_Model;
 using System.Windows;
-using System.Data.Entity;
-using Anticafe_4._0_Model;
-using System.Data.SqlClient;
-using Anticafe_4._0_Model.Models;
+using System;
 
 namespace Anticafe_4._0
 {
     public partial class MainWindow : Window
     {
-        public static string WindowTitle { get; set; }
-
-		TestContext db = new TestContext();
+		public static string WindowTitle = "На смене:" + "admin";
 
 		public MainWindow()
         {
             InitializeComponent();
-
-			WindowTitle = "На смене:";
-
-			/*GuestTable.DataContext = db.GuestInfoes.Local.ToBindingList();
-			Прписать ModelView для изменнеия ячейки и следующей привязкии её в бд
-			Так же изменить строку в бд на свои данные*/
-			SqlConnection MyConnection = new SqlConnection();
-			if (MyConnection.State != ConnectionState.Open)
-			{
-				var cs = MyConnection.State;
-				Logger.Log(cs.ToString());
-				db.GuestInfoes.Load();
-				GuestTable.ItemsSource = db.GuestInfoes.Local.ToBindingList();
-				Logger.Log("Connect to database correct");
-			}
-			else
-			{
-				BNewGuest.IsEnabled = false;
-				Logger.Log("Connect to database isn't open");
-			}
-
-		}
-
-		private void BNewGuest_Click(object sender, RoutedEventArgs e)
+        }
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (GetFromDB.GetStateDB())
+                GuestTable.ItemsSource = GetFromDB.GetGuestInfo();
+            else
+                BNewGuest.IsEnabled = false;
+        }
+        private void BNewGuest_Click(object sender, RoutedEventArgs e)
 		{
 			NewGuest newGuest = new NewGuest();
 			newGuest.ShowDialog();
-			db.GuestInfoes.Load();
-			GuestTable.ItemsSource = db.GuestInfoes.Local.ToBindingList();
-		}
+            GuestTable.ItemsSource = GetFromDB.GetGuestInfo();
+        }
 
-		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 		{
 			e.Cancel = true;
 			Visibility = Visibility.Hidden;
 		}
 
-		private void NotificayExit_Click(object sender, RoutedEventArgs e)
+        private void NotificayExit_Click(object sender, RoutedEventArgs e)
 		{
-			Application.Current.Shutdown(1);
-			Logger.Log("Close Application with notification icon");
-			Logger.Log("Exit");
+            Logger.TraceLog("Close Application with notification icon");
+            Logger.TraceLog("Exit");
+            Environment.Exit(1);
+        }
+
+		private void NotificayVisibly_Click(object sender, RoutedEventArgs e) => Visibility = Visibility.Visible;
+
+        private void BTax_Click(object sender, RoutedEventArgs e)
+		{
+			Logger.TraceLog("Open Tax Window");
+			Tax tax = new Tax();
+			tax.ShowDialog();
+			Logger.TraceLog("Close Tax Window");
 		}
 
-		private void NotificayVisibly_Click(object sender, RoutedEventArgs e)
+		private void BGuestIn_Click(object sender, RoutedEventArgs e)
 		{
-			Visibility = Visibility.Visible;
+			Logger.TraceLog("Guest In");
+			GuestIn GI = new GuestIn();
+			GI.ShowDialog();
+			Logger.TraceLog("Guest In close");
+		}
+
+		private void BGuestOut_Click(object sender, RoutedEventArgs e)
+		{
+			Logger.TraceLog("Guest Out");
+			GuestOut GO = new GuestOut();
+			GO.ShowDialog();
+			Logger.TraceLog("Guest Out close");
+		}
+
+		private void BSmenaEnd_Click(object sender, RoutedEventArgs e)
+		{
+			Logger.TraceLog("Smena End");
+			SmenaEnd smenaEnd = new SmenaEnd();
+			smenaEnd.ShowDialog();
+			Logger.TraceLog("Smena End and Close");
+            Logger.TraceLog("Close Application with code 0");
+            Logger.TraceLog("Exit");
+            Environment.Exit(0);
 		}
 	}
 }
