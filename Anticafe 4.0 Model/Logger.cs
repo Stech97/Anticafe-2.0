@@ -1,9 +1,7 @@
-﻿/*
-   Перекрутить на NLogs
- */
-
+﻿using NLog;
 using System;
 using System.IO;
+using NLog.Config;
 
 namespace Anticafe_4._0_Model
 {
@@ -11,7 +9,9 @@ namespace Anticafe_4._0_Model
 	{
         public static void TraceLog(string trace)
         {
-            var _path = "C:\\log\\Anticafe";
+			LogManager.Configuration = new XmlLoggingConfiguration("NLog.config");
+
+			var _path = "C:\\log\\Anticafe";
             
             if (Directory.Exists(_path))
             {
