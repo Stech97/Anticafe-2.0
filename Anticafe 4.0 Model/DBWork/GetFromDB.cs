@@ -1,11 +1,15 @@
-﻿using Anticafe_4._0_Model.Models;
+﻿using System;
+using Anticafe.Model.Models;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using NLog;
 
-namespace Anticafe_4._0_Model
+namespace Anticafe.Model
 {
     public static class GetFromDB
-    { 
+    {
+        private static readonly Log _log = new Log();
+
         public static bool GetStateDB()
         {
             /* По хорошему от этого метода избавиться
@@ -21,19 +25,19 @@ namespace Anticafe_4._0_Model
                 using (SqlConnection mSqlConnectionyConnection = new SqlConnection(ConnectionString))
                 {
                     var cs = mSqlConnectionyConnection.State;
-                    Logger.TraceLog("Connection state: " + cs.ToString());
+                    _log.Trace("Connection state: " + cs.ToString());
                 }
-                Logger.TraceLog("Connect to database correct");
+                _log.Info("Connect to database correct");
                 result = true;
             }
             catch (SqlException e)
             {
-                Logger.ExeptionLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
+                _log.Fatal("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
                 result = false;
             }
             catch (System.Data.Entity.Core.EntityException e)
             {
-                Logger.ExeptionLog("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
+                _log.Errors("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
                 result = false;
             }
 
@@ -41,10 +45,12 @@ namespace Anticafe_4._0_Model
         }
         public static System.ComponentModel.BindingList<GuestInfo> GetGuestInfo()
         {
-            TestContext _context = new TestContext();
-            _context.GuestInfoes.Load();
-            var result = _context.GuestInfoes.Local.ToBindingList();
-            return result;
+            using (TestContext _context = new TestContext()) 
+            {
+                _context.GuestInfoes.Load();
+                var result = _context.GuestInfoes.Local.ToBindingList();
+                return result;
+            }
         }
     }
 }

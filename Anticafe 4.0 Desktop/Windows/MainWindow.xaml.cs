@@ -1,12 +1,14 @@
-﻿using Anticafe_4._0_Model;
+﻿using Anticafe.Model;
 using System.Windows;
 using System;
 
-namespace Anticafe_4._0
+namespace Anticafe
 {
     public partial class MainWindow : Window
     {
-		public static string WindowTitle = "На смене:" + "admin";
+        private readonly Log _log = new Log();
+
+        public static string WindowTitle = "На смене:" + "admin";
 
 		public MainWindow()
         {
@@ -34,8 +36,8 @@ namespace Anticafe_4._0
 
         private void NotificayExit_Click(object sender, RoutedEventArgs e)
 		{
-            Logger.TraceLog("Close Application with notification icon");
-            Logger.TraceLog("Exit");
+            _log.Trace("Close Application with notification icon");
+            _log.Trace("Exit");
             Environment.Exit(1);
         }
 
@@ -43,36 +45,36 @@ namespace Anticafe_4._0
 
         private void BTax_Click(object sender, RoutedEventArgs e)
 		{
-			Logger.TraceLog("Open Tax Window");
+			_log.Trace("Open Tax Window");
 			Tax tax = new Tax();
 			tax.ShowDialog();
-			Logger.TraceLog("Close Tax Window");
+			_log.Trace("Close Tax Window");
 		}
 
 		private void BGuestIn_Click(object sender, RoutedEventArgs e)
 		{
-			Logger.TraceLog("Guest In");
+			_log.Trace("Guest In");
 			GuestIn GI = new GuestIn();
 			GI.ShowDialog();
-			Logger.TraceLog("Guest In close");
+			_log.Trace("Guest In close");
 		}
 
 		private void BGuestOut_Click(object sender, RoutedEventArgs e)
 		{
-			Logger.TraceLog("Guest Out");
+			_log.Trace("Guest Out");
 			GuestOut GO = new GuestOut();
 			GO.ShowDialog();
-			Logger.TraceLog("Guest Out close");
+			_log.Trace("Guest Out close");
 		}
 
 		private void BSmenaEnd_Click(object sender, RoutedEventArgs e)
 		{
-			Logger.TraceLog("Smena End");
+			_log.Trace("Smena End");
 			SmenaEnd smenaEnd = new SmenaEnd();
 			smenaEnd.ShowDialog();
-			Logger.TraceLog("Smena End and Close");
-            Logger.TraceLog("Close Application with code 0");
-            Logger.TraceLog("Exit");
+			_log.Trace("Smena End and Close");
+            _log.Trace("Close Application with code 0");
+            _log.Trace("Exit");
             Environment.Exit(0);
 		}
 	}

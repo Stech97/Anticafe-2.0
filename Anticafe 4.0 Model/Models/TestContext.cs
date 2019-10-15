@@ -1,7 +1,8 @@
+using System;
 using System.Data.Entity;
-using Anticafe_4._0_Model.Models.Mapping;
+using Anticafe.Model.Models.Mapping;
 
-namespace Anticafe_4._0_Model.Models
+namespace Anticafe.Model.Models
 {
     public partial class TestContext : DbContext
     {
@@ -17,13 +18,16 @@ namespace Anticafe_4._0_Model.Models
 
         public DbSet<GuestInfo> GuestInfoes { get; set; }
         public DbSet<AdministratorInfo> AdministratorInfoes { get; set; }
-        public DbSet<Error> Errors { get; set; }
+        public DbSet<Errors> Errors { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new GuestInfoMap());
-            modelBuilder.Configurations.Add(new AdministratorInfoMap());
-            modelBuilder.Configurations.Add(new ErrorMap());
+            if (modelBuilder != null)
+            {
+                modelBuilder.Configurations.Add(new GuestInfoMap());
+                modelBuilder.Configurations.Add(new AdministratorInfoMap());
+                modelBuilder.Configurations.Add(new ErrorMap());
+            }
         }
     }
 }

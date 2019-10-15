@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 
-namespace Anticafe_4._0_Model.Models.Mapping
+namespace Anticafe.Model.Models.Mapping
 {
     public class AdministratorInfoMap : EntityTypeConfiguration<AdministratorInfo>
     {

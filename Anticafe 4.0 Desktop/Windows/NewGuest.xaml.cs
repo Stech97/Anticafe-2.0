@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows;
-using Anticafe_4._0_Model;
+using Anticafe.Model;
 
-namespace Anticafe_4._0
+namespace Anticafe
 {
     public partial class NewGuest : Window
     {

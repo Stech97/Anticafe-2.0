@@ -1,15 +1,24 @@
 ﻿using System;
-using Anticafe_4._0_Model.Models;
+using Anticafe.Model.Models;
 
-namespace Anticafe_4._0_Model
+namespace Anticafe.Model
 {
     public static class SaveToDB
     {
         private static readonly TestContext _DB = new TestContext();
+        private static readonly Log _log = new Log();
 
         public static void SaveGuestInfoToDB(string numberCard, string firstName, string secondName, string middleName,
             string discount, string bday, string email, string phone)
         {
+            _log.Trace("trace message");
+            _log.Debug("debug message");
+            _log.Info("info message");
+            _log.Warn("warn message");
+            _log.Errors("error message");
+            _log.Fatal("fatal message");
+
+
             GuestInfo guestInfo = new GuestInfo
             {
                 NumberCard = numberCard,
@@ -24,11 +33,11 @@ namespace Anticafe_4._0_Model
 
             _DB.GuestInfoes.Add(guestInfo);
             _DB.SaveChanges();
-            Logger.TraceLog("Добавлен новый гость " + guestInfo.ToString());
+            _log.Info("Добавлен новый гость " + guestInfo.ToString());
         }
 
         public static void SaveAdministratorInfoToDB(string login, string password, string numberCard, string firstName,
-            string secondName, string middleName, string bday, string email, string phone)
+            string secondName, string middleName, string bday, IFormatProvider provider, string email, string phone)
         {
             AdministratorInfo administratorInfo = new AdministratorInfo
             {
@@ -38,19 +47,19 @@ namespace Anticafe_4._0_Model
                 FirstName = firstName,
                 SecondName = secondName,
                 MiddleName = middleName,
-                BDay = DateTime.Parse(bday),
+                BDay = DateTime.Parse(bday, provider),
                 Email = email,
                 Phone = phone
             };
 
             _DB.AdministratorInfoes.Add(administratorInfo);
             _DB.SaveChanges();
-            Logger.TraceLog("У нас новый администратор:" + administratorInfo.ToString());
+            
         }
 
         public static void SaveExeptionToDB(DateTime dateTime, string message)
         {
-            Error exep = new Error
+            Errors exep = new Errors
             {
                 date = dateTime,
                 Message = message

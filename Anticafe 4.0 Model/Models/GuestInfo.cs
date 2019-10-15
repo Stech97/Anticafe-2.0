@@ -1,6 +1,6 @@
 using System;
 
-namespace Anticafe_4._0_Model.Models
+namespace Anticafe.Model.Models
 {
     public partial class GuestInfo
     {

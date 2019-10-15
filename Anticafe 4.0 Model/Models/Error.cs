@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Anticafe_4._0_Model.Models
+namespace Anticafe.Model.Models
 {
-    public partial class Error
+    public partial class Errors
     {
         public int ID { get; set; }
         public DateTime date { get; set; }
