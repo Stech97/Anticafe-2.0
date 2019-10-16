@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Anticafe.Model.Models;
 
 namespace Anticafe.Model
@@ -11,22 +12,14 @@ namespace Anticafe.Model
         public static void SaveGuestInfoToDB(string numberCard, string firstName, string secondName, string middleName,
             string discount, string bday, string email, string phone)
         {
-            _log.Trace("trace message");
-            _log.Debug("debug message");
-            _log.Info("info message");
-            _log.Warn("warn message");
-            _log.Errors("error message");
-            _log.Fatal("fatal message");
-
-
             GuestInfo guestInfo = new GuestInfo
             {
                 NumberCard = numberCard,
                 FirstName = firstName,
                 SecondName = secondName,
                 MiddleName = middleName,
-                Discount = int.Parse(discount),
-                BDay = DateTime.Parse(bday),
+                Discount = int.Parse(discount, NumberStyles.Integer, CultureInfo.InvariantCulture),
+                BDay = DateTime.Parse(bday, CultureInfo.InvariantCulture),
                 Email = email,
                 Phone = phone
             };

@@ -13,30 +13,30 @@ namespace Anticafe.Model
             LogManager.Configuration = new XmlLoggingConfiguration("Logger/NLog.config");
             _logger = LogManager.GetCurrentClassLogger();            
         }
-        public void Trace(string message)
+        public void Trace(String TraceMessage)
         {
-            _logger.Trace(message);
+            _logger.Trace(TraceMessage);
         }
 
-        public void Debug(String message)
+        public void Debug(String DebugMessage)
         {
-            _logger.Debug(message);
+            _logger.Debug(DebugMessage);
         }
-        public void Info(String message)
+        public void Info(String InfoMessage)
         {
-            _logger.Info(message);
+            _logger.Info(InfoMessage);
         }
-        public void Warn(String message)
+        public void Warn(String WarmMessage)
         {
-            _logger.Warn(message);
+            _logger.Warn(WarmMessage);
         }
-        public void Errors(String message)
+        public void Errors(String ErorrsMessage)
         {
-            _logger.Error(message);
+            _logger.Error(ErorrsMessage);
         }
-        public void Fatal(String message)
+        public void Fatal(String FatalMessage)
         {
-            _logger.Fatal(message);
+            _logger.Fatal(FatalMessage);
         }
     }
 }

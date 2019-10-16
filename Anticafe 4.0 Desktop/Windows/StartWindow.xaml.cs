@@ -5,20 +5,20 @@ namespace Anticafe
 {
     public partial class StartWindow : Window
     {
-        private readonly ILog log;
+        private readonly Log _log = new Log();
         public StartWindow()
         {
-            InitializeComponent();   
-			log.Trace("Start application");
+            InitializeComponent();
+            _log.Trace("Start application");
         }
 
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{
 			var mes = "On work: " + TLogin.Text;
-			log.Trace(mes);
+            _log.Trace(mes);
 			mes = "Start work on: " + TTime.Text;
-            log.Trace(mes);
-            log.Trace("Open main window");
+            _log.Trace(mes);
+            _log.Trace("Open main window");
 
 			MainWindow mainWindow = new MainWindow();
 			mainWindow.Show();
