@@ -10,7 +10,7 @@ namespace Anticafe.Model
 		private static readonly ILog _log = LogManager.CreateLogger("BackEnd", "trace");
 
         public static void SaveGuestInfoToDB(string numberCard, string firstName, string secondName, string middleName,
-            string discount, DateTime bday, string email, string phone)
+												string discount, DateTime bday, string email, string phone)
         {
             GuestInfo guestInfo = new GuestInfo
             {
@@ -29,8 +29,9 @@ namespace Anticafe.Model
             _log.Info("Добавлен новый гость " + guestInfo.ToString());
         }
 
-        public static void SaveAdministratorInfoToDB(string login, string password, string numberCard, string firstName,
-            string secondName, string middleName, string bday, IFormatProvider provider, string email, string phone)
+        public static void SaveAdministratorInfoToDB(string login, string password, string numberCard, 
+														string firstName, string secondName, string middleName, 
+														DateTime bday, string email, string phone)
         {
             AdministratorInfo administratorInfo = new AdministratorInfo
             {
@@ -40,7 +41,7 @@ namespace Anticafe.Model
                 FirstName = firstName,
                 SecondName = secondName,
                 MiddleName = middleName,
-                BDay = DateTime.Parse(bday, provider),
+                BDay = bday,
                 Email = email,
                 Phone = phone
             };

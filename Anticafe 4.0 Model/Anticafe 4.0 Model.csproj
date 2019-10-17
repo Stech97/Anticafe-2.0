@@ -102,10 +102,12 @@
     <Compile Include="Logger\LogManager.cs" />
     <Compile Include="Models\AdministratorInfo.cs" />
     <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\Guest.cs" />
     <Compile Include="Models\GuestInfo.cs" />
     <Compile Include="Models\Mapping\AdministratorInfoMap.cs" />
     <Compile Include="Models\Mapping\ErrorMap.cs" />
     <Compile Include="Models\Mapping\GuestInfoMap.cs" />
+    <Compile Include="Models\Mapping\GuestMap.cs" />
     <Compile Include="Models\TestContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
