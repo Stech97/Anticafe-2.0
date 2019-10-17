@@ -47,11 +47,13 @@ namespace Anticafe.Model
 
             _DB.AdministratorInfoes.Add(administratorInfo);
             _DB.SaveChanges();
-            
-        }
+			_log.Info("Добавлен новый администратор " + administratorInfo.ToString());
+
+		}
 
         public static void SaveExeptionToDB(DateTime dateTime, string message)
         {
+			//сделать логирование через NLog
             Errors exep = new Errors
             {
                 date = dateTime,
@@ -59,8 +61,9 @@ namespace Anticafe.Model
             };
 
             _DB.Errors.Add(exep);
-            _DB.SaveChanges();       
-        }
+            _DB.SaveChanges();
+			_log.Info("Добавлено исключение в БД");
+		}
 
     }
 }

@@ -26,6 +26,7 @@ namespace Anticafe
         }
         private void BNewGuest_Click(object sender, RoutedEventArgs e)
 		{
+			_log.Trace("Open \"New Guest\" window");
 			NewGuest newGuest = new NewGuest();
 			newGuest.ShowDialog();
             GuestTable.ItemsSource = GetFromDB.GetGuestInfo();

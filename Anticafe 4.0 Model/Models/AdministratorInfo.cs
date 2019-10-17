@@ -14,11 +14,7 @@ namespace Anticafe.Model.Models
         public DateTime BDay { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public override string ToString()
-        {
-            string AdministratorInfoString;
-            AdministratorInfoString = SecondName + " " + FirstName;
-            return AdministratorInfoString;
-        }
-    }
+
+		public override string ToString() => SecondName + " " + FirstName;
+	}
 }
