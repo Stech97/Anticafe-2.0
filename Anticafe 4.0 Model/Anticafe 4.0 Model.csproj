@@ -99,6 +99,7 @@
     <Compile Include="DBWork\GetFromDB.cs" />
     <Compile Include="Logger\Log.cs" />
     <Compile Include="Logger\ILog.cs" />
+    <Compile Include="Logger\LogManager.cs" />
     <Compile Include="Models\AdministratorInfo.cs" />
     <Compile Include="Models\Error.cs" />
     <Compile Include="Models\GuestInfo.cs" />

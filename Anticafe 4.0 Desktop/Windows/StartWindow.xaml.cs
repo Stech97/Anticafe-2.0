@@ -5,9 +5,11 @@ namespace Anticafe
 {
     public partial class StartWindow : Window
     {
-        private readonly Log _log = new Log();
+		private readonly ILog _log;
+
         public StartWindow()
         {
+			_log = LogManager.CreateLogger("Desktop", "trace");
             InitializeComponent();
             _log.Trace("Start application");
         }

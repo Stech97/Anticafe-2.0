@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anticafe"
-        mc:Ignorable="d" Title="{Binding Source={x:Static  local:App.Current}}"
+        mc:Ignorable="d" Title="{Binding Source={x:Static  local:MainWindow.WindowTitle}}"
         Background="SandyBrown" Icon="/Anticafe 4.0;component/Icon.ico" WindowStartupLocation="CenterScreen" 
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" 
         FontStyle="Italic" ShowActivated="False" Closing="Window_Closing" MinWidth="1320" MinHeight="300" >

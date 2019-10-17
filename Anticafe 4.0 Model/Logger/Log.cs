@@ -1,6 +1,5 @@
 ﻿using NLog;
 using System;
-using NLog.Config;
 
 namespace Anticafe.Model
 {
@@ -8,11 +7,11 @@ namespace Anticafe.Model
      {
         private readonly ILogger _logger;
 
-        public Log()
-        {
-            LogManager.Configuration = new XmlLoggingConfiguration("Logger/NLog.config");
-            _logger = LogManager.GetCurrentClassLogger();            
-        }
+		public Log(ILogger logger)
+		{
+			_logger = logger;
+		}
+
         public void Trace(String TraceMessage)
         {
             _logger.Trace(TraceMessage);

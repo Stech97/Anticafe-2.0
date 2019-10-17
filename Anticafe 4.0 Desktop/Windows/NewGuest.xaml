@@ -29,7 +29,7 @@
 
         <Label Name="NCard" Content="№ Карты" Grid.Row="0" Grid.Column="0" Margin="10,15,10,15"/>
         <TextBox Name="BNCard" Grid.Row="0" Grid.Column="1" Margin="10,15,10,15"/>
-        
+
         <Label Name="Sname" Content="Фамилия" Grid.Row="1" Grid.Column="0" Margin="10,15,10,15"/>
         <TextBox Name="BSName" Grid.Row="1" Grid.Column="1" Margin="10,15,10,15"/>
 
@@ -40,7 +40,7 @@
         <TextBox Name="BMName"  Grid.Row="3" Grid.Column="1" Margin="10,15,10,15"/>
 
         <Label Name="BD" Content="День Рожденья" Grid.Row="4" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BBD" Grid.Row="4" Grid.Column="1" Margin="10,15,10,15"/>
+        <DatePicker Name="BBD" Grid.Column="1" Margin="10,15,10,15" Grid.Row="4" />
 
         <Label Name="Email" Content="E-mail"  Grid.Row="5" Grid.Column="0" Margin="10,15,10,15"/>
         <TextBox Name="BEmail" Grid.Row="5" Grid.Column="1" Margin="10,15,10,15"/>
@@ -52,5 +52,6 @@
         <TextBox Name="BDis"  Grid.Row="7" Grid.Column="1" Margin="10,15,10,15"/>
 
         <Button Content="Добавить нового гостя" Height="50" Click="Button_Click"  Grid.Row="9" Grid.ColumnSpan="2" Margin="60,10,60,10"/>
+        
     </Grid>
 </Window>

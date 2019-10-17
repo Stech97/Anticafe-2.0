@@ -7,7 +7,7 @@ namespace Anticafe.Model
     public static class SaveToDB
     {
         private static readonly TestContext _DB = new TestContext();
-        private static readonly Log _log = new Log();
+		private static readonly ILog _log = LogManager.CreateLogger("BackEnd", "trace");
 
         public static void SaveGuestInfoToDB(string numberCard, string firstName, string secondName, string middleName,
             string discount, string bday, string email, string phone)
@@ -19,7 +19,7 @@ namespace Anticafe.Model
                 SecondName = secondName,
                 MiddleName = middleName,
                 Discount = int.Parse(discount, NumberStyles.Integer, CultureInfo.InvariantCulture),
-                BDay = DateTime.Parse(bday, CultureInfo.InvariantCulture),
+                BDay = DateTime.Parse(bday, CultureInfo.InvariantCulture, DateTimeStyles.None),
                 Email = email,
                 Phone = phone
             };

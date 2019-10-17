@@ -6,12 +6,15 @@ namespace Anticafe
 {
     public partial class MainWindow : Window
     {
-        private readonly Log _log = new Log();
+        private readonly ILog _log;
 
-        public static string WindowTitle = "На смене:" + "admin";
+        public static string WindowTitle = "На смене:";
 
 		public MainWindow()
         {
+			/*string admin = GetFromDB. ;
+			WindowTitle += " " + admin;*/
+			_log = LogManager.CreateLogger("Desktop", "trace");
             InitializeComponent();
         }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
