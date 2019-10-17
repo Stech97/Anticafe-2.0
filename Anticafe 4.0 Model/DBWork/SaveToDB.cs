@@ -10,7 +10,7 @@ namespace Anticafe.Model
 		private static readonly ILog _log = LogManager.CreateLogger("BackEnd", "trace");
 
         public static void SaveGuestInfoToDB(string numberCard, string firstName, string secondName, string middleName,
-            string discount, string bday, string email, string phone)
+            string discount, DateTime bday, string email, string phone)
         {
             GuestInfo guestInfo = new GuestInfo
             {
@@ -19,7 +19,7 @@ namespace Anticafe.Model
                 SecondName = secondName,
                 MiddleName = middleName,
                 Discount = int.Parse(discount, NumberStyles.Integer, CultureInfo.InvariantCulture),
-                BDay = DateTime.Parse(bday, CultureInfo.InvariantCulture, DateTimeStyles.None),
+                BDay = bday,
                 Email = email,
                 Phone = phone
             };

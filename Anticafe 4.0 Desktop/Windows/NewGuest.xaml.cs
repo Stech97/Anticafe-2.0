@@ -14,8 +14,11 @@ namespace Anticafe
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			SaveToDB.SaveGuestInfoToDB(BNCard.Text, BName.Text, BSName.Text, BMName.Text, BDis.Text,
-										BBD.Text, BEmail.Text, BPhone.Text);
+			DateTime dt = DateTime.Now;
+			DateTime.TryParse(BBD.Text, out dt);
+
+			SaveToDB.SaveGuestInfoToDB(BNCard.Text, BName.Text, BSName.Text, BMName.Text, 
+										BDis.Text, dt, BEmail.Text, BPhone.Text);
 			Close();
 		}
 	}
