@@ -1,4 +1,4 @@
-﻿<Window x:Name="stratWindow" x:Class="Anticafe_4._0.StartWindow"
+﻿<Window x:Name="stratWindow" x:Class="Anticafe.StartWindow"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

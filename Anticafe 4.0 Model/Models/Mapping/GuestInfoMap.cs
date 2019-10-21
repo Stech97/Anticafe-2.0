@@ -1,6 +1,6 @@
 using System.Data.Entity.ModelConfiguration;
 
-namespace Anticafe_4._0_Model.Models.Mapping
+namespace Anticafe.Model.Models.Mapping
 {
     public class GuestInfoMap : EntityTypeConfiguration<GuestInfo>
     {
@@ -11,17 +11,16 @@ namespace Anticafe_4._0_Model.Models.Mapping
 
             // Properties
             // Table & Column Mappings
-            this.ToTable("GuestInfoes");
-            this.Property(t => t.ID).HasColumnName("ID");
-            this.Property(t => t.IsInside).HasColumnName("Inside");
-			this.Property(t => t.NumberCard).HasColumnName("NumberCard");
-            this.Property(t => t.SecondName).HasColumnName("SecondName");
-            this.Property(t => t.FirstName).HasColumnName("FirstName");
-            this.Property(t => t.MiddleName).HasColumnName("MiddleName");
-            this.Property(t => t.Discount).HasColumnName("Discount");
-            this.Property(t => t.BDay).HasColumnName("BDay");
-            this.Property(t => t.Email).HasColumnName("Email");
-			this.Property(t => t.Phone).HasColumnName("Phone");
+            ToTable("GuestInfoes");
+            Property(t => t.ID).HasColumnName("ID");
+			Property(t => t.NumberCard).HasColumnName("NumberCard");
+            Property(t => t.SecondName).HasColumnName("SecondName");
+            Property(t => t.FirstName).HasColumnName("FirstName");
+            Property(t => t.MiddleName).HasColumnName("MiddleName");
+            Property(t => t.Discount).HasColumnName("Discount");
+            Property(t => t.BDay).HasColumnName("BDay");
+            Property(t => t.Email).HasColumnName("Email");
+			Property(t => t.Phone).HasColumnName("Phone");
 		}
     }
 }

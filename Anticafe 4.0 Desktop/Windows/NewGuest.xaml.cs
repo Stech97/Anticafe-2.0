@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows;
-using Anticafe_4._0_Model;
+using Anticafe.Model;
 
-namespace Anticafe_4._0
+namespace Anticafe
 {
     public partial class NewGuest : Window
     {
@@ -13,8 +14,11 @@ namespace Anticafe_4._0
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-            SaveToDB.SaveGuestInfoToDB(BNCard.Text, BName.Text, BSName.Text, BMName.Text, BDis.Text,
-                BBD.Text, BEmail.Text, BPhone.Text);
+			DateTime dt = DateTime.Now;
+			DateTime.TryParse(BBD.Text, out dt);
+
+			SaveToDB.SaveGuestInfoToDB(BNCard.Text, BName.Text, BSName.Text, BMName.Text, 
+										BDis.Text, dt, BEmail.Text, BPhone.Text);
 			Close();
 		}
 	}

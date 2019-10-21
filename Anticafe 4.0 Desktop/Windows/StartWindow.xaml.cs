@@ -1,23 +1,26 @@
 ﻿using System.Windows;
-using Anticafe_4._0_Model;
+using Anticafe.Model;
 
-namespace Anticafe_4._0
+namespace Anticafe
 {
     public partial class StartWindow : Window
     {
+		private readonly ILog _log;
+
         public StartWindow()
         {
+			_log = LogManager.CreateLogger("Desktop", "trace");
             InitializeComponent();
-			Logger.TraceLog("Start application");
+            _log.Trace("Start application");
         }
 
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{
 			var mes = "On work: " + TLogin.Text;
-			Logger.TraceLog(mes);
+            _log.Trace(mes);
 			mes = "Start work on: " + TTime.Text;
-			Logger.TraceLog(mes);
-			Logger.TraceLog("Open main window");
+            _log.Trace(mes);
+            _log.Trace("Open main window");
 
 			MainWindow mainWindow = new MainWindow();
 			mainWindow.Show();

@@ -1,14 +1,16 @@
 ﻿using System;
-using Anticafe_4._0_Model.Models;
+using System.Globalization;
+using Anticafe.Model.Models;
 
-namespace Anticafe_4._0_Model
+namespace Anticafe.Model
 {
     public static class SaveToDB
     {
         private static readonly TestContext _DB = new TestContext();
+		private static readonly ILog _log = LogManager.CreateLogger("BackEnd", "trace");
 
         public static void SaveGuestInfoToDB(string numberCard, string firstName, string secondName, string middleName,
-            string discount, string bday, string email, string phone)
+												string discount, DateTime bday, string email, string phone)
         {
             GuestInfo guestInfo = new GuestInfo
             {
@@ -16,19 +18,20 @@ namespace Anticafe_4._0_Model
                 FirstName = firstName,
                 SecondName = secondName,
                 MiddleName = middleName,
-                Discount = int.Parse(discount),
-                BDay = DateTime.Parse(bday),
+                Discount = int.Parse(discount, NumberStyles.Integer, CultureInfo.InvariantCulture),
+                BDay = bday,
                 Email = email,
                 Phone = phone
             };
 
             _DB.GuestInfoes.Add(guestInfo);
             _DB.SaveChanges();
-            Logger.TraceLog("Добавлен новый гость " + guestInfo.ToString());
+            _log.Info("Добавлен новый гость " + guestInfo.ToString());
         }
 
-        public static void SaveAdministratorInfoToDB(string login, string password, string numberCard, string firstName,
-            string secondName, string middleName, string bday, string email, string phone)
+        public static void SaveAdministratorInfoToDB(string login, string password, string numberCard, 
+														string firstName, string secondName, string middleName, 
+														DateTime bday, string email, string phone)
         {
             AdministratorInfo administratorInfo = new AdministratorInfo
             {
@@ -38,27 +41,30 @@ namespace Anticafe_4._0_Model
                 FirstName = firstName,
                 SecondName = secondName,
                 MiddleName = middleName,
-                BDay = DateTime.Parse(bday),
+                BDay = bday,
                 Email = email,
                 Phone = phone
             };
 
             _DB.AdministratorInfoes.Add(administratorInfo);
             _DB.SaveChanges();
-            Logger.TraceLog("У нас новый администратор:" + administratorInfo.ToString());
-        }
+			_log.Info("Добавлен новый администратор " + administratorInfo.ToString());
+
+		}
 
         public static void SaveExeptionToDB(DateTime dateTime, string message)
         {
-            Error exep = new Error
+			//сделать логирование через NLog
+            Errors exep = new Errors
             {
                 date = dateTime,
                 Message = message
             };
 
             _DB.Errors.Add(exep);
-            _DB.SaveChanges();       
-        }
+            _DB.SaveChanges();
+			_log.Info("Добавлено исключение в БД");
+		}
 
     }
 }

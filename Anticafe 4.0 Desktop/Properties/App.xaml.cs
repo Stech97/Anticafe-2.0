@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Anticafe_4._0
+namespace Anticafe
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml
