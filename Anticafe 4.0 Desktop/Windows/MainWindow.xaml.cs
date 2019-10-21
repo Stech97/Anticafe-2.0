@@ -49,7 +49,17 @@ namespace Anticafe
         }
 
 		// добавить проверку на окно в развёрнутом(максимальном состоянии)
-		private void NotificayVisibly_Click(object sender, RoutedEventArgs e) => Visibility = Visibility.Visible;
+		private void NotificayVisibly_Click(object sender, RoutedEventArgs e)
+		{
+			if (!WindowState.Equals(WindowState.Maximized))
+			{
+				WindowState = WindowState.Normal;
+				Visibility = Visibility.Visible;
+				WindowState = WindowState.Maximized;
+			}				
+			else
+				Visibility = Visibility.Visible;
+		}
 
         private void BTax_Click(object sender, RoutedEventArgs e)
 		{
