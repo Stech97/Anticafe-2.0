@@ -2,6 +2,10 @@
 using System.Windows;
 using System;
 
+
+/*
+	сделать взаимодействие с кнопками через command для ViewModel во всех окнах
+*/
 namespace Anticafe
 {
     public partial class MainWindow : Window
@@ -14,16 +18,16 @@ namespace Anticafe
         {
 			/*string admin = GetFromDB. ;
 			WindowTitle += " " + admin;*/
+
 			_log = LogManager.CreateLogger("Desktop", "trace");
             InitializeComponent();
-        }
-        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (GetFromDB.GetStateDB())
-                GuestTable.ItemsSource = GetFromDB.GetGuestInfo();
-            else
-                BNewGuest.IsEnabled = false;
-        }
+
+			if (GetFromDB.GetStateDB())
+				GuestTable.ItemsSource = GetFromDB.GetGuestInfo();
+			else
+				BNewGuest.IsEnabled = false;
+		}
+
         private void BNewGuest_Click(object sender, RoutedEventArgs e)
 		{
 			_log.Trace("Open \"New Guest\" window");

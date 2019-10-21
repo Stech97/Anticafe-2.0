@@ -21,22 +21,23 @@ namespace Anticafe.Model
 
 			try
 			{
-				using (SqlConnection mSqlConnectionyConnection = new SqlConnection(ConnectionString))
+				using (SqlConnection sql = new SqlConnection(ConnectionString))
 				{
-					var cs = mSqlConnectionyConnection.State;
+					sql.Open();
+					var cs = sql.State;
 					_log.Trace("Connection state: " + cs.ToString());
 				}
 				_log.Info("Connect to database correct");
 				result = true;
 			}
-			catch (SqlException e)
+			catch (SqlException exception)
 			{
-				_log.Fatal("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
+				_log.Fatal($"Ошибка в {nameof(Model)}. \r\nПричина: {exception.GetBaseException().Message}. \r\nСтек: {exception.StackTrace}.");
 				result = false;
 			}
-			catch (System.Data.Entity.Core.EntityException e)
+			catch (System.Data.Entity.Core.EntityException exception)
 			{
-				_log.Errors("Connect to database isn't open" + "\r\n" + "Ошибка:" + e.ToString());
+				_log.Errors($"Ошибка в {nameof(Model)}. \r\nПричина: {exception.GetBaseException().Message}. \r\nСтек: {exception.StackTrace}.");
 				result = false;
 			}
 
