@@ -48,7 +48,6 @@ namespace Anticafe
             Environment.Exit(1);
         }
 
-		// добавить проверку на окно в развёрнутом(максимальном состоянии)
 		private void NotificayVisibly_Click(object sender, RoutedEventArgs e)
 		{
 			if (!WindowState.Equals(WindowState.Maximized))
