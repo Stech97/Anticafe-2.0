@@ -18,10 +18,7 @@ namespace Anticafe
 			_log.Trace("Старт приложения");
 
 			if (GetFromDB.GetStateDB())
-			{
-				var admin = GetFromDB.GetCurrentAdministrator();
-				//добавление в выпадющий спсиок, всех администраторов
-			}
+				CLogin.ItemsSource = GetFromDB.GetCurrentAdministrator();
 			else
 			{
 				_log.Errors("Нет подключения к Базе Данных.");
@@ -32,7 +29,7 @@ namespace Anticafe
 
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{
-			var mes = "На смене:" + TLogin.Text;
+			var mes = "На смене:" + CLogin.Text;
             _log.Trace(mes);
 			mes = "Время начала работы:" + TTime.Text;
             _log.Trace(mes);

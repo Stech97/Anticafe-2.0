@@ -8,6 +8,6 @@
 [user]
 	email = Maksstech97@gmail.com
 [user]
-	signingkey = C342A7A287439284
+	signingkey = 0AAE4112F291E7E8
 [pull]
     rebase = true
