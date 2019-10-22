@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using Anticafe.Model;
+using System.Windows.Input;
+using System.Windows.Controls;
 
 namespace Anticafe
 {
@@ -7,24 +10,33 @@ namespace Anticafe
     {
 		private readonly ILog _log;
 
-        public StartWindow()
+		public StartWindow()
         {
-			_log = LogManager.CreateLogger("Desktop", "trace");
             InitializeComponent();
-            _log.Trace("Start application");
+			_log = LogManager.CreateLogger("Desktop", "trace");
+			_log.Trace("Старт приложения");
+
+			if (GetFromDB.GetStateDB())
+				CLogin.ItemsSource = GetFromDB.GetCurrentAdministrator();
+			else
+			{
+				_log.Errors("Нет подключения к Базе Данных.");
+				_log.Errors("Приложение закрыто с кодом -1");
+				Environment.Exit(-1);
+			}
         }
 
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{
-			var mes = "On work: " + TLogin.Text;
+			var mes = "На смене:" + CLogin.Text;
             _log.Trace(mes);
-			mes = "Start work on: " + TTime.Text;
+			mes = "Время начала работы:" + TTime.Text;
             _log.Trace(mes);
-            _log.Trace("Open main window");
 
 			MainWindow mainWindow = new MainWindow();
 			mainWindow.Show();
 			Close();
 		}
+
 	}
 }

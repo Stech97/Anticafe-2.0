@@ -49,8 +49,8 @@ using System.Windows;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.0.0.10")]
-[assembly: AssemblyFileVersion("4.0.0.10")]
+[assembly: AssemblyVersion("4.0.0.11")]
+[assembly: AssemblyFileVersion("4.0.0.11")]
 [assembly: NeutralResourcesLanguage("ru-RU")]
 [assembly: AssemblyCopyright("Apache Licence 2.0")]
 

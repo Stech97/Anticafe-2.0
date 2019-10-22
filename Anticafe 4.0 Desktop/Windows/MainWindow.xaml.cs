@@ -19,22 +19,21 @@ namespace Anticafe
 			/*string admin = GetFromDB. ;
 			WindowTitle += " " + admin;*/
 
-			_log = LogManager.CreateLogger("Desktop", "trace");
             InitializeComponent();
 
-			if (GetFromDB.GetStateDB())
-				GuestTable.ItemsSource = GetFromDB.GetGuestInfo();
-			else
-				BNewGuest.IsEnabled = false;
+			_log = LogManager.CreateLogger("Desktop", "trace");
+			_log.Trace("Открыто основное окно");
+
 		}
 
         private void BNewGuest_Click(object sender, RoutedEventArgs e)
 		{
-			_log.Trace("Open \"New Guest\" window");
+			_log.Trace("Открыто окно \"Новый гость\"");
 			NewGuest newGuest = new NewGuest();
 			newGuest.ShowDialog();
             GuestTable.ItemsSource = GetFromDB.GetGuestInfo();
-        }
+			_log.Trace("Закрыто окно \"Новый гость\"");
+		}
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 		{
@@ -44,44 +43,55 @@ namespace Anticafe
 
         private void NotificayExit_Click(object sender, RoutedEventArgs e)
 		{
-            _log.Trace("Close Application with notification icon");
+            _log.Trace("Приложение закрыто через значок уведомления");
             _log.Trace("Exit");
             Environment.Exit(1);
         }
 
-		private void NotificayVisibly_Click(object sender, RoutedEventArgs e) => Visibility = Visibility.Visible;
+		private void NotificayVisibly_Click(object sender, RoutedEventArgs e)
+		{
+			if (!WindowState.Equals(WindowState.Maximized))
+			{
+				WindowState = WindowState.Normal;
+				Visibility = Visibility.Visible;
+				WindowState = WindowState.Maximized;
+			}				
+			else
+				Visibility = Visibility.Visible;
+		}
 
         private void BTax_Click(object sender, RoutedEventArgs e)
 		{
-			_log.Trace("Open Tax Window");
+			_log.Trace("Открыто окно \"Тарифы\"");
 			Tax tax = new Tax();
 			tax.ShowDialog();
-			_log.Trace("Close Tax Window");
+			_log.Trace("Закрыто окно \"Тарифы\"");
 		}
 
 		private void BGuestIn_Click(object sender, RoutedEventArgs e)
 		{
-			_log.Trace("Guest In");
+			_log.Trace("Открыто окно \"Гость пришёл\"");
 			GuestIn GI = new GuestIn();
 			GI.ShowDialog();
-			_log.Trace("Guest In close");
+			_log.Trace("Закрыто окно \"Гость пришёл\"");
 		}
 
 		private void BGuestOut_Click(object sender, RoutedEventArgs e)
 		{
-			_log.Trace("Guest Out");
+			_log.Trace("Открыто окно \"Гость уходит\"");
 			GuestOut GO = new GuestOut();
 			GO.ShowDialog();
-			_log.Trace("Guest Out close");
+			_log.Trace("Закрыто окно \"Гость уходит\"");
 		}
 
 		private void BSmenaEnd_Click(object sender, RoutedEventArgs e)
 		{
-			_log.Trace("Smena End");
+			_log.Trace("Открыто окно \"Конец смены\"");
 			SmenaEnd smenaEnd = new SmenaEnd();
+			_log.Trace("Закрыто окно \"Конец смены\"");
 			smenaEnd.ShowDialog();
-			_log.Trace("Smena End and Close");
-            _log.Trace("Close Application with code 0");
+			_log.Trace("Смена закрыта");
+            _log.Trace("Приложение закрыто с кодом 0");
             _log.Trace("Exit");
             Environment.Exit(0);
 		}

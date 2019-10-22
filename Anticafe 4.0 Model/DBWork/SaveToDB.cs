@@ -29,9 +29,8 @@ namespace Anticafe.Model
             _log.Info("Добавлен новый гость " + guestInfo.ToString());
         }
 
-        public static void SaveAdministratorInfoToDB(string login, string password, string numberCard, 
-														string firstName, string secondName, string middleName, 
-														DateTime bday, string email, string phone)
+        public static void SaveAdministratorInfoToDB(string login, string password, string numberCard, string firstName, 
+														string secondName, string middleName, DateTime bday, string email, string phone)
         {
             AdministratorInfo administratorInfo = new AdministratorInfo
             {
