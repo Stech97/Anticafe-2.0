@@ -119,7 +119,6 @@
     <None Include="Logger\NLog.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
     <None Include="Properties\packages.config" />
     <None Include="Properties\App.config" />
     <AppDesigner Include="Properties\" />

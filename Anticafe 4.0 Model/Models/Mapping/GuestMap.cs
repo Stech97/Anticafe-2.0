@@ -13,12 +13,8 @@ namespace Anticafe.Model.Models.Mapping
 			// Table & Column Mappings
 			ToTable("GuestInfoes");
 			Property(t => t.ID).HasColumnName("ID");
-			Property(t => t.NumberCard).HasColumnName("NumberCard");
-			Property(t => t.SecondName).HasColumnName("SecondName");
-			Property(t => t.FirstName).HasColumnName("FirstName");
-			Property(t => t.MiddleName).HasColumnName("MiddleName");
-			Property(t => t.Discount).HasColumnName("Discount");
-			Property(t => t.BDay).HasColumnName("BDay");
+			Property(t => t.LastInput).HasColumnName("Last_Input");
+			Property(t => t.LastOutput).HasColumnName("Last_Output");
 		}
 	}
 }

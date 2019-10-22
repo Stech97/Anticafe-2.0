@@ -4,7 +4,6 @@ using Anticafe.Model;
 using System.Windows.Input;
 using System.Windows.Controls;
 
-
 namespace Anticafe
 {
     public partial class StartWindow : Window
