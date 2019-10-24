@@ -207,7 +207,7 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Anticafe 4.0 Model\Anticafe 4.0 Model.csproj">
+    <ProjectReference Include="..\Anticafe Model\Anticafe 4.0 Model.csproj">
       <Project>{bca3f389-57cb-468d-a06f-c17a578de3b2}</Project>
       <Name>Anticafe 4.0 Model</Name>
     </ProjectReference>
