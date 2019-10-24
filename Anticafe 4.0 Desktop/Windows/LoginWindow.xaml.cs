@@ -16,22 +16,22 @@ namespace Anticafe
 			_log = LogManager.CreateLogger("Desktop", "trace");
 			_log.Trace("Старт приложения");
 
-			if (GetFromDB.GetStateDB())
+			//не забудь убрать после отладки
+			/*if (GetFromDB.GetStateDB())
 				CLogin.ItemsSource = GetFromDB.GetCurrentAdministrator();
 			else
 			{
 				_log.Errors("Нет подключения к Базе Данных.");
 				_log.Errors("Приложение закрыто с кодом -1");
 				Environment.Exit(-1);
-			}
+			}*/
         }
 
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{
 			var mes = "На смене:" + CLogin.Text;
             _log.Trace(mes);
-			mes = "Время начала работы:" + TTime.Text;
-            _log.Trace(mes);
+            _log.Trace("Смена началась");
 
 			MainWindow mainWindow = new MainWindow();
 			mainWindow.Show();
