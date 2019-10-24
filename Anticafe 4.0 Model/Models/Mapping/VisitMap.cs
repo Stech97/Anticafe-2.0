@@ -2,19 +2,17 @@
 
 namespace Anticafe.Model.Models.Mapping
 {
-	class GuestMap : EntityTypeConfiguration<Guest>
+	class VisitMap :  EntityTypeConfiguration<Visit>
 	{
-		public GuestMap()
+		public VisitMap()
 		{
 			// Primary Key
 			HasKey(t => t.ID);
 
 			// Properties
 			// Table & Column Mappings
-			ToTable("GuestInfoes");
+			ToTable("Visits");
 			Property(t => t.ID).HasColumnName("ID");
-			Property(t => t.LastInput).HasColumnName("Last_Input");
-			Property(t => t.LastOutput).HasColumnName("Last_Output");
 		}
 	}
 }

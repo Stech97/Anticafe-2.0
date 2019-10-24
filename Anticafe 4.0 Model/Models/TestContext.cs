@@ -9,19 +9,22 @@ namespace Anticafe.Model.Models
 
 		public TestContext() : base("Name=TestContext") {}
 
-        public DbSet<GuestInfo> GuestInfoes { get; set; }
-        public DbSet<AdministratorInfo> AdministratorInfoes { get; set; }
-		public DbSet<Guest> Guests { get; set; }
+		public DbSet<AdministratorInfo> AdministratorInfoes { get; set; }
 		public DbSet<Errors> Errors { get; set; }
+		public DbSet<Guest> Guests { get; set; }
+		public DbSet<GuestInfo> GuestInfoes { get; set; }
+		public DbSet<Visit> Visits { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             if (modelBuilder != null)
             {
-                modelBuilder.Configurations.Add(new GuestInfoMap());
-                modelBuilder.Configurations.Add(new AdministratorInfoMap());
+				modelBuilder.Configurations.Add(new AdministratorInfoMap());
+				modelBuilder.Configurations.Add(new ErrorMap());
 				modelBuilder.Configurations.Add(new GuestMap());
-                modelBuilder.Configurations.Add(new ErrorMap());
+				modelBuilder.Configurations.Add(new GuestInfoMap());
+				modelBuilder.Configurations.Add(new VisitMap());
             }
         }
     }

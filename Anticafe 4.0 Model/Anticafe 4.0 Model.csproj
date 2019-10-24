@@ -108,7 +108,9 @@
     <Compile Include="Models\Mapping\ErrorMap.cs" />
     <Compile Include="Models\Mapping\GuestInfoMap.cs" />
     <Compile Include="Models\Mapping\GuestMap.cs" />
+    <Compile Include="Models\Mapping\VisitMap.cs" />
     <Compile Include="Models\TestContext.cs" />
+    <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
