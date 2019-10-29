@@ -13,6 +13,8 @@ namespace Anticafe
 		public StartWindow()
         {
             InitializeComponent();
+			CLogin.Items.Add("Admin");
+			CLogin.Items.Add("qwaszx");
 			_log = LogManager.CreateLogger("Desktop", "trace");
 			_log.Trace("Старт приложения");
 

@@ -27,16 +27,16 @@
             <Style.Triggers>
                 <MultiDataTrigger>
                     <MultiDataTrigger.Conditions>
-                        <Condition Binding="{Binding ElementName=СLogin, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=СLogin, Path=SelectedItem}" Value="{x:Null}"/>
                     </MultiDataTrigger.Conditions>
                     <Setter Property="IsEnabled" Value="False" />
                 </MultiDataTrigger>
-                <MultiDataTrigger>
+                <!--  <MultiDataTrigger>
                     <MultiDataTrigger.Conditions>
-                        <Condition Binding="{Binding ElementName=TPassword, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=TPassword, Path=Password.Length}" Value="0" />
                     </MultiDataTrigger.Conditions>
                     <Setter Property="IsEnabled" Value="False" />
-                </MultiDataTrigger>
+                </MultiDataTrigger>-->
             </Style.Triggers>
         </Style>
     </Window.Resources>
@@ -56,9 +56,9 @@
         <ComboBox x:Name="CLogin"  Grid.Row="0"/>
 
         <Label x:Name="LPassword" Content="Пароль:" Grid.Row="1"/>
-        <PasswordBox x:Name="TPassword" Grid.Row="1"/>
+        <PasswordBox x:Name="TPassword" Grid.Row="1" />
 
-        <Button x:Name="BStatrt" Content="Войти!" Click="BStatrt_Click" Grid.Row="3" Margin="120,15,120,15"/>
+        <Button x:Name="BLogin" Content="Войти!" Click="BStatrt_Click" Grid.Row="3" Margin="120,15,120,15"/>
 
     </Grid>
 </Window>
