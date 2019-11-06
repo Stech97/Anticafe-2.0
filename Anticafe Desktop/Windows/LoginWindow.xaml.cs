@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using Anticafe.Model;
 using System.Windows.Input;
@@ -6,15 +7,19 @@ using System.Windows.Controls;
 
 namespace Anticafe
 {
-    public partial class StartWindow : Window
+    public partial class LoginWindow : Window
     {
 		private readonly ILog _log;
 
-		public StartWindow()
+		public static List<string> vs = new List<string>();
+
+		public LoginWindow()
         {
             InitializeComponent();
-			CLogin.Items.Add("Admin");
-			CLogin.Items.Add("qwaszx");
+			
+			vs.Add("Admin");
+			vs.Add("qwaszx");
+
 			_log = LogManager.CreateLogger("Desktop", "trace");
 			_log.Trace("Старт приложения");
 
