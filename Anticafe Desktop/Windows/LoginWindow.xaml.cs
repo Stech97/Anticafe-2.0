@@ -11,14 +11,14 @@ namespace Anticafe
     {
 		private readonly ILog _log;
 
-		public static List<string> vs = new List<string>();
+		public static List<string> Vs = new List<string>();
 
 		public LoginWindow()
         {
             InitializeComponent();
 			
-			vs.Add("Admin");
-			vs.Add("qwaszx");
+			Vs.Add("Admin");
+			Vs.Add("qwaszx");
 
 			_log = LogManager.CreateLogger("Desktop", "trace");
 			_log.Trace("Старт приложения");

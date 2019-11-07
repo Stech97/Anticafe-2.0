@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anticafe"
-        mc:Ignorable="d" Title="Антикафе приветствует тебя на работе и желает хорошой смены)" 
+        mc:Ignorable="d" Title="Представьтесь системе" 
         Height="350" Width="650" MinHeight="350" MinWidth="650" WindowStartupLocation="CenterOwner" Background="SandyBrown"
         Icon="/Anticafe 4.0;component/Icon.ico" FontFamily="Times New Roman" FontSize="37" FontWeight="Bold" 
         FontStyle="Italic" ResizeMode="NoResize">
@@ -25,11 +25,17 @@
             <Setter Property="Margin" Value="120,15,120,15"/>
             <Setter Property="Grid.ColumnSpan" Value="2"/>
             <Setter Property="Grid.Row" Value="4"/>
-            <!--в теории должно быть так но почему то не работает-->
             <Style.Triggers>
-                <DataTrigger Binding="{Binding ElementName=TPassword, Path=Password.Length}" Value="0">
-                    <Setter Property="IsEnabled" Value="False"/>
-                </DataTrigger>
+                <MultiDataTrigger>
+                    <!--не работает проверка пароля-->
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding ElementName=CLogin, Path=SelectedItem}" Value="{x:Null}"/>
+                        <Condition Binding="{Binding ElementName=TPassword, Path=Password.Length}" Value="0" />
+                    </MultiDataTrigger.Conditions>
+                    <MultiDataTrigger.Setters>
+                        <Setter Property="IsEnabled" Value="False"/>
+                    </MultiDataTrigger.Setters>
+                </MultiDataTrigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
@@ -46,10 +52,10 @@
         </Grid.RowDefinitions>
 
         <Label x:Name="LLogin" Content="Логин:" Grid.Row="0"/>
-        <ComboBox x:Name="CLogin" Grid.Row="0" TabIndex="1" ItemsSource="{Binding Source={x:Static local:LoginWindow.vs}}"/>
+        <ComboBox x:Name="CLogin" Grid.Row="0" TabIndex="1" ItemsSource="{Binding Source={x:Static local:LoginWindow.Vs}}"/>
 
         <Label x:Name="LPassword" Content="Пароль:" Grid.Row="1"/>
-        <PasswordBox x:Name="TPassword" Grid.Row="1" TabIndex="2"/>
+        <PasswordBox x:Name="TPassword" Grid.Row="1" TabIndex="2" Password=""/>
 
         <Button x:Name="BLogin" Content="Войти!" Click="BStatrt_Click" Grid.Row="3" Margin="120,15,120,15" TabIndex="3"/>
 
