@@ -114,6 +114,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Command\AddGuestCommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Windows\GuestIn.xaml.cs">
       <DependentUpon>GuestIn.xaml</DependentUpon>
     </Compile>
@@ -211,6 +214,9 @@
       <Project>{bca3f389-57cb-468d-a06f-c17a578de3b2}</Project>
       <Name>Anticafe 4.0 Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Command\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
