@@ -14,29 +14,26 @@
             <Setter Property="Margin" Value="15,10,15,10"/>
             <Setter Property="Grid.Column" Value="0"/>
         </Style>
-        <Style TargetType="TextBox" x:Name="BasePasswordBox">
+        <Style TargetType="TextBox" x:Name="BaseTextBox">
             <Setter Property="Margin" Value="15,10,15,10"/>
             <Setter Property="Grid.Column" Value="1"/>
         </Style>
-        <!--<Style TargetType="Button" x:Name="BaseButton">
-            <Setter Property="Margin" Value="120,15,120,15"/>
+        <Style TargetType="Button" x:Name="BaseButton">
+            <Setter Property="Margin" Value="60,10,60,10"/>
             <Setter Property="Grid.ColumnSpan" Value="2"/>
-            <Setter Property="Grid.Row" Value="4"/>
+            <Setter Property="Grid.Row" Value="9"/>
             <Style.Triggers>
                 <MultiDataTrigger>
                     <MultiDataTrigger.Conditions>
-                        <Condition Binding="{Binding ElementName=СLogin, Path=Text.Length}" Value="0" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="IsEnabled" Value="False" />
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <Condition Binding="{Binding ElementName=TPassword, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=BNCard, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=BSName, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=BSName, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=BDis, Path=Text.Length}" Value="0" />
                     </MultiDataTrigger.Conditions>
                     <Setter Property="IsEnabled" Value="False" />
                 </MultiDataTrigger>
             </Style.Triggers>
-        </Style>-->
+        </Style>
     </Window.Resources>
 
     <Grid>
@@ -81,7 +78,7 @@
         <Label Name="Dis" Content="Дисконт" Grid.Row="7" />
         <TextBox Name="BDis" Grid.Row="7" />
 
-        <Button Content="Добавить нового гостя" Click="Button_Click"  Grid.Row="9" Grid.ColumnSpan="2" Margin="60,10,60,9"/>
+        <Button Content="Добавить нового гостя" Click="Button_Click" Command="{Binding ButtonCommand}"  />
 
     </Grid>
 </Window>

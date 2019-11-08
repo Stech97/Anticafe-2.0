@@ -32,18 +32,16 @@
                 <MultiDataTrigger>
                     <MultiDataTrigger.Conditions>
                         <Condition Binding="{Binding ElementName=TName, Path=Text.Length}" Value="0" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="IsEnabled" Value="False" />
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
                         <Condition Binding="{Binding ElementName=CTax, Path=Text.Length}" Value="0" />
                     </MultiDataTrigger.Conditions>
-                    <Setter Property="IsEnabled" Value="False" />
+                    <MultiDataTrigger.Setters>
+                        <Setter Property="IsEnabled" Value="False" />
+                    </MultiDataTrigger.Setters>
                 </MultiDataTrigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
@@ -54,14 +52,12 @@
             <RowDefinition Height="15*"/>
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
+        
         <Label x:Name="LName" Content="Имя:" Grid.Row="0"/>
         <TextBox x:Name="TName" Text=""/>
         <Label x:Name="LTax" Content="Тариф:" Grid.Row="1"/>
-        <ComboBox x:Name="CTax">
-            <TextBlock>Обычный</TextBlock>
-            <TextBlock>Студенческий</TextBlock>
-            <TextBlock>Детский</TextBlock>
-        </ComboBox>
+        <ComboBox x:Name="CTax" ItemsSource="{Binding Source={x:Static local:LoginWindow.Vs}}"/>
+
         <Button x:Name="BNew" Content="Ура, новый гость"/>
     </Grid>
 </Window>

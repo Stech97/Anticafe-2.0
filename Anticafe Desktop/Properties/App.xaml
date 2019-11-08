@@ -1,7 +1,7 @@
 ﻿<Application x:Class="Anticafe.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="/Anticafe 4.0;component/Windows/LoginWindow.xaml">
+             StartupUri="/Anticafe 4.0;component/Windows/NewGuest.xaml">
     <Application.Resources>
          
     </Application.Resources>
