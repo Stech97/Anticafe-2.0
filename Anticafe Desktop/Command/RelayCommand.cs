@@ -3,14 +3,14 @@ using System.Windows.Input;
 
 namespace Anticafe
 {
-	public class RelayCommand : ICommand
+	abstract public class RelayCommand : ICommand
 	{
 		private Action<object> execute;
 		private Func<object, bool> canExecute;
 
 		public event EventHandler CanExecuteChanged
 		{
-			add { CommandManager.RequerySuggested += value; }
+			add	{ CommandManager.RequerySuggested += value; }
 			remove { CommandManager.RequerySuggested -= value; }
 		}
 
@@ -20,14 +20,8 @@ namespace Anticafe
 			this.canExecute = canExecute;
 		}
 
-		public bool CanExecute(object parameter)
-		{
-			return this.canExecute == null || this.canExecute(parameter);
-		}
+		public abstract bool CanExecute(object parameter);
 
-		public void Execute(object parameter)
-		{
-			this.execute(parameter);
-		}
+		public abstract void Execute(object parameter);
 	}
 }
