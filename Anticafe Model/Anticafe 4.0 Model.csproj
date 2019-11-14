@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBWork\GetFromDB.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Logger\Log.cs" />
     <Compile Include="Logger\ILog.cs" />
     <Compile Include="Logger\LogManager.cs" />
