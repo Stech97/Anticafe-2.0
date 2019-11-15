@@ -18,3 +18,5 @@ namespace Anticafe
 		}
 	}
 }
+
+//https://habr.com/ru/post/338518/
