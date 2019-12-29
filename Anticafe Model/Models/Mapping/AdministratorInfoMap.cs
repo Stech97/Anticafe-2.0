@@ -11,7 +11,7 @@ namespace Anticafe.Model.Models.Mapping
 
             // Properties
             // Table & Column Mappings
-            ToTable("AdministratorInfoes");
+            ToTable("AdministratorInfo");
             Property(t => t.ID).HasColumnName("ID");
             Property(t => t.Login).HasColumnName("Login");
             Property(t => t.Password).HasColumnName("Password");

@@ -4,7 +4,7 @@ namespace Anticafe.Model.Models
 {
     public partial class GuestInfo
     {
-        public int GuestInfoID { get; set; }
+        public int ID { get; set; }
         public string NumberCard { get; set; }
         public string SecondName { get; set; }
         public string FirstName { get; set; }
@@ -17,10 +17,6 @@ namespace Anticafe.Model.Models
 
 		public override string ToString() => SecondName + " " + FirstName + " " + MiddleName + " № кратры:" + NumberCard;
 
-        public GuestInfo()
-        {
-            this.Guests = new List<Guest>();
-
-        }
+        public GuestInfo() => this.Guests = new List<Guest>();
 	}
 }
