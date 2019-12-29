@@ -16,14 +16,8 @@ namespace Anticafe
 			_log = LogManager.CreateLogger("Desktop", "trace");
 			_log.Trace("Старт приложения");
 
-			if (GetFromDB.GetStateDB())
-				CLogin.ItemsSource = GetFromDB.GetCurrentAdministrator();
-			else
-			{
-				_log.Errors("Нет подключения к Базе Данных.");
-				_log.Errors("Приложение закрыто с кодом -1");
-				Environment.Exit(-1);
-			}
+			GetFromDB.GetStateDB();
+			CLogin.ItemsSource = GetFromDB.GetCurrentAdministrator();
         }
 
 		private void BStatrt_Click(object sender, RoutedEventArgs e)

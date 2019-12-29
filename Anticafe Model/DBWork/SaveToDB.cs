@@ -6,7 +6,7 @@ namespace Anticafe.Model
 {
     public static class SaveToDB
     {
-        private static readonly TestContext _DB = new TestContext();
+        private static readonly AnticafeDB _DB = new AnticafeDB();
 		private static readonly ILog _log = LogManager.CreateLogger("BackEnd", "trace");
 
         public static void SaveGuestInfoToDB(string numberCard, string firstName, string secondName, string middleName,
@@ -26,7 +26,22 @@ namespace Anticafe.Model
 
             _DB.GuestInfoes.Add(guestInfo);
             _DB.SaveChanges();
-            _log.Info("Добавлен новый гость " + guestInfo.ToString());
+            _log.Trace("Добавлен новый гость " + guestInfo.ToString());
+        }
+        public static void SaveGuestInfoToDB()
+        {
+            GuestInfo guestInfo = new GuestInfo();
+            _DB.GuestInfoes.Add(guestInfo);
+            _DB.SaveChanges();
+            _log.Info("Создана таблица GuestInfo");
+        }
+
+        public static void SaveGuestToDB()
+        {
+            Guest guest = new Guest();
+            _DB.Guests.Add(guest);
+            _DB.SaveChanges();
+            _log.Info("Создана таблица Guest");
         }
 
         public static void SaveAdministratorInfoToDB(string login, string password, string numberCard, string firstName, 
@@ -47,10 +62,28 @@ namespace Anticafe.Model
 
             _DB.AdministratorInfoes.Add(administratorInfo);
             _DB.SaveChanges();
-			_log.Info("Добавлен новый администратор " + administratorInfo.ToString());
-
+			_log.Trace("Добавлен новый администратор " + administratorInfo.ToString());
 		}
+        public static void SaveAdministratorInfoToDB()
+        {
+            AdministratorInfo administratorInfo = new AdministratorInfo
+            {
+                Login = "admin",
+                Password = "admin",
+                NumberCard = "0",
+                FirstName = "Администратор",
+                SecondName = "Системы",
+                MiddleName = " ",
+                BDay = DateTime.Now.Date,
+                Email = " ",
+                Phone = " "
 
+            };
+
+            _DB.AdministratorInfoes.Add(administratorInfo);
+            _DB.SaveChanges();
+            _log.Trace("Добавлена таблица AdministratorInfoes");
+        }
         public static void SaveExeptionToDB(DateTime dateTime, string message)
         {
 			//сделать логирование через NLog
@@ -62,8 +95,17 @@ namespace Anticafe.Model
 
             _DB.Errors.Add(exep);
             _DB.SaveChanges();
-			_log.Info("Добавлено исключение в БД");
+			_log.Trace("Добавлено исключение в БД");
 		}
+        public static void SaveExeptionToDB()
+        {
+            //сделать логирование через NLog
+            Errors exep = new Errors();
+
+            _DB.Errors.Add(exep);
+            _DB.SaveChanges();
+            _log.Trace("Добавлена таблица Errors");
+        }
 
     }
 }

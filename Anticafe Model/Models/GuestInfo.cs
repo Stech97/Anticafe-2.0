@@ -1,8 +1,10 @@
+using System.Collections.Generic;
+
 namespace Anticafe.Model.Models
 {
     public partial class GuestInfo
     {
-        public int ID { get; set; }
+        public int GuestInfoID { get; set; }
         public string NumberCard { get; set; }
         public string SecondName { get; set; }
         public string FirstName { get; set; }
@@ -11,9 +13,14 @@ namespace Anticafe.Model.Models
         public System.DateTime BDay { get; set; }
         public string Email { get; set; }
 		public string Phone { get; set; }
-		public  int? GuestID { get; set; }
-		public Guest Guest { get; set; }
+        public List<Guest> Guests { get; set; }
 
 		public override string ToString() => SecondName + " " + FirstName + " " + MiddleName + " № кратры:" + NumberCard;
+
+        public GuestInfo()
+        {
+            this.Guests = new List<Guest>();
+
+        }
 	}
 }

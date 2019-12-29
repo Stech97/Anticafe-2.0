@@ -7,12 +7,12 @@ namespace Anticafe.Model.Models.Mapping
         public GuestInfoMap()
         {
             // Primary Key
-            this.HasKey(t => t.ID);
+            this.HasKey(t => t.GuestInfoID);
 
             // Properties
             // Table & Column Mappings
             ToTable("GuestInfoes");
-            Property(t => t.ID).HasColumnName("ID");
+            Property(t => t.GuestInfoID).HasColumnName("ID");
 			Property(t => t.NumberCard).HasColumnName("NumberCard");
             Property(t => t.SecondName).HasColumnName("SecondName");
             Property(t => t.FirstName).HasColumnName("FirstName");

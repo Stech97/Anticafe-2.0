@@ -16,14 +16,13 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Anticafe.Model</RootNamespace>
-    <AssemblyName>Anticafe 4.0 Model</AssemblyName>
+    <AssemblyName>Anticafe Model</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
-    <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -180,7 +179,7 @@
     <Compile Include="Models\Mapping\GuestInfoMap.cs" />
     <Compile Include="Models\Mapping\GuestMap.cs" />
     <Compile Include="Models\Mapping\VisitMap.cs" />
-    <Compile Include="Models\TestContext.cs" />
+    <Compile Include="Models\AnticafeDB.cs" />
     <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -193,8 +192,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\packages.config" />
-    <None Include="Properties\App.config" />
+    <None Include="App.config" />
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>

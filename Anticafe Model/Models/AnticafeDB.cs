@@ -3,11 +3,9 @@ using Anticafe.Model.Models.Mapping;
 
 namespace Anticafe.Model.Models
 {
-    public partial class TestContext : DbContext
+    public partial class AnticafeDB : DbContext
     {
-		static TestContext() => Database.SetInitializer<TestContext>(null);
-
-		public TestContext() : base("Name=TestContext") {}
+		public AnticafeDB() : base("AnticafeDB") {}
 
 		public DbSet<AdministratorInfo> AdministratorInfoes { get; set; }
 		public DbSet<Errors> Errors { get; set; }
@@ -20,10 +18,11 @@ namespace Anticafe.Model.Models
         {
             if (modelBuilder != null)
             {
+				modelBuilder.Entity<GuestInfo>().HasMany(c => c.Guests).WithRequired(o => o.GuestInfo);
 				modelBuilder.Configurations.Add(new AdministratorInfoMap());
-				modelBuilder.Configurations.Add(new ErrorMap());
-				modelBuilder.Configurations.Add(new GuestMap());
 				modelBuilder.Configurations.Add(new GuestInfoMap());
+				modelBuilder.Configurations.Add(new GuestMap());
+				modelBuilder.Configurations.Add(new ErrorMap());
 				modelBuilder.Configurations.Add(new VisitMap());
             }
         }
