@@ -3,6 +3,7 @@ using System.Data.Entity;
 using Anticafe.Model.Models;
 using System.Data.SqlClient;
 using System.ComponentModel;
+using System.Configuration;
 
 namespace Anticafe.Model
 {
@@ -12,13 +13,8 @@ namespace Anticafe.Model
 
 		public static void GetStateDB()
 		{
-			/* По хорошему от этого метода избавиться
-             * или изменить для проверки БД по полной 
-             * (разные типы БД)
-             */
-
-			const string ConnectionString = @"Data Source=WS-Q0010\LOCALTEST;Initial Catalog=AnticafeDB;Integrated Security=True;MultipleActiveResultSets=True";
-
+			string ConnectionString = ConfigurationManager.ConnectionStrings["AnticafeDB"].ConnectionString;
+			
 			if (Database.Exists(ConnectionString))
 			{
 				using (SqlConnection sql = new SqlConnection(ConnectionString))
@@ -29,7 +25,6 @@ namespace Anticafe.Model
 					sql.Close();
 				}
 			}
-
 			else
 			{
 				using (SqlConnection sql = new SqlConnection(ConnectionString))
@@ -40,8 +35,6 @@ namespace Anticafe.Model
 					try
 					{
 						AnticafeDB dB = new AnticafeDB();
-
-						// Запустить инициализацию базы данных в этой точке
 						dB.Database.Initialize(true);
 					}
 					catch (Exception exp)
@@ -63,20 +56,20 @@ namespace Anticafe.Model
 
 		public static BindingList<GuestInfo> GetGuestInfo()
 		{
-			using (AnticafeDB _context = new AnticafeDB())
+			using (AnticafeDB dB = new AnticafeDB())
 			{
-				_context.GuestInfoes.Load();
-				var result = _context.GuestInfoes.Local.ToBindingList();
+				dB.GuestInfoes.Load();
+				var result = dB.GuestInfoes.Local.ToBindingList();
 				return result;
 			}
 		}
 
 		public static BindingList<AdministratorInfo> GetCurrentAdministrator()
 		{
-			using (AnticafeDB _context = new AnticafeDB())
+			using (AnticafeDB dB = new AnticafeDB())
 			{
-				_context.AdministratorInfoes.Load();
-				var result = _context.AdministratorInfoes.Local.ToBindingList();
+				dB.AdministratorInfoes.Load();
+				var result = dB.AdministratorInfoes.Local.ToBindingList();
 				return result;
 			}
 		}
