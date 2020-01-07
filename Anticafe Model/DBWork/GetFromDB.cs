@@ -36,6 +36,7 @@ namespace Anticafe.Model
 					{
 						AnticafeDB dB = new AnticafeDB();
 						dB.Database.Initialize(true);
+						SaveToDB.AddRootAdministrator();
 					}
 					catch (Exception exp)
 					{
