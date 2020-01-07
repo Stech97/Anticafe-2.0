@@ -1,7 +1,8 @@
 using System.Data.Entity;
+using Anticafe.Model.Models;
 using Anticafe.Model.Models.Mapping;
 
-namespace Anticafe.Model.Models
+namespace Anticafe.Model
 {
     public partial class AnticafeDB : DbContext
     {
