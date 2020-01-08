@@ -1,0 +1,7 @@
+﻿1) Read https://habr.com/ru/post/143292/
+
+Summary:
+If you add/delete Propertise you can use auto migration, else use command
+1) Execute command: Add-Migration <name> -ProjectName "Anticafe Model"
+2) Execute command: Update-Database -script(or update-database)  
+or use this method  https://romiller.com/2012/02/09/running-scripting-migrations-from-code/

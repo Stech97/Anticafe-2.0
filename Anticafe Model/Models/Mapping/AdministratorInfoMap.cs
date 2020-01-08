@@ -16,8 +16,8 @@ namespace Anticafe.Model.Models.Mapping
             Property(t => t.Login).HasColumnName("Login");
             Property(t => t.Password).HasColumnName("Password");
             Property(t => t.NumberCard).HasColumnName("NumberCard");
-            Property(t => t.SecondName).HasColumnName("SecondName");
             Property(t => t.FirstName).HasColumnName("FirstName");
+            Property(t => t.SecondName).HasColumnName("SecondName");
             Property(t => t.MiddleName).HasColumnName("MiddleName");
             Property(t => t.BDay).HasColumnName("BDay");
             Property(t => t.Email).HasColumnName("Email");

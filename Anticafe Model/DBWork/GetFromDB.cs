@@ -4,6 +4,7 @@ using Anticafe.Model.Models;
 using System.Data.SqlClient;
 using System.ComponentModel;
 using System.Configuration;
+using Configuration = Anticafe.Model.Migrations.Configuration;
 
 namespace Anticafe.Model
 {
@@ -17,6 +18,8 @@ namespace Anticafe.Model
 			
 			if (Database.Exists(ConnectionString))
 			{
+				Database.SetInitializer(new MigrateDatabaseToLatestVersion<AnticafeDB, Configuration>());
+
 				using (SqlConnection sql = new SqlConnection(ConnectionString))
 				{
 					_log.Info("База данных " + sql.Database + " существует");
