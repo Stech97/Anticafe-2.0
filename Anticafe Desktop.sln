@@ -1,5 +1,6 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 19
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
 VisualStudioVersion = 16.3.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anticafe Model", "Anticafe Model\Anticafe Model.csproj", "{BCA3F389-57CB-468D-A06F-C17A578DE3B2}"
@@ -28,4 +29,3 @@ Global
 		SolutionGuid = {5AB129BA-9C97-44D2-8D5B-F34C21458137}
 	EndGlobalSection
 EndGlobal
-ndGlobal
