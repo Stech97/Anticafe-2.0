@@ -6,7 +6,7 @@ namespace Anticafe.Model
 {
     public static class SaveToDB
     {
-        private static readonly TestContext _DB = new TestContext();
+        private static readonly AnticafeDB dB = new AnticafeDB();
 		private static readonly ILog _log = LogManager.CreateLogger("BackEnd", "trace");
 
         public static void SaveGuestInfoToDB(string numberCard, string firstName, string secondName, string middleName,
@@ -24,9 +24,9 @@ namespace Anticafe.Model
                 Phone = phone
             };
 
-            _DB.GuestInfoes.Add(guestInfo);
-            _DB.SaveChanges();
-            _log.Info("Добавлен новый гость " + guestInfo.ToString());
+            dB.GuestInfoes.Add(guestInfo);
+            dB.SaveChanges();
+            _log.Trace("Добавлен новый гость " + guestInfo.ToString());
         }
 
         public static void SaveAdministratorInfoToDB(string login, string password, string numberCard, string firstName, 
@@ -45,12 +45,30 @@ namespace Anticafe.Model
                 Phone = phone
             };
 
-            _DB.AdministratorInfoes.Add(administratorInfo);
-            _DB.SaveChanges();
-			_log.Info("Добавлен новый администратор " + administratorInfo.ToString());
-
+            dB.AdministratorInfoes.Add(administratorInfo);
+            dB.SaveChanges();
+			_log.Trace("Добавлен новый администратор " + administratorInfo.ToString());
 		}
+        public static void AddRootAdministrator()
+        {
+            AdministratorInfo administratorInfo = new AdministratorInfo
+            {
+                Login = "admin",
+                Password = "admin",
+                NumberCard = "0",
+                FirstName = "Администратор",
+                SecondName = "Системы",
+                MiddleName = " ",
+                BDay = DateTime.Now.Date,
+                Email = " ",
+                Phone = " "
 
+            };
+
+            dB.AdministratorInfoes.Add(administratorInfo);
+            dB.SaveChanges();
+            _log.Trace("Добавлен рут-администратор " + administratorInfo.ToString());
+        }
         public static void SaveExeptionToDB(DateTime dateTime, string message)
         {
 			//сделать логирование через NLog
@@ -60,9 +78,9 @@ namespace Anticafe.Model
                 Message = message
             };
 
-            _DB.Errors.Add(exep);
-            _DB.SaveChanges();
-			_log.Info("Добавлено исключение в БД");
+            dB.Errors.Add(exep);
+            dB.SaveChanges();
+			_log.Trace("Добавлено исключение в БД");
 		}
 
     }

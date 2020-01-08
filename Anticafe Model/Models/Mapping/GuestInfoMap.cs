@@ -11,7 +11,7 @@ namespace Anticafe.Model.Models.Mapping
 
             // Properties
             // Table & Column Mappings
-            ToTable("GuestInfoes");
+            ToTable("GuestInfo");
             Property(t => t.ID).HasColumnName("ID");
 			Property(t => t.NumberCard).HasColumnName("NumberCard");
             Property(t => t.SecondName).HasColumnName("SecondName");
