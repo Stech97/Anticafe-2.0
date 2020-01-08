@@ -11,7 +11,7 @@ using System.Windows;
 [assembly: AssemblyDescription("Сметка для Антикафе 'Время Терпит'")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MaksStech97")]
-[assembly: AssemblyProduct("Anticafe 4.0")]
+[assembly: AssemblyProduct("Anticafe")]
 [assembly: AssemblyCopyright("Apache Licence 2.0")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -51,5 +51,5 @@ using System.Windows;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.0.0.11")]
-[assembly: AssemblyFileVersion("4.0.0.11")]
+[assembly: AssemblyVersion("4.0.0.12")]
+[assembly: AssemblyFileVersion("4.0.0.12")]
