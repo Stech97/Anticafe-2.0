@@ -15,7 +15,7 @@ namespace Anticafe.Model.Models
 		public string Phone { get; set; }
         public List<Guest> Guests { get; set; }
 
-		public override string ToString() => SecondName + " " + FirstName + " " + MiddleName + " № кратры:" + NumberCard;
+		public override string ToString() => SecondName + " " + FirstName + " " + MiddleName + " пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:" + NumberCard;
 
         public GuestInfo() => this.Guests = new List<Guest>();
 	}

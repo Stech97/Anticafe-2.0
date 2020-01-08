@@ -5,53 +5,80 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Новый гость" Height="720" Width="420" Background="SandyBrown"
+        Title="Новый гость" Height="650" Width="420" Background="SandyBrown"
         WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Icon.ico"
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-        MinHeight="720" MinWidth="420">
+        MinHeight="650" MinWidth="420" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="Label" x:Name="BaseLabel">
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Grid.Column" Value="0"/>
+        </Style>
+        <Style TargetType="TextBox" x:Name="BaseTextBox">
+            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Grid.Column" Value="1"/>
+        </Style>
+        <Style TargetType="Button" x:Name="BaseButton">
+            <Setter Property="Margin" Value="60,10,60,10"/>
+            <Setter Property="Grid.ColumnSpan" Value="2"/>
+            <Setter Property="Grid.Row" Value="9"/>
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding ElementName=BNCard, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=BSName, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=BSName, Path=Text.Length}" Value="0" />
+                        <Condition Binding="{Binding ElementName=BDis, Path=Text.Length}" Value="0" />
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="IsEnabled" Value="False" />
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150*"/>
-            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="210*"/>
+            <ColumnDefinition Width="190*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="65*"/>
         </Grid.RowDefinitions>
 
-        <Label Name="NCard" Content="№ Карты" Grid.Row="0" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BNCard" Grid.Row="0" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="NCard" Content="№ Карты" Grid.Row="0" />
+        <TextBox Name="BNCard" Grid.Row="0" />
 
-        <Label Name="Sname" Content="Фамилия" Grid.Row="1" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BSName" Grid.Row="1" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="Sname" Content="Фамилия" Grid.Row="1" />
+        <TextBox Name="BSName" Grid.Row="1" Grid.Column="1" />
 
-        <Label Name="name" Content="Имя" Grid.Row="2" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BName" Grid.Row="2" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="name" Content="Имя" Grid.Row="2" />
+        <TextBox Name="BName" Grid.Row="2" />
 
-        <Label Name="Mname" Content="Отчество"  Grid.Row="3" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BMName"  Grid.Row="3" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="Mname" Content="Отчество" Grid.Row="3" />
+        <TextBox Name="BMName" Grid.Row="3" />
 
-        <Label Name="BD" Content="День Рожденья" Grid.Row="4" Grid.Column="0" Margin="10,15,10,15"/>
-        <DatePicker Name="BBD" Grid.Column="1" Margin="10,15,10,15" Grid.Row="4" SelectedDate="{x:Static sys:DateTime.Now}" />
+        <Label Name="BD" Content="День рожденья" Grid.Row="4" />
+        <DatePicker Name="BBD" Grid.Column="1" Margin="15,10,15,10" Grid.Row="4" SelectedDate="{x:Static sys:DateTime.Now}" />
 
-        <Label Name="Email" Content="E-mail"  Grid.Row="5" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BEmail" Grid.Row="5" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="Email" Content="E-mail"  Grid.Row="5"/>
+        <TextBox Name="BEmail" Grid.Row="5" />
 
-        <Label Name="Phone" Content="Телефон"  Grid.Row="6" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BPhone" Grid.Row="6" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="Phone" Content="Телефон" Grid.Row="6" />
+        <TextBox Name="BPhone" Grid.Row="6" />
 
-        <Label Name="Dis" Content="Дисконт"  Grid.Row="7" Grid.Column="0" Margin="10,15,10,15"/>
-        <TextBox Name="BDis"  Grid.Row="7" Grid.Column="1" Margin="10,15,10,15"/>
+        <Label Name="Dis" Content="Дисконт" Grid.Row="7" />
+        <TextBox Name="BDis" Grid.Row="7" />
 
-        <Button Content="Добавить нового гостя" Height="50" Click="Button_Click"  Grid.Row="9" Grid.ColumnSpan="2" Margin="60,10,60,10"/>
-        
+        <Button Content="Добавить нового гостя" Click="Button_Click" Command="{Binding ButtonCommand}"  />
+
     </Grid>
 </Window>

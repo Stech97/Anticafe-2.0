@@ -9,5 +9,10 @@ namespace Anticafe
         {
             InitializeComponent();
         }
-    }
+
+		private void BOk_Click(object sender, RoutedEventArgs e)
+		{
+			Close();
+		}
+	}
 }
