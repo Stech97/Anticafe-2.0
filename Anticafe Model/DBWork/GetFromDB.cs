@@ -14,8 +14,17 @@ namespace Anticafe.Model
 
 		public static void GetStateDB()
 		{
-			string ConnectionString = ConfigurationManager.ConnectionStrings["AnticafeDB"].ConnectionString;
-			
+			string ConnectionString = "";
+			try
+			{
+				ConnectionString = ConfigurationManager.ConnectionStrings["AnticafeDB"].ConnectionString;
+			}
+			catch (ConfigurationErrorsException exp)
+			{
+				_log.Fatal($"Ошибка в {nameof(Model)}. \r\nПричина: {exp.GetBaseException().Message}. \r\nСтек: {exp.StackTrace}.");
+				Environment.Exit(-1);
+			}
+
 			if (Database.Exists(ConnectionString))
 			{
 				Database.SetInitializer(new MigrateDatabaseToLatestVersion<AnticafeDB, Configuration>());
