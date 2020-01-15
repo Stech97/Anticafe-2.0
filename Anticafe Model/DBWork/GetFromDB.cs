@@ -51,20 +51,20 @@ namespace Anticafe.Model
 
 		public static System.ComponentModel.BindingList<GuestInfo> GetGuestInfo()
 		{
-			using (TestContext _context = new TestContext())
+			using (AnticafeDB dB = new AnticafeDB())
 			{
-				_context.GuestInfoes.Load();
-				var result = _context.GuestInfoes.Local.ToBindingList();
+				dB.GuestInfoes.Load();
+				var result = dB.GuestInfoes.Local.ToBindingList();
 				return result;
 			}
 		}
 
 		public static System.ComponentModel.BindingList<AdministratorInfo> GetCurrentAdministrator()
 		{
-			using (TestContext _context = new TestContext())
+			using (AnticafeDB dB = new AnticafeDB())
 			{
-				_context.AdministratorInfoes.Load();
-				var result = _context.AdministratorInfoes.Local.ToBindingList();
+				dB.AdministratorInfoes.Load();
+				var result = dB.AdministratorInfoes.Local.ToBindingList();
 				return result;
 			}
 		}

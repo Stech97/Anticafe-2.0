@@ -56,7 +56,6 @@
         <Label x:Name="LName" Content="Имя:" Grid.Row="0"/>
         <TextBox x:Name="TName" Text=""/>
         <Label x:Name="LTax" Content="Тариф:" Grid.Row="1"/>
-        <ComboBox x:Name="CTax" ItemsSource="{Binding Source={x:Static local:LoginWindow.Vs}}"/>
 
         <Button x:Name="BNew" Content="Ура, новый гость"/>
     </Grid>
