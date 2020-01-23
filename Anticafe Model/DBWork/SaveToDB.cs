@@ -69,7 +69,7 @@ namespace Anticafe.Model
             dB.SaveChanges();
             _log.Trace("Добавлен рут-администратор " + administratorInfo.ToString());
         }
-        public static void SaveExeptionToDB(DateTime dateTime, string message)
+        /*public static void SaveExeptionToDB(DateTime dateTime, string message)
         {
 			//сделать логирование через NLog
             Errors exep = new Errors
@@ -81,7 +81,7 @@ namespace Anticafe.Model
             dB.Errors.Add(exep);
             dB.SaveChanges();
 			_log.Trace("Добавлено исключение в БД");
-		}
+		}*/
 
     }
 }

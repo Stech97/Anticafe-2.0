@@ -1,14 +1,12 @@
 ﻿using System.Reflection;
-using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Anticafe 4.0 Model")]
-[assembly: AssemblyDescription("Сметка для Антикафе 'Время Терпит'")]
+[assembly: AssemblyTitle("Anticafe Model")]
+[assembly: AssemblyDescription("Система биллинга для антикафе")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MaksStech97")]
 [assembly: AssemblyProduct("Anticafe")]
@@ -16,19 +14,8 @@ using System.Windows;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// Параметр ComVisible со значением FALSE делает типы в сборке невидимыми 
-// для COM-компонентов.  Если требуется обратиться к типу в этой сборке через 
-// COM, задайте атрибуту ComVisible значение TRUE для этого типа.
+
 [assembly: ComVisible(false)]
-
-//Чтобы начать сборку локализованных приложений, задайте 
-//<UICulture>CultureYouAreCodingWith</UICulture> в файле .csproj
-//внутри <PropertyGroup>.  Например, если используется английский США
-//в своих исходных файлах установите <UICulture> в en-US.  Затем отмените преобразование в комментарий
-//атрибута NeutralResourceLanguage ниже.  Обновите "en-US" в
-//строка внизу для обеспечения соответствия настройки UICulture в файле проекта.
-
-//[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
 
 [assembly: ThemeInfo(
@@ -51,5 +38,5 @@ using System.Windows;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.0.1.0")]
-[assembly: AssemblyFileVersion("4.0.1.0")]
+[assembly: AssemblyVersion("4.0.1.1")]
+[assembly: AssemblyFileVersion("4.0.1.1")]
