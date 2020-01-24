@@ -23,6 +23,7 @@ namespace Anticafe
 
 			_log = LogManager.CreateLogger("Desktop", "trace");
 			_log.Trace("Открыто основное окно");
+			GuestTable.ItemsSource = GetFromDB.GetGuestInfo();
 
 		}
 
