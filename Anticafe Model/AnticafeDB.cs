@@ -9,7 +9,6 @@ namespace Anticafe.Model
 		public AnticafeDB() : base("AnticafeDB") {}
 
 		public DbSet<AdministratorInfo> AdministratorInfoes { get; set; }
-		public DbSet<Errors> Errors { get; set; }
 		public DbSet<Guest> Guests { get; set; }
 		public DbSet<GuestInfo> GuestInfoes { get; set; }
 		public DbSet<Visit> Visits { get; set; }
@@ -23,7 +22,6 @@ namespace Anticafe.Model
 				modelBuilder.Configurations.Add(new AdministratorInfoMap());
 				modelBuilder.Configurations.Add(new GuestInfoMap());
 				modelBuilder.Configurations.Add(new GuestMap());
-				modelBuilder.Configurations.Add(new ErrorMap());
 				modelBuilder.Configurations.Add(new VisitMap());
             }
         }

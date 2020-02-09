@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using Anticafe.Model.Models;
 using System.Data.SqlClient;
-
+using System.Configuration;
 
 namespace Anticafe.Model
 {
@@ -17,14 +17,14 @@ namespace Anticafe.Model
              * (разные типы БД)
              */
 
-			const string ConnectionString = @"Data Source=MAX-PC\ANTICAFE_DB;Initial Catalog=Test;Integrated Security=True;MultipleActiveResultSets=True";
+			ConnectionStringSettingsCollection settings = ConfigurationManager.ConnectionStrings;
 			//const string ConnectionString = @"Server=WS-Q0010\LOCALTEST;Initial Catalog=AnticafeDB;Integrated Security=True;MultipleActiveResultSets=True";
 
 			bool result;
 
 			try
 			{
-				using (SqlConnection sql = new SqlConnection(ConnectionString))
+				using (SqlConnection sql = new SqlConnection(settings[0].ConnectionString))
 				{
 					sql.Open();
 					var cs = sql.State;
