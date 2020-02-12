@@ -11,15 +11,12 @@ namespace Anticafe
 		private readonly ILog _log;
 
 		public StartWindow()
-        {
-            InitializeComponent();
+		{
 			_log = LogManager.CreateLogger("Desktop", "trace");
 			_log.Trace("Старт приложения");
-
-			GetFromDB.GetStateDB();
-			CLogin.ItemsSource = GetFromDB.GetCurrentAdministrator();
-        }
-
+			InitializeComponent();
+			//DataContext = new ;
+		}
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{
 			var mes = "На смене:" + CLogin.Text;
