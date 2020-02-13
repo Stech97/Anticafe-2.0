@@ -5,8 +5,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7C8CC98D-DB1D-4193-9052-527C7EC926C1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Anticafe_ViewModel</RootNamespace>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Anticafe.ViewModel</RootNamespace>
     <AssemblyName>Anticafe ViewModel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -32,10 +32,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Folder Include="Command\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StartWindowViewModel.cs" />
     <Compile Include="View\StartWindow.cs" />
   </ItemGroup>
   <ItemGroup>

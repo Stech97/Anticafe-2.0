@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.ObjectModel;
+using System.Windows;
 using System.Data.Entity;
 using Anticafe.Model.Models;
 using System.Data.SqlClient;
@@ -12,25 +13,30 @@ namespace Anticafe.Model
 
 		public static bool GetStateDB()
 		{
-			/* По хорошему от этого метода избавиться
-             * или изменить для проверки БД по полной 
-             * (разные типы БД)
-             */
-
+			const string ConnectionStringMaster = @"Server=WS-Q0010\LOCALTEST;Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True";
 			ConnectionStringSettingsCollection settings = ConfigurationManager.ConnectionStrings;
-			//const string ConnectionString = @"Server=WS-Q0010\LOCALTEST;Initial Catalog=AnticafeDB;Integrated Security=True;MultipleActiveResultSets=True";
 
 			bool result;
 
 			try
 			{
+				using (SqlConnection sqlMaster = new SqlConnection(ConnectionStringMaster))
+				{
+					sqlMaster.Open();
+					SqlCommand sqlCommand = new SqlCommand("SELECT * FROM sys.databases WHERE [name] = 'AnticafeDB'", sqlMaster);
+					var answer = sqlCommand.ExecuteScalar();
+					if (answer == null)
+						SaveToDB.AddRootAdministrator();
+				}
+				
 				using (SqlConnection sql = new SqlConnection(settings[0].ConnectionString))
 				{
 					sql.Open();
 					var cs = sql.State;
 					_log.Trace("Состояние подключения:" + cs.ToString());
 				}
-				_log.Info("Подключение к Базе Данных осуществленно");
+
+				_log.Info("Подключение к Базе Данных: " + settings[0].Name +" осуществленно");
 				result = true;
 			}
 			catch (SqlException exception)
@@ -45,8 +51,9 @@ namespace Anticafe.Model
 			{
 				_log.Errors($"Ошибка в {nameof(Model)}. \r\nПричина: {exception.GetBaseException().Message}. \r\nСтек: {exception.StackTrace}.");
 				result = false;
+				
 
-				MessageBox.Show("Нет подключения к Базе Данных \r\nПриложение будет остановленно \r\n"+"Причина: { exception.GetBaseException().Message}.", 
+				MessageBox.Show("Нет подключения к Базе Данных \r\nПриложение будет остановленно \r\n"+"Причина: " + exception.GetBaseException().Message + ".", 
 								"Ошибка", MessageBoxButton.OK, MessageBoxImage.Stop, MessageBoxResult.OK);
 			}
 
@@ -63,12 +70,12 @@ namespace Anticafe.Model
 			}
 		}
 
-		public static System.ComponentModel.BindingList<AdministratorInfo> GetCurrentAdministrator()
+		public static ObservableCollection<AdministratorInfo> GetCurrentAdministrator()
 		{
 			using (AnticafeDB dB = new AnticafeDB())
 			{
 				dB.AdministratorInfoes.Load();
-				var result = dB.AdministratorInfoes.Local.ToBindingList();
+				var result = dB.AdministratorInfoes.Local;
 				return result;
 			}
 		}

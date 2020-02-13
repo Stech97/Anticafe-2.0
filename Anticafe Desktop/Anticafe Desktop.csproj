@@ -178,6 +178,10 @@
       <Project>{bca3f389-57cb-468d-a06f-c17a578de3b2}</Project>
       <Name>Anticafe Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Anticafe ViewModel\Anticafe ViewModel.csproj">
+      <Project>{7c8cc98d-db1d-4193-9052-527c7ec926c1}</Project>
+      <Name>Anticafe ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
