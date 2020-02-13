@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
@@ -11,15 +12,36 @@ namespace Anticafe.ViewModel
 	public class StartWindowViewModel : INotifyPropertyChanged
 	{
 		private readonly ILog _log;
+
 		private AdministratorInfo _administratorInfo;
+		private StartWindowCommand _command;
 		public ObservableCollection<AdministratorInfo> AdministratorInfoes { get; set; }
-		public AdministratorInfo LoadAdministratorInfo
+		
+		public AdministratorInfo AdministratorInfos
 		{
 			get  => _administratorInfo; 
 			set
 			{
 				_administratorInfo = value;
-				OnPropertyChanged("LoadCLogin");
+				OnPropertyChanged("Administrators");
+			}
+		}
+
+		public StartWindowCommand Command
+		{
+			get
+			{
+				return _command ??(_command = new StartWindowCommand(obj =>
+				{
+					var admin = AdministratorInfoes.ToList<AdministratorInfo>();
+					var mes = "На смене: " + admin[0].ToString();
+
+					_log.Trace(mes);
+					mes = "Время начала работы: " + DateTime.Now.ToShortTimeString();
+					_log.Trace(mes);
+
+
+				}));
 			}
 		}
 

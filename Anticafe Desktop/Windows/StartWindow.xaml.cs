@@ -12,11 +12,6 @@ namespace Anticafe
 		}
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{
-			//var mes = "На смене:" + CLogin.Text;
-			//_log.Trace(mes);
-			//mes = "Время начала работы:" + TTime.Text;
-			//_log.Trace(mes);
-
 			var mainWindow = new MainWindow();
 			mainWindow.Show();
 			Close();

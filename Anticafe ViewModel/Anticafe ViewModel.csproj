@@ -35,10 +35,9 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Command\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Command\StartWindowCommand.cs" />
     <Compile Include="StartWindowViewModel.cs" />
     <Compile Include="View\StartWindow.cs" />
   </ItemGroup>
@@ -49,6 +48,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -55,7 +55,8 @@
             <RowDefinition Height="20*" />
         </Grid.RowDefinitions>
         <Label x:Name="LLogin" Content="Логин:" Grid.Row="0"/>
-        <ComboBox x:Name="CLogin"  Grid.Column="1" Margin="15,10,15,10" ItemsSource="{Binding AdministratorInfoes}"/>
+        <ComboBox x:Name="CLogin"  Grid.Column="1" Margin="15,10,15,10" ItemsSource="{Binding AdministratorInfoes}" 
+                  SelectedItem="{Binding AdministratorInfoes, UpdateSourceTrigger=PropertyChanged}"/>
 
         <Label x:Name="LPassword" Content="Пароль:" Grid.Row="1"/>
         <PasswordBox x:Name="TPassword" Grid.Row="1"/>
@@ -64,7 +65,7 @@
         <TextBox x:Name="TTime" Text="{Binding Source={x:Static sys:DateTime.Now}, Mode=OneWay,  StringFormat='HH:mm'}" 
                   IsEnabled="False" Grid.Column="1" Grid.Row="2"/>
 
-        <Button x:Name="BStatrt" Content="Начать смену!" Click="BStatrt_Click"/>
+        <Button x:Name="BStatrt" Content="Начать смену!" Click="BStatrt_Click" Command="{Binding Command}" CommandParameter="{Binding AdministratorInfoes}"/>
 
     </Grid>
 </Window>
