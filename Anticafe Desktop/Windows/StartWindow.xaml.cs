@@ -16,6 +16,5 @@ namespace Anticafe
 			mainWindow.Show();
 			Close();
 		}
-
 	}
 }

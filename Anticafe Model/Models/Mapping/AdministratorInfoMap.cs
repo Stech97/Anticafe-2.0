@@ -22,6 +22,7 @@ namespace Anticafe.Model.Models.Mapping
             Property(t => t.BDay).HasColumnName("BDay");
             Property(t => t.Email).HasColumnName("Email");
             Property(t => t.Phone).HasColumnName("Phone");
+            Property(t => t.TimeStartSmena).HasColumnName("StartSmena").IsOptional();
         }
     }
 }

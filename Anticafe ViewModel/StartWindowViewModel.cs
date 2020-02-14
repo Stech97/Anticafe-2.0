@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.ComponentModel;
-using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 using Anticafe.Model.Models;
 using Anticafe.Model;
@@ -13,35 +12,37 @@ namespace Anticafe.ViewModel
 	{
 		private readonly ILog _log;
 
-		private AdministratorInfo _administratorInfo;
 		private StartWindowCommand _command;
-		public ObservableCollection<AdministratorInfo> AdministratorInfoes { get; set; }
-		
-		public AdministratorInfo AdministratorInfos
+		private BindingList<AdministratorInfo> _administrators;
+
+		public BindingList<AdministratorInfo> Administrators
 		{
-			get  => _administratorInfo; 
+			get => _administrators;
 			set
 			{
-				_administratorInfo = value;
-				OnPropertyChanged("Administrators");
+				_administrators = value;
+				OnPropertyChanged("PropertyChanged");
 			}
 		}
 
-		public StartWindowCommand Command
+		public string AdminOnSmena { get; set; }
+		public string Passsword { get; set; }
+
+		public StartWindowCommand Admin
 		{
 			get
 			{
-				return _command ??(_command = new StartWindowCommand(obj =>
-				{
-					var admin = AdministratorInfoes.ToList<AdministratorInfo>();
-					var mes = "На смене: " + admin[0].ToString();
+				return _command ?? (_command = new StartWindowCommand(obj =>
+				 {
+					 var admin = _administrators.First(x => x.ToString() == AdminOnSmena);
+					 admin.TimeStartSmena = DateTime.Now;
 
-					_log.Trace(mes);
-					mes = "Время начала работы: " + DateTime.Now.ToShortTimeString();
-					_log.Trace(mes);
-
-
-				}));
+					 _log.Trace("На смене: " + admin.Login + " - " + admin.ToString());
+					 _log.Trace("Время начала работы: " + admin.TimeStartSmena.ToShortTimeString());
+					 SaveToDB.UpdateAdministratorInfoToDB(admin);
+				 },
+				(obj) => !string.IsNullOrEmpty(AdminOnSmena) && !string.IsNullOrEmpty(Passsword)
+				));
 			}
 		}
 
@@ -52,8 +53,7 @@ namespace Anticafe.ViewModel
 				_log = LogManager.CreateLogger("Desktop", "trace");
 				_log.Trace("Старт приложения");
 
-				AdministratorInfoes = new ObservableCollection<AdministratorInfo>();
-				AdministratorInfoes = GetFromDB.GetCurrentAdministrator();
+				_administrators = GetFromDB.GetCurrentAdministrator();
 			}
 			else
 			{

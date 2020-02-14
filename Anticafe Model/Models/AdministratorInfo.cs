@@ -14,6 +14,7 @@ namespace Anticafe.Model.Models
         public DateTime BDay { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+        public DateTime TimeStartSmena { get; set; }
 
 		public override string ToString() => FirstName + " " + SecondName;
 	}

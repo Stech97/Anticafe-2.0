@@ -14,7 +14,7 @@ namespace Anticafe.ViewModel
 			set
 			{
 				_administrators = value;
-				OnPropertyChanged("Administrators");
+				OnPropertyChanged("PropertyChanged");
 			}
 		}
 

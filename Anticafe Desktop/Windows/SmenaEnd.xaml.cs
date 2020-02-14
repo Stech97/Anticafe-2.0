@@ -8,5 +8,10 @@ namespace Anticafe
         {
             InitializeComponent();
         }
+
+        private void BEnd_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

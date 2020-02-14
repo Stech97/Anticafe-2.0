@@ -42,13 +42,23 @@ namespace Anticafe.Model
                 MiddleName = middleName,
                 BDay = bday,
                 Email = email,
-                Phone = phone
+                Phone = phone,
+                TimeStartSmena = DateTime.Now
             };
 
             dB.AdministratorInfoes.Add(administratorInfo);
             dB.SaveChanges();
 			_log.Trace("Добавлен новый администратор " + administratorInfo.ToString());
 		}
+
+        public static void UpdateAdministratorInfoToDB(AdministratorInfo administratorInfo)
+        {
+            dB.AdministratorInfoes.Attach(administratorInfo);
+            dB.Entry(administratorInfo).Property(x => x.TimeStartSmena).IsModified = true;
+
+            dB.SaveChanges();
+            _log.Trace("Обновлена иформация об администраторе " + administratorInfo.ToString());
+        }
         public static void AddRootAdministrator()
         {
             AdministratorInfo administratorInfo = new AdministratorInfo
@@ -61,8 +71,8 @@ namespace Anticafe.Model
                 MiddleName = " ",
                 BDay = DateTime.Now.Date,
                 Email = " ",
-                Phone = " "
-
+                Phone = " ",
+                TimeStartSmena = DateTime.Now
             };
 
             dB.AdministratorInfoes.Add(administratorInfo);

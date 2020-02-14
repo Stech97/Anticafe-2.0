@@ -1,9 +1,10 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows;
+﻿using System.Windows;
 using System.Data.Entity;
-using Anticafe.Model.Models;
-using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.ComponentModel;
+using Anticafe.Model.Models;
+
 
 namespace Anticafe.Model
 {
@@ -60,7 +61,7 @@ namespace Anticafe.Model
 			return result;
 		}
 
-		public static System.ComponentModel.BindingList<GuestInfo> GetGuestInfo()
+		public static BindingList<GuestInfo> GetGuestInfo()
 		{
 			using (AnticafeDB dB = new AnticafeDB())
 			{
@@ -70,12 +71,12 @@ namespace Anticafe.Model
 			}
 		}
 
-		public static ObservableCollection<AdministratorInfo> GetCurrentAdministrator()
+		public static BindingList<AdministratorInfo> GetCurrentAdministrator()
 		{
 			using (AnticafeDB dB = new AnticafeDB())
 			{
 				dB.AdministratorInfoes.Load();
-				var result = dB.AdministratorInfoes.Local;
+				var result = dB.AdministratorInfoes.Local.ToBindingList();
 				return result;
 			}
 		}

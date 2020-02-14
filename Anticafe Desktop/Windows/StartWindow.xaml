@@ -14,58 +14,40 @@
             <Setter Property="Grid.Column" Value="0"/>
         </Style>
         <Style TargetType="TextBox" x:Name="BaseTextBox">
-            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Margin" Value="15,10,15,20"/>
             <Setter Property="Grid.Column" Value="1"/>
             <Setter Property="MaxLines" Value="1"/>
         </Style>
         <Style TargetType="PasswordBox" x:Name="BasePasswordBox">
-            <Setter Property="Margin" Value="15,10,15,10"/>
+            <Setter Property="Margin" Value="15,10,15,20"/>
             <Setter Property="Grid.Column" Value="1"/>
         </Style>
         <Style TargetType="Button" x:Name="BaseButton">
             <Setter Property="Margin" Value="120,15,120,15"/>
             <Setter Property="Grid.ColumnSpan" Value="2"/>
             <Setter Property="Grid.Row" Value="4"/>
-            <Style.Triggers>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <Condition Binding="{Binding ElementName=TLogin, Path=Text.Length}" Value="0" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="IsEnabled" Value="False" />
-                </MultiDataTrigger>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <Condition Binding="{Binding ElementName=TPassword, Path=Text.Length}" Value="0" />
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="IsEnabled" Value="False" />
-                </MultiDataTrigger>
-            </Style.Triggers>
         </Style>
     </Window.Resources>
     <Grid x:Name="MainGrid" Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="390*"/>
-            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="110*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="15*" />
             <RowDefinition Height="20*" />
-            <RowDefinition Height="20*" />
-            <RowDefinition Height="20*" />
-            <RowDefinition Height="20*" />
-            <RowDefinition Height="20*" />
+            <RowDefinition Height="15*" />
         </Grid.RowDefinitions>
         <Label x:Name="LLogin" Content="Логин:" Grid.Row="0"/>
-        <ComboBox x:Name="CLogin"  Grid.Column="1" Margin="15,10,15,10" ItemsSource="{Binding AdministratorInfoes}" 
-                  SelectedItem="{Binding AdministratorInfoes, UpdateSourceTrigger=PropertyChanged}"/>
+        <ComboBox x:Name="CLogin"  Grid.Column="1" Margin="15,10,15,20" ItemsSource="{Binding Administrators}" 
+                  IsSynchronizedWithCurrentItem="True" SelectedItem="{Binding AdminOnSmena}" />
 
         <Label x:Name="LPassword" Content="Пароль:" Grid.Row="1"/>
-        <PasswordBox x:Name="TPassword" Grid.Row="1"/>
+        <PasswordBox x:Name="TPassword" Grid.Row="1" TextInput="{Binding Password}"/>
 
-        <Label x:Name="LTime" Content="Время начала смены:" Grid.Column="0" Grid.Row="2"/>
-        <TextBox x:Name="TTime" Text="{Binding Source={x:Static sys:DateTime.Now}, Mode=OneWay,  StringFormat='HH:mm'}" 
-                  IsEnabled="False" Grid.Column="1" Grid.Row="2"/>
-
-        <Button x:Name="BStatrt" Content="Начать смену!" Click="BStatrt_Click" Command="{Binding Command}" CommandParameter="{Binding AdministratorInfoes}"/>
+        <Button x:Name="BStatrt" Content="Начать смену!" Click="BStatrt_Click"
+                Command="{Binding Admin}" CommandParameter="{Binding AdminOnSmena}"/>
 
     </Grid>
 </Window>
