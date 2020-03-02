@@ -6,7 +6,7 @@ namespace Anticafe.Model
 	{
 		static LogManager()
 		{
-			NLog.LogManager.Configuration = new XmlLoggingConfiguration("config/NLog.config");
+			NLog.LogManager.Configuration = new XmlLoggingConfiguration("Logger/NLog.config");
 		}
 
 		public static ILog CreateLogger(string systemComponent, string loggerType)

@@ -9,9 +9,16 @@
     <Authors>Maksstech97</Authors>
     <Company>Stech97</Company>
     <RootNamespace>Anticafe.Desktop</RootNamespace>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icon.ico" />
+    <None Remove="ServiceWindows\Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,8 +29,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Anticafe Model\Anticafe Model.csproj" />
     <ProjectReference Include="..\DBRepository\DBRepository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icon.ico" />
+    <Resource Include="ServiceWindows\Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
   </ItemGroup>
 
 </Project>
