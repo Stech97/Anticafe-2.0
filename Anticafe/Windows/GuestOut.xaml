@@ -4,9 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" Title="Гость уходит" Height="350" Width="350"
-        Background="SandyBrown" Icon="/Anticafe 4.0;component/Icon.ico" 
+        Background="SandyBrown" 
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic">
+        FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" Icon="/Anticafe Desktop;component/Icon.ico">
     <Window.Resources>
         <Style TargetType="Label" x:Key="LabelLeft">
             <Setter Property="Margin" Value="15,0,0,0"/>

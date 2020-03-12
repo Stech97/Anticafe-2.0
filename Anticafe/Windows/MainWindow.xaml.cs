@@ -82,10 +82,6 @@ namespace Anticafe
 			SmenaEnd smenaEnd = new SmenaEnd();
 			_log.Trace("Закрыто окно \"Конец смены\"");
 			smenaEnd.ShowDialog();
-			_log.Trace("Смена закрыта");
-            _log.Trace("Приложение закрыто с кодом 0");
-            _log.Trace("Exit");
-            Environment.Exit(0);
 		}
 	}
 }

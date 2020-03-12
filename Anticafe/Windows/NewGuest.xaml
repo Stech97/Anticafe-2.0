@@ -6,9 +6,9 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Новый гость" Height="650" Width="420" Background="SandyBrown"
-        WindowStartupLocation="CenterOwner" Icon="/Anticafe 4.0;component/Icon.ico"
+        WindowStartupLocation="CenterOwner"
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic"
-        MinHeight="650" MinWidth="420" ResizeMode="NoResize">
+        MinHeight="650" MinWidth="420" ResizeMode="NoResize" Icon="/Anticafe Desktop;component/Icon.ico">
     <Window.Resources>
         <Style TargetType="Label" x:Name="BaseLabel">
             <Setter Property="Margin" Value="15,10,15,10"/>

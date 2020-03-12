@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Anticafe"
         mc:Ignorable="d"
         Title="Конец смены" Height="400" Width="500" Background="SandyBrown" 
-        Icon="/Anticafe 4.0;component/Icon.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Icon="/Anticafe Desktop;component/Icon.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic">
     <Window.Resources>
         <Style TargetType="Label" x:Key="LabelLeft">
@@ -46,7 +46,7 @@
         <Label Style="{StaticResource LabelRight}" x:Name="Result" Content="" Grid.Row="3"/>
         <Button x:Name="BEnd" Content="Конец смены" Margin="160,15,160,15" 
                 FontFamily="Times New Roman" FontSize="25" FontWeight="Bold" FontStyle="Italic" 
-                Grid.ColumnSpan="2" Grid.Row="4" IsEnabled="{Binding ElementName=SumHB, Path=Text.Length}" />
+                Grid.ColumnSpan="2" Grid.Row="4" IsEnabled="{Binding ElementName=SumHB, Path=Text.Length}" Click="BEnd_Click" />
         
     </Grid>
 </Window>
