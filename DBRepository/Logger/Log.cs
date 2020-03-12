@@ -1,7 +1,6 @@
 ﻿using NLog;
-using System;
 
-namespace Anticafe.Model
+namespace DBRepository.Logger
 {
      public class Log : ILog
      {

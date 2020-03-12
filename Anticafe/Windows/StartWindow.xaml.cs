@@ -1,19 +1,13 @@
 ﻿using System.Windows;
-using Anticafe.Model;
+using DBRepository.Logger;
 
 namespace Anticafe
 {
     public partial class StartWindow : Window
     {
-		private readonly ILog _log;
+		private readonly ILog _log = LogManager.CreateLogger("Desktop", "trace");
 
-		public StartWindow()
-		{
-			_log = LogManager.CreateLogger("Desktop", "trace");
-			_log.Trace("Старт приложения");
-
-			InitializeComponent();
-		}
+		public StartWindow() => InitializeComponent();
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{
 			var mes = "На смене:" + CLogin.Text;

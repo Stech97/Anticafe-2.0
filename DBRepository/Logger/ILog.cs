@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Anticafe.Model
+﻿namespace DBRepository.Logger
 {
     public interface ILog
     {

@@ -1,6 +1,6 @@
 ﻿using NLog.Config;
 
-namespace Anticafe.Model
+namespace DBRepository.Logger
 {
 	public static class LogManager
 	{

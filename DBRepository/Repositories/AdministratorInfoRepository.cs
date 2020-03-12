@@ -1,5 +1,6 @@
 ﻿using Anticafe.Model;
 using DBRepository.Interfaces;
+using DBRepository.Logger;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

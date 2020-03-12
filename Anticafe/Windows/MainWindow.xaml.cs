@@ -1,7 +1,6 @@
-﻿using Anticafe.Model;
-using System.Windows;
+﻿using System.Windows;
 using System;
-
+using DBRepository.Logger;
 
 /*
 	сделать взаимодействие с кнопками через command для ViewModel во всех окнах
