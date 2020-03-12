@@ -7,7 +7,7 @@
         mc:Ignorable="d" Title="Антикафе приветствует тебя на работе и желает хорошой смены)" 
         Height="420" Width="570" MinHeight="400" MinWidth="570" WindowStartupLocation="CenterOwner" Background="SandyBrown"
         FontFamily="Times New Roman" FontSize="37" FontWeight="Bold" 
-        FontStyle="Italic" ResizeMode="NoResize" Icon="Icon.ico">
+        FontStyle="Italic" ResizeMode="NoResize" Icon="/Icon.ico">
     <Window.Resources>
         <Style TargetType="Label" x:Name="BaseLabel">
             <Setter Property="Margin" Value="15,10,15,10"/>

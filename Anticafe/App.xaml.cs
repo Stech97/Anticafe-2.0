@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DBRepository;
+using DBRepository.Interfaces;
+using DBRepository.Repositories;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 using System.Windows;
 
 namespace Anticafe
@@ -13,5 +12,26 @@ namespace Anticafe
 	/// </summary>
 	public partial class App : Application
 	{
+		private readonly IRepositoryContextFactory contextFactory;
+
+	private async void Application_Startup(object sender, StartupEventArgs e)
+		{
+			StartWindow window = new StartWindow();
+
+			var builder = new ConfigurationBuilder()
+				.SetBasePath(Directory.GetCurrentDirectory()).
+				AddJsonFile("appsettings.json");
+			var config = builder.Build();
+			var factory = new RepositoryContextFactory();
+			var connectonString = config.GetConnectionString("DefaultConnection");
+			using var context = factory.CreateDbContext(connectonString);
+			await DbInitializer.Initialize(context);
+
+			AdministratorInfoRepository administratorInfoRepository =
+				new AdministratorInfoRepository(connectonString, contextFactory);
+
+			window.CLogin.DataContext = administratorInfoRepository.GetCurrentAdministrator();
+			window.Show();
+		}
 	}
 }

@@ -62,7 +62,7 @@
 
         <!--https://www.codeproject.com/Articles/36468/WPF-NotifyIcon-2#hello-->
 
-        <tb:TaskbarIcon Name="NI" IconSource="Icon.ico" ToolTipText="Биллинг Антикафе" >
+        <tb:TaskbarIcon Name="NI" IconSource="/Icon.ico" ToolTipText="Биллинг Антикафе" >
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu Background="White">
                     <MenuItem Header="Развернуть" Click="NotificayVisibly_Click" />

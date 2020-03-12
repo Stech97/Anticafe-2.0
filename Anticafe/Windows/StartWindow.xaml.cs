@@ -1,8 +1,5 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using Anticafe.Model;
-using System.Windows.Input;
-using System.Windows.Controls;
 
 namespace Anticafe
 {
@@ -14,8 +11,8 @@ namespace Anticafe
 		{
 			_log = LogManager.CreateLogger("Desktop", "trace");
 			_log.Trace("Старт приложения");
+
 			InitializeComponent();
-			//DataContext = new ;
 		}
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{

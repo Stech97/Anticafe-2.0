@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <None Remove="Icon.ico" />
-    <None Remove="ServiceWindows\Icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,7 +38,6 @@
 
   <ItemGroup>
     <Resource Include="Icon.ico" />
-    <Resource Include="ServiceWindows\Icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +45,12 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
