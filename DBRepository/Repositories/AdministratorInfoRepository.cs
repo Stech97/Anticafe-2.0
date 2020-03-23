@@ -15,8 +15,7 @@ namespace DBRepository.Repositories
 
 		public AdministratorInfoRepository(string connectionString, IRepositoryContextFactory contextFactory) : base(connectionString, contextFactory) { }
 
-		public async Task SaveAdministratorInfo(string login, string password, string numberCard, string firstName, string secondName, string middleName,
-			DateTime bday, string email, string phone) // (AdministratorInfo administratorInfo) - посмотреть где будет вызываться и мб туда это передать
+		public async Task SaveAdministratorInfo(AdministratorInfo administratorInfo) 
 		{
 			AdministratorInfo administratorInfo = new AdministratorInfo
 			{

@@ -7,8 +7,7 @@ namespace DBRepository.Interfaces
 {
 	public interface IAdministratorInfoRepository
 	{
-		Task SaveAdministratorInfo(string login, string password, string numberCard, string firstName, string secondName, string middleName,
-							 DateTime bday, string email, string phone);
+		Task SaveAdministratorInfo(AdministratorInfo administratorInfo);
 
 		Task UpdateAdministratorInfoToDB(AdministratorInfo administratorInfo);
 
