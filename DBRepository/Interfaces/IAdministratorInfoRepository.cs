@@ -11,6 +11,6 @@ namespace DBRepository.Interfaces
 
 		Task UpdateAdministratorInfoToDB(AdministratorInfo administratorInfo);
 
-		Task<List<string>> GetCurrentAdministrator();
+		Task<List<AdministratorInfo>> GetCurrentAdministrator();
 	}
 }

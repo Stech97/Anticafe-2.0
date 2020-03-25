@@ -17,20 +17,6 @@ namespace DBRepository.Repositories
 
 		public async Task SaveAdministratorInfo(AdministratorInfo administratorInfo) 
 		{
-			AdministratorInfo administratorInfo = new AdministratorInfo
-			{
-				Login = login,
-				Password = password,  // добавить шифрование
-				NumberCard = numberCard,
-				FirstName = firstName,
-				SecondName = secondName,
-				MiddleName = middleName,
-				BDay = bday,
-				Email = email,
-				Phone = phone,
-				TimeStartSmena = DateTime.Now
-			};
-
 			using (var context = ContextFactory.CreateDbContext(ConnectionString))
 			{
 				context.AdministratorInfos.Add(administratorInfo);
@@ -52,11 +38,11 @@ namespace DBRepository.Repositories
 			_log.Trace("Обновлена иформация об администраторе " + administratorInfo.ToString());
 		}
 
-		public async Task<List<string>> GetCurrentAdministrator()
+		public async Task<List<AdministratorInfo>> GetCurrentAdministrator()
 		{
 			using (var context = ContextFactory.CreateDbContext(ConnectionString))
 			{
-				return await context.AdministratorInfos.Select(x => x.ToString()).Distinct().ToListAsync();
+				return await context.AdministratorInfos.ToListAsync();
 			}
 		}
 	}

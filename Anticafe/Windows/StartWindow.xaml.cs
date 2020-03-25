@@ -7,7 +7,11 @@ namespace Anticafe
     {
 		private readonly ILog _log = LogManager.CreateLogger("Desktop", "trace");
 
-		public StartWindow() => InitializeComponent();
+		public StartWindow()
+		{
+			InitializeComponent();
+			DataContext = new ApplicationViewModel();
+		}
 		private void BStatrt_Click(object sender, RoutedEventArgs e)
 		{
 			var mes = "На смене:" + CLogin.Text;
