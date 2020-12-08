@@ -6,5 +6,3 @@
 <li> WPF and pattern MVVM
 
 Приложение разработано Stech97(Степучев М.А.)
-
-Лицензия APACHE LICENSE VERSION 2.0
